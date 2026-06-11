@@ -14,10 +14,28 @@ const REASONS = [
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", company: "", reason: "Sales", message: "" });
-  const onSubmit = (e) => {
+  const [submitting, setSubmitting] = useState(false);
+  const onSubmit = async (e) => {
     e.preventDefault();
-    toast.success("Thanks — our team will reply within 4 business hours.");
-    setForm({ name: "", email: "", company: "", reason: "Sales", message: "" });
+    setSubmitting(true);
+    try {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (data.ok) {
+        toast.success(data.message || "Thanks — our team will reply within 4 business hours.");
+        setForm({ name: "", email: "", company: "", reason: "Sales", message: "" });
+      } else {
+        toast.error("Something went wrong. Please email hello@trackthebreach.com directly.");
+      }
+    } catch (err) {
+      toast.error("Network error. Please email hello@trackthebreach.com directly.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -84,10 +102,11 @@ export default function Contact() {
             </Field>
             <button
               type="submit"
+              disabled={submitting}
               data-testid="contact-submit"
-              className="mt-2 group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold transition shadow-[0_12px_40px_-12px_rgba(37,99,235,0.55)]"
+              className="mt-2 group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 disabled:opacity-60 disabled:cursor-wait text-white font-semibold transition shadow-[0_12px_40px_-12px_rgba(37,99,235,0.55)]"
             >
-              Send message
+              {submitting ? "Sending…" : "Send message"}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
             </button>
             <p className="mt-4 text-xs text-slate-500">By submitting, you agree to our privacy policy. We never share contact data with third parties.</p>

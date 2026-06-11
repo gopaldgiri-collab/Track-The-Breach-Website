@@ -42,13 +42,29 @@ export default function Navbar() {
       </div>
 
       <nav className="container mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link to="/" data-testid="navbar-logo" className="flex items-center gap-3 group">
-            <div className="relative">
-              <img src={LOGO_URL} alt="Track The Breach" className="w-11 h-11 object-contain" />
-            </div>
-            <span className="font-display font-bold text-slate-900 tracking-tight text-[17px] hidden sm:inline">Track The Breach</span>
+        <div className="flex items-center justify-between h-16 lg:h-20 relative">
+          {/* Mobile-only hamburger on the left */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            data-testid="mobile-menu-toggle"
+            className="lg:hidden p-2 -ml-2 text-slate-900 z-20"
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+
+          {/* Brand: centered on mobile, left on desktop */}
+          <Link
+            to="/"
+            data-testid="navbar-logo"
+            className="flex items-center gap-3 group absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0"
+          >
+            <img src={LOGO_URL} alt="Track The Breach" className="w-10 h-10 lg:w-11 lg:h-11 object-contain" />
+            <span className="font-display font-bold text-slate-900 tracking-tight text-[15px] lg:text-[17px]">Track The Breach</span>
           </Link>
+
+          {/* Spacer on mobile to balance the hamburger so brand stays visually centered */}
+          <div className="lg:hidden w-10 z-20" aria-hidden="true" />
 
           <ul className="hidden lg:flex items-center gap-1">
             {MENUS.map((m) => (
@@ -125,15 +141,6 @@ export default function Navbar() {
               <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform" />
             </a>
           </div>
-
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            data-testid="mobile-menu-toggle"
-            className="lg:hidden p-2 text-slate-900"
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
 
         {mobileOpen && (

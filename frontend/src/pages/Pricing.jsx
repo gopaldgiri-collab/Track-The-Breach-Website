@@ -43,11 +43,15 @@ export default function Pricing() {
         </div>
       </PageHero>
 
-      {/* Plan cards */}
-      <section className="relative pb-20">
+      {/* Plan cards — row 1: 3 starter plans */}
+      <section className="relative pb-12">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-            {PRICING_PLANS.map((p, i) => {
+          <div className="text-center mb-10">
+            <div className="text-xs font-mono uppercase tracking-[0.2em] text-blue-600/80">For individuals & growing teams</div>
+            <h2 className="mt-2 font-display text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Choose how you start.</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {PRICING_PLANS.slice(0, 3).map((p, i) => {
               const c = PLAN_COLORS[i];
               return (
                 <div
@@ -120,8 +124,113 @@ export default function Pricing() {
               );
             })}
           </div>
+        </div>
+      </section>
 
-          {/* Reassurance under cards */}
+      {/* Plan cards — row 2: 2 premium detailed plans */}
+      <section className="relative pb-12">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
+            <div>
+              <div className="text-xs font-mono uppercase tracking-[0.2em] text-blue-600/80">Premium & VIP-grade protection</div>
+              <h2 className="mt-2 font-display text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">For executives, organizations & high-risk individuals.</h2>
+            </div>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold">
+              <Sparkles className="w-3.5 h-3.5" /> White-glove tier
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            {PRICING_PLANS.slice(3).map((p, idx) => {
+              const i = idx + 3;
+              const c = PLAN_COLORS[i];
+              return (
+                <div
+                  key={p.name}
+                  data-testid={`pricing-plan-${i}`}
+                  className={`relative rounded-2xl bg-white border border-slate-200 p-6 lg:p-9 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition ${c.glow}`}
+                >
+                  <div className={`absolute -top-20 -right-20 w-60 h-60 rounded-full bg-gradient-to-br ${c.grad} opacity-10 blur-3xl pointer-events-none`} />
+
+                  <div className="relative grid grid-cols-1 md:grid-cols-12 gap-6">
+                    {/* Left: identity + price + CTA */}
+                    <div className="md:col-span-5 flex flex-col">
+                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${c.grad} flex items-center justify-center shadow-lg mb-5`}>
+                        <Sparkles className="w-6 h-6 text-white" />
+                      </div>
+
+                      <div className="text-xs font-mono uppercase tracking-[0.18em] text-slate-500 mb-1">{p.name}</div>
+                      <div className={`text-sm font-display font-semibold inline-block w-fit px-2.5 py-0.5 rounded-md ${c.chip} border mb-3`}>
+                        {p.tagline}
+                      </div>
+                      <p className="text-xs text-slate-500">{p.audience}</p>
+
+                      <div className="mt-5 flex items-baseline gap-1.5 flex-wrap">
+                        <span className="font-display text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tighter">
+                          {currency === "USD" ? p.priceUSD : p.priceINR}
+                        </span>
+                        <span className="text-xs text-slate-500">/ {p.period}</span>
+                      </div>
+
+                      <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-mono text-slate-700 bg-slate-50 border border-slate-200 px-2 py-1 rounded-md w-fit">
+                        <CreditCard className="w-3 h-3" />
+                        {p.credits}
+                      </div>
+
+                      <a
+                        href={`${APP_URL}/signup?plan=${p.name.toLowerCase().replace(/\s+/g, "-")}`}
+                        data-testid={`pricing-cta-${i}`}
+                        className={`mt-6 group inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm transition bg-gradient-to-br ${c.grad} text-white shadow hover:shadow-lg`}
+                      >
+                        {p.cta}
+                        <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition" />
+                      </a>
+
+                      <div className="mt-5 grid grid-cols-3 gap-1 text-[10px] uppercase tracking-wider text-slate-500 text-center">
+                        <Cell label="Protection" value={p.protection} />
+                        <Cell label="Monitoring" value={p.monitoring} />
+                        <Cell label="Support" value={p.support} />
+                      </div>
+                    </div>
+
+                    {/* Right: features + extra benefits */}
+                    <div className="md:col-span-7 md:border-l md:border-slate-200 md:pl-7">
+                      <div className="text-xs font-mono uppercase tracking-[0.18em] text-blue-600/80 mb-4">What&apos;s included</div>
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2.5 text-sm text-slate-700">
+                        {p.features.map((f, j) => (
+                          <li key={j} className="flex items-start gap-2">
+                            <Check className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+                            <span>{f}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div className="mt-6 pt-4 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                        <div className="flex items-center gap-2 text-slate-600">
+                          <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                          SOC 2 Type II audited
+                        </div>
+                        <div className="flex items-center gap-2 text-slate-600">
+                          <Lock className="w-3.5 h-3.5 text-blue-600" />
+                          Custom data residency
+                        </div>
+                        <div className="flex items-center gap-2 text-slate-600">
+                          <Sparkles className="w-3.5 h-3.5 text-fuchsia-600" />
+                          Dedicated analyst & CSM
+                        </div>
+                        <div className="flex items-center gap-2 text-slate-600">
+                          <Check className="w-3.5 h-3.5 text-cyan-600" />
+                          99.99% uptime SLA
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Reassurance */}
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3 text-xs">
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-medium">
               <Lock className="w-3.5 h-3.5" /> Account creation is free — no credit card at sign-up

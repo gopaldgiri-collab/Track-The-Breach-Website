@@ -1,12 +1,15 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, HTTPException
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
+import smtplib
+import ssl
+from email.message import EmailMessage
 from pathlib import Path
-from pydantic import BaseModel, Field, ConfigDict
-from typing import List
+from pydantic import BaseModel, Field, ConfigDict, EmailStr
+from typing import List, Optional
 import uuid
 from datetime import datetime, timezone
 
@@ -65,6 +68,74 @@ async def get_status_checks():
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     
     return status_checks
+
+
+# ===== Contact form =====
+class ContactSubmission(BaseModel):
+    name: str = Field(min_length=1, max_length=200)
+    email: EmailStr
+    company: Optional[str] = Field(default=None, max_length=200)
+    reason: str = Field(min_length=1, max_length=100)
+    message: str = Field(min_length=1, max_length=5000)
+
+
+def _send_email(submission: ContactSubmission) -> bool:
+    """Send the contact submission to ADMIN_EMAIL via SMTP. Returns True if sent."""
+    smtp_user = os.environ.get("SMTP_USER", "")
+    smtp_pass = os.environ.get("SMTP_PASS", "")
+    admin_email = os.environ.get("ADMIN_EMAIL", "")
+
+    if not (smtp_user and smtp_pass and admin_email):
+        logger.warning("SMTP not configured — contact stored in DB only. Set SMTP_USER, SMTP_PASS, ADMIN_EMAIL in backend/.env to enable delivery.")
+        return False
+
+    smtp_host = os.environ.get("SMTP_HOST", "smtp.gmail.com")
+    smtp_port = int(os.environ.get("SMTP_PORT", "587"))
+    from_name = os.environ.get("FROM_NAME", "Track The Breach")
+
+    msg = EmailMessage()
+    msg["Subject"] = f"[Track The Breach] {submission.reason} — {submission.name}"
+    msg["From"] = f"{from_name} <{smtp_user}>"
+    msg["To"] = admin_email
+    msg["Reply-To"] = submission.email
+    msg.set_content(
+        f"New contact form submission\n\n"
+        f"Name:    {submission.name}\n"
+        f"Email:   {submission.email}\n"
+        f"Company: {submission.company or '-'}\n"
+        f"Reason:  {submission.reason}\n\n"
+        f"Message:\n{submission.message}\n"
+    )
+
+    context = ssl.create_default_context()
+    with smtplib.SMTP(smtp_host, smtp_port, timeout=15) as server:
+        server.starttls(context=context)
+        server.login(smtp_user, smtp_pass)
+        server.send_message(msg)
+    return True
+
+
+@api_router.post("/contact")
+async def submit_contact(submission: ContactSubmission):
+    # Persist to MongoDB
+    doc = submission.model_dump()
+    doc["id"] = str(uuid.uuid4())
+    doc["submitted_at"] = datetime.now(timezone.utc).isoformat()
+    doc["email_sent"] = False
+    try:
+        sent = _send_email(submission)
+        doc["email_sent"] = sent
+    except Exception as e:
+        logger.exception("SMTP delivery failed: %s", e)
+        doc["email_error"] = str(e)
+        sent = False
+
+    await db.contact_submissions.insert_one(doc)
+    return {
+        "ok": True,
+        "email_sent": sent,
+        "message": "Thanks — our team will reply within 4 business hours.",
+    }
 
 # Include the router in the main app
 app.include_router(api_router)
