@@ -6,6 +6,7 @@ import os
 import logging
 import smtplib
 import ssl
+import asyncio
 from email.message import EmailMessage
 from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict, EmailStr
@@ -130,7 +131,7 @@ async def submit_contact(submission: ContactSubmission):
     doc["submitted_at"] = datetime.now(timezone.utc).isoformat()
     doc["email_sent"] = False
     try:
-        sent = _send_email(submission)
+        sent = await asyncio.to_thread(_send_email, submission)
         doc["email_sent"] = sent
     except Exception as e:
         logger.exception("SMTP delivery failed: %s", e)

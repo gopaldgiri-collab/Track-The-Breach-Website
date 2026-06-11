@@ -19,7 +19,7 @@ def mongo_col():
     col = client[DB_NAME]["contact_submissions"]
     yield col
     # Cleanup TEST_ prefixed submissions and the SMTP verify submission
-    col.delete_many({"$or": [{"name": {"$regex": "^TEST_"}}, {"name": "SMTP Verify Test"}]})
+    col.delete_many({"$or": [{"name": {"$regex": "^TEST_"}}, {"name": "SMTP Verify Test"}, {"name": "portal fix test"}]})
     client.close()
 
 
@@ -61,10 +61,10 @@ def test_contact_valid_submission(mongo_col):
 # --- /api/contact iteration-5 live SMTP verify: send the exact body the review request specified ---
 def test_contact_smtp_verify_live_delivery(mongo_col):
     payload = {
-        "name": "SMTP Verify Test",
+        "name": "portal fix test",
         "email": "hello@trackthebreach.com",
         "reason": "Sales",
-        "message": "Live SMTP delivery test from iteration 5",
+        "message": "verifying portal fix did not break SMTP",
     }
     r = requests.post(f"{API}/contact", json=payload, timeout=30)
     assert r.status_code == 200, f"Unexpected status: {r.status_code} body={r.text}"
@@ -74,7 +74,7 @@ def test_contact_smtp_verify_live_delivery(mongo_col):
         f"Expected email_sent=True with live SMTP credentials, got {data}. "
         "Check backend logs for SMTP authentication errors."
     )
-    doc = mongo_col.find_one({"name": "SMTP Verify Test", "email": "hello@trackthebreach.com"})
+    doc = mongo_col.find_one({"name": "portal fix test", "email": "hello@trackthebreach.com"})
     assert doc is not None
     assert doc.get("email_sent") is True
 
