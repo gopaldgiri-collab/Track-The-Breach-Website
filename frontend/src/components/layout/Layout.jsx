@@ -10,10 +10,19 @@ export default function Layout({ children }) {
   }, [pathname]);
 
   return (
-    <div className="min-h-screen bg-[#050816] text-slate-100">
-      <Navbar />
-      <main className="pt-16 lg:pt-20">{children}</main>
-      <Footer />
+    <div className="min-h-screen bg-[#FBFCFF] text-slate-900 relative">
+      {/* Floating ambient gradient orbs */}
+      <div className="ambient-bg" aria-hidden="true">
+        <span className="orb-green" />
+        <span className="orb-orange" />
+        <span className="orb-cyan" />
+      </div>
+
+      <div className="relative z-10">
+        <Navbar />
+        <main className="pt-24 lg:pt-28">{children}</main>
+        <Footer />
+      </div>
     </div>
   );
 }

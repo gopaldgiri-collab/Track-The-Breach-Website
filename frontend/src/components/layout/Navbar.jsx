@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ChevronDown, Menu, X, Shield, ArrowUpRight } from "lucide-react";
-import { NAV, APP_URL } from "../../data/content";
+import { ChevronDown, Menu, X, ArrowUpRight, ShieldCheck } from "lucide-react";
+import { NAV, APP_URL, LOGO_URL, BRAND_MOTTO } from "../../data/content";
 
 const MENUS = [
   { key: "product", label: "Product" },
@@ -32,21 +32,24 @@ export default function Navbar() {
     <header
       data-testid="site-navbar"
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#050816]/85 backdrop-blur-xl border-b border-white/5" : "bg-transparent"
+        scrolled ? "bg-white/85 backdrop-blur-xl border-b border-slate-200/70 shadow-sm" : "bg-white/40 backdrop-blur-md"
       }`}
     >
+      {/* Motto strip */}
+      <div className="hidden md:flex items-center justify-center gap-2 py-1.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 text-white text-[11px] font-mono uppercase tracking-[0.25em]">
+        <ShieldCheck className="w-3 h-3" />
+        <span data-testid="brand-motto">{BRAND_MOTTO}</span>
+      </div>
+
       <nav className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link to="/" data-testid="navbar-logo" className="flex items-center gap-2.5 group">
             <div className="relative">
-              <div className="absolute inset-0 bg-indigo-500 blur-lg opacity-50 group-hover:opacity-80 transition" />
-              <div className="relative w-9 h-9 rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center">
-                <Shield className="w-5 h-5 text-white" strokeWidth={2.5} />
-              </div>
+              <img src={LOGO_URL} alt="Track The Breach" className="w-10 h-10 object-contain" />
             </div>
             <div className="flex flex-col leading-tight">
-              <span className="font-display font-bold text-white tracking-tight text-[15px]">Track The Breach</span>
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-indigo-300/80">Identity Intelligence</span>
+              <span className="font-display font-bold text-slate-900 tracking-tight text-[15px]">Track The Breach</span>
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-blue-600/80">Identity Intelligence</span>
             </div>
           </Link>
 
@@ -60,26 +63,27 @@ export default function Navbar() {
               >
                 <button
                   data-testid={`nav-${m.key}-trigger`}
-                  className="flex items-center gap-1 px-4 py-2 text-sm text-slate-300 hover:text-white transition rounded-lg"
+                  onClick={() => setOpenMenu(openMenu === m.key ? null : m.key)}
+                  className="flex items-center gap-1 px-4 py-2 text-sm text-slate-700 hover:text-blue-600 transition rounded-lg"
                 >
                   {m.label}
                   <ChevronDown className={`w-4 h-4 transition-transform ${openMenu === m.key ? "rotate-180" : ""}`} />
                 </button>
                 {openMenu === m.key && (
                   <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3">
-                    <div className="glass-strong rounded-2xl p-3 shadow-2xl shadow-black/60 w-[520px] grid grid-cols-2 gap-1">
+                    <div className="glass-strong rounded-2xl p-3 shadow-2xl shadow-blue-900/10 w-[520px] grid grid-cols-2 gap-1">
                       {NAV[m.key].map((item) => (
                         <Link
                           key={item.to + item.label}
                           to={item.to}
                           data-testid={`nav-${m.key}-${item.label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
-                          className="group flex flex-col gap-0.5 px-3 py-2.5 rounded-xl hover:bg-white/5 transition"
+                          className="group flex flex-col gap-0.5 px-3 py-2.5 rounded-xl hover:bg-blue-50 transition"
                         >
-                          <span className="text-sm font-medium text-white group-hover:text-cyan-300 transition flex items-center gap-1">
+                          <span className="text-sm font-medium text-slate-900 group-hover:text-blue-600 transition flex items-center gap-1">
                             {item.label}
                             <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition" />
                           </span>
-                          {item.desc && <span className="text-xs text-slate-400">{item.desc}</span>}
+                          {item.desc && <span className="text-xs text-slate-500">{item.desc}</span>}
                         </Link>
                       ))}
                     </div>
@@ -91,7 +95,7 @@ export default function Navbar() {
               <Link
                 to="/pricing"
                 data-testid="nav-pricing"
-                className="px-4 py-2 text-sm text-slate-300 hover:text-white transition rounded-lg"
+                className="px-4 py-2 text-sm text-slate-700 hover:text-blue-600 transition rounded-lg"
               >
                 Pricing
               </Link>
@@ -100,7 +104,7 @@ export default function Navbar() {
               <Link
                 to="/contact"
                 data-testid="nav-contact"
-                className="px-4 py-2 text-sm text-slate-300 hover:text-white transition rounded-lg"
+                className="px-4 py-2 text-sm text-slate-700 hover:text-blue-600 transition rounded-lg"
               >
                 Contact
               </Link>
@@ -111,14 +115,14 @@ export default function Navbar() {
             <a
               href={`${APP_URL}/login`}
               data-testid="navbar-login"
-              className="px-4 py-2 text-sm text-slate-300 hover:text-white transition"
+              className="px-4 py-2 text-sm text-slate-700 hover:text-blue-600 transition"
             >
               Log in
             </a>
             <a
               href={`${APP_URL}/signup`}
               data-testid="navbar-signup"
-              className="group relative inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold transition shadow-[0_0_30px_rgba(79,70,229,0.35)]"
+              className="group relative inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-sm font-semibold transition shadow-[0_8px_24px_-8px_rgba(37,99,235,0.55)]"
             >
               Sign Up Free
               <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform" />
@@ -128,7 +132,7 @@ export default function Navbar() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             data-testid="mobile-menu-toggle"
-            className="lg:hidden p-2 text-white"
+            className="lg:hidden p-2 text-slate-900"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -136,10 +140,10 @@ export default function Navbar() {
         </div>
 
         {mobileOpen && (
-          <div data-testid="mobile-menu" className="lg:hidden pb-6 pt-2 max-h-[80vh] overflow-y-auto">
+          <div data-testid="mobile-menu" className="lg:hidden pb-6 pt-2 max-h-[80vh] overflow-y-auto bg-white">
             {MENUS.map((m) => (
-              <div key={m.key} className="border-t border-white/5 py-3">
-                <div className="text-xs font-mono uppercase tracking-[0.18em] text-indigo-300/80 px-1 mb-2">
+              <div key={m.key} className="border-t border-slate-200 py-3">
+                <div className="text-xs font-mono uppercase tracking-[0.18em] text-blue-600/80 px-1 mb-2">
                   {m.label}
                 </div>
                 <div className="grid grid-cols-1 gap-0.5">
@@ -148,7 +152,7 @@ export default function Navbar() {
                       key={item.to + item.label}
                       to={item.to}
                       data-testid={`mobile-nav-${item.label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
-                      className="px-1 py-2 text-sm text-slate-200 hover:text-cyan-300 transition"
+                      className="px-1 py-2 text-sm text-slate-700 hover:text-blue-600 transition"
                     >
                       {item.label}
                     </Link>
@@ -156,14 +160,14 @@ export default function Navbar() {
                 </div>
               </div>
             ))}
-            <div className="border-t border-white/5 pt-4 flex flex-col gap-2">
-              <Link to="/pricing" className="px-1 py-2 text-sm text-slate-200" data-testid="mobile-pricing">Pricing</Link>
-              <Link to="/contact" className="px-1 py-2 text-sm text-slate-200" data-testid="mobile-contact">Contact</Link>
-              <a href={`${APP_URL}/login`} data-testid="mobile-login" className="px-1 py-2 text-sm text-slate-200">Log in</a>
+            <div className="border-t border-slate-200 pt-4 flex flex-col gap-2">
+              <Link to="/pricing" className="px-1 py-2 text-sm text-slate-700" data-testid="mobile-pricing">Pricing</Link>
+              <Link to="/contact" className="px-1 py-2 text-sm text-slate-700" data-testid="mobile-contact">Contact</Link>
+              <a href={`${APP_URL}/login`} data-testid="mobile-login" className="px-1 py-2 text-sm text-slate-700">Log in</a>
               <a
                 href={`${APP_URL}/signup`}
                 data-testid="mobile-signup"
-                className="mt-1 text-center px-4 py-3 rounded-lg bg-indigo-600 text-white text-sm font-semibold"
+                className="mt-1 text-center px-4 py-3 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 text-white text-sm font-semibold"
               >
                 Sign Up Free
               </a>
