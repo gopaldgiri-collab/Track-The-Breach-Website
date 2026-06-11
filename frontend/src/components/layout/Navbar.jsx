@@ -14,6 +14,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [openMenu, setOpenMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileSection, setMobileSection] = useState(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -25,14 +26,25 @@ export default function Navbar() {
 
   useEffect(() => {
     setMobileOpen(false);
+    setMobileSection(null);
     setOpenMenu(null);
   }, [location.pathname]);
+
+  // Prevent body scroll when mobile drawer open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
 
   return (
     <header
       data-testid="site-navbar"
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/85 backdrop-blur-xl border-b border-slate-200/70 shadow-sm" : "bg-white/40 backdrop-blur-md"
+        scrolled ? "bg-white/90 backdrop-blur-xl border-b border-slate-200/70 shadow-sm" : "bg-white/50 backdrop-blur-md"
       }`}
     >
       {/* Motto strip */}
@@ -63,9 +75,10 @@ export default function Navbar() {
             <span className="font-display font-bold text-slate-900 tracking-tight text-[14px] sm:text-[15px] lg:text-[17px] whitespace-nowrap">Track The Breach</span>
           </Link>
 
-          {/* Spacer on mobile to balance the hamburger so brand stays visually centered */}
+          {/* Mobile spacer to balance the hamburger so brand stays centered */}
           <div className="lg:hidden w-10 z-20" aria-hidden="true" />
 
+          {/* Desktop menu */}
           <ul className="hidden lg:flex items-center gap-1">
             {MENUS.map((m) => (
               <li
@@ -77,7 +90,7 @@ export default function Navbar() {
                 <button
                   data-testid={`nav-${m.key}-trigger`}
                   onClick={() => setOpenMenu(openMenu === m.key ? null : m.key)}
-                  className="flex items-center gap-1 px-4 py-2 text-sm text-slate-700 hover:text-blue-600 transition rounded-lg"
+                  className="flex items-center gap-1 px-4 py-2 text-[15px] font-semibold text-slate-800 hover:text-blue-600 transition rounded-lg"
                 >
                   {m.label}
                   <ChevronDown className={`w-4 h-4 transition-transform ${openMenu === m.key ? "rotate-180" : ""}`} />
@@ -92,7 +105,7 @@ export default function Navbar() {
                           data-testid={`nav-${m.key}-${item.label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
                           className="group flex flex-col gap-0.5 px-3 py-2.5 rounded-xl hover:bg-blue-50 transition"
                         >
-                          <span className="text-sm font-medium text-slate-900 group-hover:text-blue-600 transition flex items-center gap-1">
+                          <span className="text-sm font-semibold text-slate-900 group-hover:text-blue-600 transition flex items-center gap-1">
                             {item.label}
                             <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition" />
                           </span>
@@ -108,7 +121,7 @@ export default function Navbar() {
               <Link
                 to="/pricing"
                 data-testid="nav-pricing"
-                className="px-4 py-2 text-sm text-slate-700 hover:text-blue-600 transition rounded-lg"
+                className="px-4 py-2 text-[15px] font-semibold text-slate-800 hover:text-blue-600 transition rounded-lg"
               >
                 Pricing
               </Link>
@@ -117,7 +130,7 @@ export default function Navbar() {
               <Link
                 to="/contact"
                 data-testid="nav-contact"
-                className="px-4 py-2 text-sm text-slate-700 hover:text-blue-600 transition rounded-lg"
+                className="px-4 py-2 text-[15px] font-semibold text-slate-800 hover:text-blue-600 transition rounded-lg"
               >
                 Contact
               </Link>
@@ -128,7 +141,7 @@ export default function Navbar() {
             <a
               href={`${APP_URL}/login`}
               data-testid="navbar-login"
-              className="px-4 py-2 text-sm text-slate-700 hover:text-blue-600 transition"
+              className="px-4 py-2 text-[15px] font-semibold text-slate-800 hover:text-blue-600 transition"
             >
               Log in
             </a>
@@ -142,43 +155,92 @@ export default function Navbar() {
             </a>
           </div>
         </div>
+      </nav>
 
-        {mobileOpen && (
-          <div data-testid="mobile-menu" className="lg:hidden pb-6 pt-2 max-h-[80vh] overflow-y-auto bg-white">
-            {MENUS.map((m) => (
-              <div key={m.key} className="border-t border-slate-200 py-3">
-                <div className="text-xs font-mono uppercase tracking-[0.18em] text-blue-600/80 px-1 mb-2">
-                  {m.label}
+      {/* Mobile drawer overlay */}
+      {mobileOpen && (
+        <div
+          className="lg:hidden fixed inset-0 top-16 bg-slate-900/30 backdrop-blur-sm z-40 animate-fade-in"
+          onClick={() => setMobileOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Mobile drawer */}
+      <div
+        data-testid="mobile-menu"
+        className={`lg:hidden fixed left-3 right-3 top-[68px] z-50 transform transition-all duration-300 ease-out ${
+          mobileOpen ? "translate-y-0 opacity-100 pointer-events-auto" : "-translate-y-4 opacity-0 pointer-events-none"
+        }`}
+      >
+        <div className="rounded-3xl glass-strong shadow-2xl shadow-blue-900/15 overflow-hidden max-h-[80vh] overflow-y-auto">
+          <div className="p-3">
+            {MENUS.map((m, idx) => {
+              const isOpen = mobileSection === m.key;
+              return (
+                <div
+                  key={m.key}
+                  className="rounded-2xl overflow-hidden mb-2 last:mb-0 border border-slate-200/70 bg-white/60"
+                  style={{ animationDelay: `${idx * 60}ms` }}
+                >
+                  <button
+                    onClick={() => setMobileSection(isOpen ? null : m.key)}
+                    data-testid={`mobile-section-${m.key}`}
+                    className="w-full flex items-center justify-between px-4 py-3.5 text-left hover:bg-blue-50/60 transition"
+                    aria-expanded={isOpen}
+                  >
+                    <span className="text-[15px] font-semibold text-slate-900">{m.label}</span>
+                    <ChevronDown className={`w-4 h-4 text-slate-500 transition-transform duration-300 ${isOpen ? "rotate-180 text-blue-600" : ""}`} />
+                  </button>
+                  <div
+                    className={`grid transition-all duration-300 ease-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="px-2 pb-3 grid grid-cols-1 gap-1">
+                        {NAV[m.key].map((item) => (
+                          <Link
+                            key={item.to + item.label}
+                            to={item.to}
+                            data-testid={`mobile-nav-${item.label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+                            className="block px-3 py-2.5 rounded-xl text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition"
+                          >
+                            <span className="font-medium">{item.label}</span>
+                            {item.desc && <span className="block text-[11px] text-slate-500 mt-0.5">{item.desc}</span>}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="grid grid-cols-1 gap-0.5">
-                  {NAV[m.key].slice(0, 6).map((item) => (
-                    <Link
-                      key={item.to + item.label}
-                      to={item.to}
-                      data-testid={`mobile-nav-${item.label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
-                      className="px-1 py-2 text-sm text-slate-700 hover:text-blue-600 transition"
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))}
-            <div className="border-t border-slate-200 pt-4 flex flex-col gap-2">
-              <Link to="/pricing" className="px-1 py-2 text-sm text-slate-700" data-testid="mobile-pricing">Pricing</Link>
-              <Link to="/contact" className="px-1 py-2 text-sm text-slate-700" data-testid="mobile-contact">Contact</Link>
-              <a href={`${APP_URL}/login`} data-testid="mobile-login" className="px-1 py-2 text-sm text-slate-700">Log in</a>
+              );
+            })}
+
+            {/* Direct links */}
+            <div className="grid grid-cols-2 gap-2 mt-2">
+              <Link to="/pricing" data-testid="mobile-pricing" className="rounded-2xl border border-slate-200/70 bg-white/60 px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-blue-50 hover:text-blue-600 transition text-center">
+                Pricing
+              </Link>
+              <Link to="/contact" data-testid="mobile-contact" className="rounded-2xl border border-slate-200/70 bg-white/60 px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-blue-50 hover:text-blue-600 transition text-center">
+                Contact
+              </Link>
+            </div>
+
+            {/* CTAs */}
+            <div className="mt-3 flex flex-col gap-2">
+              <a href={`${APP_URL}/login`} data-testid="mobile-login" className="rounded-2xl border border-slate-200/70 bg-white/60 px-4 py-3 text-sm font-semibold text-slate-800 hover:text-blue-600 transition text-center">
+                Log in
+              </a>
               <a
                 href={`${APP_URL}/signup`}
                 data-testid="mobile-signup"
-                className="mt-1 text-center px-4 py-3 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 text-white text-sm font-semibold"
+                className="rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-sm font-semibold px-4 py-3 text-center shadow-[0_12px_30px_-12px_rgba(37,99,235,0.55)]"
               >
                 Sign Up Free
               </a>
             </div>
           </div>
-        )}
-      </nav>
+        </div>
+      </div>
     </header>
   );
 }

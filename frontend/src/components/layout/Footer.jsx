@@ -95,8 +95,21 @@ export default function Footer() {
 
         {/* Bottom row */}
         <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <div className="text-xs text-slate-500">
-            © {new Date().getFullYear()} Track The Breach. All rights reserved.
+          <div className="flex flex-col sm:flex-row sm:items-center gap-x-4 gap-y-1 text-xs text-slate-500">
+            <span>© {new Date().getFullYear()} Track The Breach. All rights reserved.</span>
+            <span className="hidden sm:inline text-slate-300">·</span>
+            <span>
+              Designed & developed by{" "}
+              <a
+                href="https://peopleschoice.tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="footer-pct-link"
+                className="font-semibold text-slate-700 hover:text-blue-600 transition underline-offset-4 hover:underline"
+              >
+                People&apos;s Choice Tech
+              </a>
+            </span>
           </div>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-slate-500">
             <Link to="/trust-center" data-testid="footer-trust" className="hover:text-blue-600">Trust Center</Link>

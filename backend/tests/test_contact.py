@@ -18,8 +18,8 @@ def mongo_col():
     client = MongoClient(MONGO_URL)
     col = client[DB_NAME]["contact_submissions"]
     yield col
-    # Cleanup TEST_ prefixed submissions
-    col.delete_many({"name": {"$regex": "^TEST_"}})
+    # Cleanup TEST_ prefixed submissions and the SMTP verify submission
+    col.delete_many({"$or": [{"name": {"$regex": "^TEST_"}}, {"name": "SMTP Verify Test"}]})
     client.close()
 
 
@@ -44,7 +44,8 @@ def test_contact_valid_submission(mongo_col):
     assert r.status_code == 200, f"Unexpected status: {r.status_code} body={r.text}"
     data = r.json()
     assert data.get("ok") is True
-    assert data.get("email_sent") is False  # SMTP blank by design
+    # Iteration 5: SMTP creds now live. Accept either True (delivery worked) or False (transient SMTP failure).
+    assert data.get("email_sent") in (True, False)
     assert "Thanks" in data.get("message", "")
     # Persistence check
     doc = mongo_col.find_one({"email": payload["email"]})
@@ -52,9 +53,30 @@ def test_contact_valid_submission(mongo_col):
     assert doc["name"] == payload["name"]
     assert doc["reason"] == payload["reason"]
     assert doc["message"] == payload["message"]
-    assert doc.get("email_sent") is False
+    assert doc.get("email_sent") in (True, False)
     assert "submitted_at" in doc
     assert "id" in doc
+
+
+# --- /api/contact iteration-5 live SMTP verify: send the exact body the review request specified ---
+def test_contact_smtp_verify_live_delivery(mongo_col):
+    payload = {
+        "name": "SMTP Verify Test",
+        "email": "hello@trackthebreach.com",
+        "reason": "Sales",
+        "message": "Live SMTP delivery test from iteration 5",
+    }
+    r = requests.post(f"{API}/contact", json=payload, timeout=30)
+    assert r.status_code == 200, f"Unexpected status: {r.status_code} body={r.text}"
+    data = r.json()
+    assert data.get("ok") is True
+    assert data.get("email_sent") is True, (
+        f"Expected email_sent=True with live SMTP credentials, got {data}. "
+        "Check backend logs for SMTP authentication errors."
+    )
+    doc = mongo_col.find_one({"name": "SMTP Verify Test", "email": "hello@trackthebreach.com"})
+    assert doc is not None
+    assert doc.get("email_sent") is True
 
 
 # --- /api/contact minimal payload (no company) ---

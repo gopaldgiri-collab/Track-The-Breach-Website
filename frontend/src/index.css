@@ -274,6 +274,12 @@ h1, h2, h3, h4 {
 
 .animate-float { animation: float 4s ease-in-out infinite; }
 
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.animate-fade-in { animation: fade-in 200ms ease-out; }
+
 .shimmer {
     background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.08), transparent);
     background-size: 200% 100%;

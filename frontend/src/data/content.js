@@ -133,7 +133,7 @@ export const FAQ_ITEMS = [
   { q: "Can you detect deepfakes?", a: "Yes. Our video intelligence engine runs perceptual hashing, biometric matching, and generative-AI detectors to flag deepfakes and unauthorized video re-uploads in near real time." },
   { q: "Does it work for non-US identities?", a: "Absolutely. We support 50+ countries including India (Aadhaar, PAN), the UK, EU member states, Singapore, UAE, Brazil, Australia, and more." },
   { q: "Do you integrate with SIEM/SOAR tools?", a: "Yes — we ship native integrations for Splunk, Sentinel, Chronicle, Elastic, Sumo Logic, and CrowdStrike Falcon. A REST API and webhooks are available on Business and above." },
-  { q: "How is pricing structured?", a: "Plans are outcome-based. You pay for the protection level (individuals → enterprise) and credits are bundled with each plan. Credits are exposed as a secondary metric on detail dashboards." },
+  { q: "How is pricing structured?", a: "Plans are one-time credit packs — pay once, use credits whenever you need a scan, and they never expire. You're not locked into a monthly subscription. Each plan also unlocks the corresponding protection tier (advanced monitoring, takedowns, concierge support) for as long as you keep using the platform." },
   { q: "Is the account creation free?", a: "Yes — creating your Track The Breach account is completely free. No credit card required at signup. You can log into the dashboard immediately. To run scans you choose a plan that fits your needs." },
   { q: "Can I monitor my whole family?", a: "Yes — the Family plan covers up to 6 members with shared dashboards, age-aware alerts, and dedicated kid-safety controls." },
   { q: "Do you support enterprise SSO?", a: "Yes — SAML 2.0, OIDC, SCIM provisioning, role-based access control, and conditional access policies are included on Enterprise and Full Secure plans." },
@@ -153,7 +153,8 @@ export const PRICING_PLANS = [
     audience: "Individuals checking email breach exposure",
     priceUSD: "$4.99",
     priceINR: "₹499",
-    period: "per month",
+    period: "one-time",
+    creditNote: "Credits never expire",
     credits: "20 Credits",
     cta: "Choose Starter",
     features: [
@@ -174,7 +175,8 @@ export const PRICING_PLANS = [
     audience: "Professionals & Remote Workers",
     priceUSD: "$19.99",
     priceINR: "₹1,999",
-    period: "per month",
+    period: "one-time",
+    creditNote: "Credits never expire",
     credits: "100 Credits",
     cta: "Choose Professional",
     features: [
@@ -197,7 +199,8 @@ export const PRICING_PLANS = [
     audience: "Creators, Influencers & Researchers",
     priceUSD: "$49.99",
     priceINR: "₹4,999",
-    period: "per month",
+    period: "one-time",
+    creditNote: "Credits never expire",
     credits: "300 Credits",
     cta: "Choose Business",
     features: [
@@ -219,7 +222,8 @@ export const PRICING_PLANS = [
     audience: "Executives & Organizations",
     priceUSD: "$99.99",
     priceINR: "₹9,999",
-    period: "per month",
+    period: "one-time",
+    creditNote: "Credits never expire",
     credits: "1,000 Credits",
     cta: "Choose Enterprise",
     features: [
@@ -241,7 +245,8 @@ export const PRICING_PLANS = [
     audience: "Families, High-Net-Worth Individuals, Security Teams & Enterprises",
     priceUSD: "$249.99",
     priceINR: "₹24,999",
-    period: "per month",
+    period: "one-time",
+    creditNote: "Credits never expire",
     credits: "3,000 Credits",
     cta: "Choose Full Secure",
     features: [

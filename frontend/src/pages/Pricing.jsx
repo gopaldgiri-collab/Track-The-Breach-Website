@@ -21,8 +21,8 @@ export default function Pricing() {
     <div data-testid="pricing-page">
       <PageHero
         eyebrow="PRICING"
-        title="Outcomes, not credits."
-        subtitle="Create your account anytime — no credit card required. Pick a plan only when you're ready to run scans. Every plan ships with our AI Risk Score, professional reports, and continuous monitoring."
+        title="Pricing built to defend you — from today's breaches and tomorrow's threats."
+        subtitle="Pay once. Use credits whenever you need a scan. They never expire — keep them for years if you want. Account creation is free, no credit card required at sign-up."
         icon="ShieldCheck"
       >
         <div className="inline-flex items-center gap-1 p-1 rounded-xl bg-white border border-slate-200 shadow-sm" data-testid="currency-toggle">
@@ -81,12 +81,16 @@ export default function Pricing() {
                     <span className="font-display text-4xl font-extrabold text-slate-900 tracking-tighter">
                       {currency === "USD" ? p.priceUSD : p.priceINR}
                     </span>
-                    <span className="text-xs text-slate-500">/ {p.period}</span>
+                    <span className="text-xs text-slate-500">{p.period}</span>
                   </div>
 
                   <div className="mt-2 inline-flex items-center gap-1.5 text-xs font-mono text-slate-700 bg-slate-50 border border-slate-200 px-2 py-1 rounded-md w-fit">
                     <CreditCard className="w-3 h-3" />
                     {p.credits}
+                  </div>
+                  <div className="mt-1.5 inline-flex items-center gap-1 text-[10px] font-medium text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md w-fit">
+                    <Check className="w-2.5 h-2.5" />
+                    {p.creditNote}
                   </div>
 
                   <a
@@ -169,12 +173,16 @@ export default function Pricing() {
                         <span className="font-display text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tighter">
                           {currency === "USD" ? p.priceUSD : p.priceINR}
                         </span>
-                        <span className="text-xs text-slate-500">/ {p.period}</span>
+                        <span className="text-xs text-slate-500">{p.period}</span>
                       </div>
 
                       <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-mono text-slate-700 bg-slate-50 border border-slate-200 px-2 py-1 rounded-md w-fit">
                         <CreditCard className="w-3 h-3" />
                         {p.credits}
+                      </div>
+                      <div className="mt-1.5 inline-flex items-center gap-1 text-[10px] font-medium text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md w-fit">
+                        <Check className="w-2.5 h-2.5" />
+                        {p.creditNote}
                       </div>
 
                       <a
@@ -253,7 +261,7 @@ export default function Pricing() {
               </h2>
             </div>
             <p className="lg:col-span-5 text-base text-slate-600">
-              Each plan ships with a monthly credit allowance. Credits are spent only when you run a scan — never on monitoring, alerts, or reports.
+              Each plan ships with a one-time credit pack. Credits never expire and are spent only when you run a scan — never on monitoring, alerts, or reports.
             </p>
           </div>
 
