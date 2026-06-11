@@ -1,54 +1,110 @@
-import { useEffect } from "react";
+import { Toaster } from "sonner";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-import { HOME } from "@/constants/testIds";
+import Layout from "@/components/layout/Layout";
+import Home from "@/pages/Home";
+import Pricing from "@/pages/Pricing";
+import Contact from "@/pages/Contact";
+import About from "@/pages/About";
+import Careers from "@/pages/Careers";
+import Partners from "@/pages/Partners";
+import Blog from "@/pages/Blog";
+import TrustCenter from "@/pages/TrustCenter";
+import FAQPage from "@/pages/FAQPage";
+import CategoryPage from "@/pages/CategoryPage";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          data-testid={HOME.emergentLink}
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+// Page routes mapped to slugs in /app/frontend/src/data/content.js -> PAGES
+const CATEGORY_ROUTES = [
+  // Product
+  "platform",
+  "email-monitoring",
+  "phone-monitoring",
+  "social-monitoring",
+  "government-id-monitoring",
+  "photo-monitoring",
+  "video-monitoring",
+  "dark-web-monitoring",
+  "digital-footprint-monitoring",
+  "ai-risk-intelligence",
+  "continuous-monitoring",
+  // Solutions
+  "individuals",
+  "families",
+  "professionals",
+  "influencers",
+  "executives",
+  "business",
+  "enterprise",
+  "researchers",
+  "security-teams",
+  // Investor
+  "why-track-the-breach",
+  "our-vision",
+  "our-mission",
+  "market-opportunity",
+  "technology",
+  "security-architecture",
+  "company-overview",
+  "cybersecurity-future",
+  // Enterprise
+  "executive-protection",
+  "employee-monitoring",
+  "brand-protection",
+  "enterprise-monitoring",
+  "incident-intelligence",
+  "identity-protection-for-business",
+  // SEO
+  "check-email-breach",
+  "email-leak-checker",
+  "phone-leak-checker",
+  "digital-identity-protection",
+  "identity-theft-protection",
+  "online-privacy-protection",
+  "personal-cybersecurity",
+  "deepfake-detection",
+  "fake-profile-detection",
+  "online-impersonation-detection",
+  "data-breach-monitoring",
+  "government-id-exposure",
+  "photo-misuse-detection",
+  "video-misuse-detection",
+  "account-takeover-prevention",
+  "whatsapp-scam-protection",
+  "sim-swap-protection",
+  "cyber-safety-families",
+  "executive-digital-protection",
+];
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/partners" element={<Partners />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<Blog />} />
+            <Route path="/help" element={<FAQPage />} />
+            <Route path="/faq" element={<FAQPage />} />
+            <Route path="/learn" element={<Blog />} />
+            <Route path="/breach-library" element={<Blog />} />
+            <Route path="/press" element={<About />} />
+            <Route path="/trust-center" element={<TrustCenter />} />
+
+            {CATEGORY_ROUTES.map((slug) => (
+              <Route key={slug} path={`/${slug}`} element={<CategoryPage slug={slug} />} />
+            ))}
+
+            <Route path="*" element={<CategoryPage slug="__missing__" />} />
+          </Routes>
+        </Layout>
       </BrowserRouter>
+      <Toaster theme="dark" position="bottom-right" />
     </div>
   );
 }
