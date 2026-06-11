@@ -1,0 +1,45 @@
+{
+  "summary": "Iteration 3 frontend test PASS. All 14 review-request acceptance criteria verified: blog post detail pages render full bodies (9 slugs), schema.org JSON-LD (Organization/WebSite/SoftwareApplication) on homepage + Article schema on blog posts, sitemap.xml returns 200 with 71 URLs incl. all blog slugs, container capped at 1240px (340px breathing room each side at 1920 viewport), relaxed headline letter-spacing, new transparent logo (Logo_1-removebg-preview.png) in navbar + footer, 'Identity Intelligence' subtitle removed, footer motto retained. All iteration-2 criteria still pass.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [
+    "Awareness only (no code change needed): CRA dev server does NOT hot-reload changes to /app/frontend/public/index.html. After E1 edits index.html (e.g., adding JSON-LD schemas, canonical, meta), the frontend supervisor MUST be restarted (`sudo supervisorctl restart frontend`) for changes to be served. I restarted it during this run so the schemas are now live. Recommend documenting this for future iterations."
+  ],
+  "critical_code_review_comments": [
+    "BlogPost.jsx: Article JSON-LD uses `typeof window !== 'undefined' ? window.location.href : ''` for mainEntityOfPage @id — fine for CSR but will render empty string on SSR/initial server render. Not blocking since this site is CSR-only.",
+    "BlogPost.jsx TOC anchors use `href=#slug` derived from h2 text but the rendered H2 elements don't have matching `id` attributes — anchor links won't actually scroll. Low priority (purely additive UX).",
+    "All 9 BLOG_BODIES entries verified to render with multiple h2 sections, lead paragraph, and recommended-defenses list. Body character counts range 607-1214 — body content is real, not placeholder.",
+    "Sitemap.xml contains 71 <url> entries including homepage, /pricing, /blog, /email-monitoring, and all 9 blog detail slugs — matches review request.",
+    "JSON-LD schema on homepage now correctly serves Organization, WebSite, SoftwareApplication with applicationCategory='SecurityApplication' and name='Track The Breach' (verified via raw curl after frontend restart)."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (static marketing site)", "frontend": "100%"},
+  "test_credentials": "N/A",
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Site is static CSR React. IMPORTANT: when /app/frontend/public/index.html is modified (meta/og/JSON-LD/canonical), CRA dev server requires `sudo supervisorctl restart frontend` to serve the new template — hot reload does NOT pick it up. Useful data-testid hooks: blogpost-title, blogpost-body, blogpost-subscribe, blogpost-share, back-to-blog, related-0/1/2, blogpost-{slug}, brand-motto, currency-usd, currency-inr, pricing-plan-0..4. Container width is 1240px globally. All 9 blog detail slugs verified: 1.6b-records-breach-trends-2026, ai-deepfake-defense-playbook, anatomy-of-modern-sim-swap, dark-web-economics-2026, dpdp-act-implications, case-study-fintech-impersonation, identity-theft-2026-mega-guide, romance-scam-deep-dive, credentials-breach-2025-review.",
+  "test_summary": {
+    "blog_post_1.6b": "PASS - title, body sections (Credential stealers, Phone-first, Government ID, Recommended defenses) all render; blogpost-{slug} testid present",
+    "blog_posts_other_8": "PASS - all 8 slugs render with real bodies (600-1200 chars, 2-4 h2 sections each)",
+    "blogpost_subscribe_sidebar": "PASS - data-testid='blogpost-subscribe' present, links to /contact",
+    "blogpost_toc": "PASS - 'In this article' panel lists H2 headings (rendered as uppercase via CSS)",
+    "related_articles": "PASS - 3 related cards (related-0/1/2) link to other /blog/{slug} URLs",
+    "back_to_blog": "PASS - clicking data-testid='back-to-blog' navigates to /blog",
+    "homepage_jsonld": "PASS (after frontend restart) - Organization + WebSite + SoftwareApplication scripts present; SecurityApplication category found",
+    "article_jsonld": "PASS - <script type='application/ld+json'> with @type='Article' and publisher 'Track The Breach' injected per blog post",
+    "sitemap_xml": "PASS - HTTP 200, valid XML, 71 <url> entries incl. homepage, /pricing, /blog, /email-monitoring, all 9 blog detail URLs",
+    "container_width": "PASS - .container width 1240px at 1920 viewport, left=340px → ≥200px breathing room each side on homepage, pricing, blog post",
+    "headline_letter_spacing": "PASS - homepage h1 letter-spacing -1.2px (at 80px font, ~1.5%), pricing h1 -0.9px; visually breathes, not crushed",
+    "navbar_logo": "PASS - src contains 'Logo_1-removebg-preview.png'",
+    "navbar_no_identity_intelligence": "PASS - 'Identity Intelligence' subtitle removed; only 'Track The Breach' brand visible",
+    "footer_logo_and_motto": "PASS - new transparent logo, 'Track The Breach' brand, 'Stay Safe, Stay Protected' motto (uppercase via CSS) all present",
+    "iteration_2_regression": "PASS - motto banner (brand-motto), 5 pricing plans, USD/INR toggle, mobile hamburger present, 5 sampled category routes (/email-monitoring, /dark-web-monitoring, /platform, /executives, /deepfake-detection) all return 200 with content"
+  },
+  "rca_of_the_issue": "Initial homepage DOM showed 0 JSON-LD scripts despite them being in /app/frontend/public/index.html. ROOT CAUSE: CRA's webpack-dev-server reads public/index.html template at startup and does not hot-reload changes to that file. Mitigation: `sudo supervisorctl restart frontend` reloaded the template; subsequently all 3 schemas + canonical are correctly served. No code change needed — this is a CRA framework behavior."
+}

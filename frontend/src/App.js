@@ -11,6 +11,7 @@ import Partners from "@/pages/Partners";
 import Blog from "@/pages/Blog";
 import TrustCenter from "@/pages/TrustCenter";
 import FAQPage from "@/pages/FAQPage";
+import BlogPost from "@/pages/BlogPost";
 import CategoryPage from "@/pages/CategoryPage";
 
 // Page routes mapped to slugs in /app/frontend/src/data/content.js -> PAGES
@@ -88,7 +89,7 @@ function App() {
             <Route path="/careers" element={<Careers />} />
             <Route path="/partners" element={<Partners />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/help" element={<FAQPage />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/learn" element={<Blog />} />

@@ -18,6 +18,32 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Site-wide container constraint — gives breathing room on wide screens */
+.container {
+    max-width: 1240px !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+@media (min-width: 768px) {
+    .container { padding-left: 2rem; padding-right: 2rem; }
+}
+@media (min-width: 1024px) {
+    .container { padding-left: 3rem; padding-right: 3rem; }
+}
+
+/* Headlines: relax the over-tight letter-spacing */
+h1, h2, h3, h4 {
+    letter-spacing: -0.01em !important;
+}
+.tracking-tighter {
+    letter-spacing: -0.015em !important;
+}
+.tracking-tight {
+    letter-spacing: -0.005em !important;
+}
+
 * {
     -webkit-tap-highlight-color: transparent;
 }

@@ -43,14 +43,11 @@ export default function Navbar() {
 
       <nav className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link to="/" data-testid="navbar-logo" className="flex items-center gap-2.5 group">
+          <Link to="/" data-testid="navbar-logo" className="flex items-center gap-3 group">
             <div className="relative">
-              <img src={LOGO_URL} alt="Track The Breach" className="w-10 h-10 object-contain" />
+              <img src={LOGO_URL} alt="Track The Breach" className="w-11 h-11 object-contain" />
             </div>
-            <div className="flex flex-col leading-tight">
-              <span className="font-display font-bold text-slate-900 tracking-tight text-[15px]">Track The Breach</span>
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-blue-600/80">Identity Intelligence</span>
-            </div>
+            <span className="font-display font-bold text-slate-900 tracking-tight text-[17px] hidden sm:inline">Track The Breach</span>
           </Link>
 
           <ul className="hidden lg:flex items-center gap-1">

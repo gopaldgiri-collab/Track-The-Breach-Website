@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Top-level pages -->
+  <url><loc>https://trackthebreach.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://trackthebreach.com/pricing</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://trackthebreach.com/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/careers</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://trackthebreach.com/partners</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://trackthebreach.com/blog</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://trackthebreach.com/trust-center</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/faq</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Product pages -->
+  <url><loc>https://trackthebreach.com/platform</loc><priority>0.9</priority></url>
+  <url><loc>https://trackthebreach.com/email-monitoring</loc><priority>0.9</priority></url>
+  <url><loc>https://trackthebreach.com/phone-monitoring</loc><priority>0.9</priority></url>
+  <url><loc>https://trackthebreach.com/social-monitoring</loc><priority>0.9</priority></url>
+  <url><loc>https://trackthebreach.com/government-id-monitoring</loc><priority>0.9</priority></url>
+  <url><loc>https://trackthebreach.com/photo-monitoring</loc><priority>0.9</priority></url>
+  <url><loc>https://trackthebreach.com/video-monitoring</loc><priority>0.9</priority></url>
+  <url><loc>https://trackthebreach.com/dark-web-monitoring</loc><priority>0.9</priority></url>
+  <url><loc>https://trackthebreach.com/digital-footprint-monitoring</loc><priority>0.9</priority></url>
+  <url><loc>https://trackthebreach.com/ai-risk-intelligence</loc><priority>0.9</priority></url>
+  <url><loc>https://trackthebreach.com/continuous-monitoring</loc><priority>0.9</priority></url>
+
+  <!-- Solutions -->
+  <url><loc>https://trackthebreach.com/individuals</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/families</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/professionals</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/influencers</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/executives</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/business</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/enterprise</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/researchers</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/security-teams</loc><priority>0.8</priority></url>
+
+  <!-- Investor / Company -->
+  <url><loc>https://trackthebreach.com/why-track-the-breach</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/our-vision</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/our-mission</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/market-opportunity</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/technology</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/security-architecture</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/company-overview</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/cybersecurity-future</loc><priority>0.7</priority></url>
+
+  <!-- Enterprise -->
+  <url><loc>https://trackthebreach.com/executive-protection</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/employee-monitoring</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/brand-protection</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/enterprise-monitoring</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/incident-intelligence</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/identity-protection-for-business</loc><priority>0.7</priority></url>
+
+  <!-- SEO landing -->
+  <url><loc>https://trackthebreach.com/check-email-breach</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/email-leak-checker</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/phone-leak-checker</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/digital-identity-protection</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/identity-theft-protection</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/online-privacy-protection</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/personal-cybersecurity</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/deepfake-detection</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/fake-profile-detection</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/online-impersonation-detection</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/data-breach-monitoring</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/government-id-exposure</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/photo-misuse-detection</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/video-misuse-detection</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/account-takeover-prevention</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/whatsapp-scam-protection</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/sim-swap-protection</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/cyber-safety-families</loc><priority>0.8</priority></url>
+  <url><loc>https://trackthebreach.com/executive-digital-protection</loc><priority>0.8</priority></url>
+
+  <!-- Blog posts -->
+  <url><loc>https://trackthebreach.com/blog/1.6b-records-breach-trends-2026</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/blog/ai-deepfake-defense-playbook</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/blog/anatomy-of-modern-sim-swap</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/blog/dark-web-economics-2026</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/blog/dpdp-act-implications</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/blog/case-study-fintech-impersonation</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/blog/identity-theft-2026-mega-guide</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/blog/romance-scam-deep-dive</loc><priority>0.7</priority></url>
+  <url><loc>https://trackthebreach.com/blog/credentials-breach-2025-review</loc><priority>0.7</priority></url>
+</urlset>

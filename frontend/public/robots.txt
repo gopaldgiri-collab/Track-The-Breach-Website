@@ -1,0 +1,10 @@
+# robots.txt for Track The Breach
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://trackthebreach.com/sitemap.xml
+
+# Crawl-delay (be a good citizen but keep visibility)
+Crawl-delay: 1

@@ -1,6 +1,6 @@
 // Site-wide content configuration: all 60+ pages use this config
 export const APP_URL = "https://app.trackthebreach.com";
-export const LOGO_URL = "https://customer-assets.emergentagent.com/job_threat-monitor-83/artifacts/3n9x5oxp_Logo%201.png";
+export const LOGO_URL = "https://customer-assets.emergentagent.com/job_threat-monitor-83/artifacts/jdbmqmpe_Logo_1-removebg-preview.png";
 export const BRAND_MOTTO = "Stay Safe, Stay Protected";
 
 export const NAV = {
@@ -969,3 +969,154 @@ export const JOBS = [
   { role: "Backend Engineer — Identity Graph", location: "Remote (Global)", team: "Engineering" },
   { role: "GTM Marketing Lead", location: "NYC / Bengaluru", team: "Marketing" },
 ];
+
+// Full blog post bodies keyed by slug. Each entry is an array of content blocks.
+export const BLOG_BODIES = {
+  "1.6b-records-breach-trends-2026": {
+    author: "Track The Breach Threat Research",
+    blocks: [
+      { type: "lead", text: "Across 2025 we ingested another 412 million breach records into our identity graph, pushing the total dataset past 1.6 billion. The patterns are clear — and uncomfortable." },
+      { type: "h2", text: "1. Credential stealers are the new combo-lists" },
+      { type: "p", text: "Info-stealer malware (RedLine, LummaC2, Vidar, StealC) now accounts for 61% of new credential exposures we see — up from 38% in 2023. Unlike traditional combo-lists, stealer logs include session cookies, MFA backup codes, and crypto wallet seeds, giving attackers same-day account takeover capability." },
+      { type: "p", text: "Defensive takeaway: rotating passwords alone is no longer sufficient. Every breach-driven response must include forced session invalidation and an MFA reset for impacted users." },
+      { type: "h2", text: "2. Phone-first attack chains are exploding" },
+      { type: "p", text: "Phone-number exposures grew 117% YoY. Attackers chain leaked phone numbers with SIM-swap services on Telegram (averaging $250/swap) and OTP-interception kits to bypass SMS MFA." },
+      { type: "h2", text: "3. Government IDs are the new gold standard" },
+      { type: "p", text: "Aadhaar, PAN, passport, and SSN-tier identifiers are the highest-priced commodities on Tor markets — fetching 6–9× the price of an email-password pair. Synthetic identity fraud built on real government-ID fragments grew 84%." },
+      { type: "h2", text: "Recommended defenses" },
+      { type: "list", items: [
+        "Treat session cookies as primary-tier secrets in your IR playbook",
+        "Replace SMS MFA with WebAuthn/passkeys for any account holding financial value",
+        "Apply continuous identity monitoring on the top 3 government IDs for your geography",
+        "Watch credential brokers — not just paste sites — for early-warning intel",
+      ]},
+    ],
+  },
+  "ai-deepfake-defense-playbook": {
+    author: "Track The Breach AI Lab",
+    blocks: [
+      { type: "lead", text: "Generative video has crossed the uncanny valley. Boards, journalists, and family members can no longer distinguish authentic recordings from synthetic ones — and attackers know it." },
+      { type: "h2", text: "The 2026 deepfake threat surface" },
+      { type: "p", text: "We track 3 attack patterns: (1) executive impersonation for wire fraud, (2) deepfake romance scams for retirement-age victims, and (3) synthetic 'leaked' content used for extortion. All three have moved from novelty to industrial scale in the last 18 months." },
+      { type: "h2", text: "Defense layer 1 — pre-emptive likeness registration" },
+      { type: "p", text: "Register your face, voice, and signature gestures with a likeness-protection platform before any incident. This builds the biometric baseline used to match (and refute) future synthetic content." },
+      { type: "h2", text: "Defense layer 2 — verbal challenge-response codes" },
+      { type: "p", text: "Establish a rotating pass-phrase between family members and key executives. Any unusual ask — wire transfers, address changes, gift-card requests — requires the spoken phrase before action." },
+      { type: "h2", text: "Defense layer 3 — detection at the platform edge" },
+      { type: "p", text: "Subscribe to deepfake-detection monitoring that scans YouTube, TikTok, X, and Telegram for synthetic uploads using your likeness. Time-to-takedown matters — most damage happens within the first 12 hours of upload." },
+    ],
+  },
+  "anatomy-of-modern-sim-swap": {
+    author: "Track The Breach Incident Response",
+    blocks: [
+      { type: "lead", text: "Last quarter our IR team helped contain a SIM-swap attack on a fintech founder. Here is the precise sequence — sanitized for OPSEC — and the controls that ultimately stopped it." },
+      { type: "h2", text: "T-72h: reconnaissance" },
+      { type: "p", text: "The attacker bought a $40 OSINT profile from a Telegram broker. It included the founder's phone number, carrier, address history, mother's maiden name (from a 2017 breach), and last-four of two credit cards." },
+      { type: "h2", text: "T-0: social engineering the carrier" },
+      { type: "p", text: "At 03:14 local time the attacker called the carrier impersonating the founder, used the OSINT data to pass verification, and ported the number to an attacker-controlled eSIM." },
+      { type: "h2", text: "T+4min: account takeover attempts" },
+      { type: "p", text: "Within four minutes the attacker requested password resets on Gmail, the founder's exchange account, and a bank. Two SMS OTPs were delivered to the attacker — but failed: the founder's accounts required hardware MFA (FIDO2 keys), not SMS." },
+      { type: "h2", text: "What saved the founder" },
+      { type: "list", items: [
+        "Carrier-side SIM-PIN preventing port-out without an extra code",
+        "Hardware MFA on all financial-grade accounts (SMS MFA disabled)",
+        "Real-time SIM-swap monitoring alert from Track The Breach within 60 seconds",
+        "Pre-arranged crisis playbook with the carrier fraud team",
+      ]},
+    ],
+  },
+  "dark-web-economics-2026": {
+    author: "Track The Breach Dark Web Intelligence",
+    blocks: [
+      { type: "lead", text: "Stolen-data prices on Tor markets have shifted sharply since 2024. Here is the current pricing landscape — and what the numbers tell us about attacker priorities." },
+      { type: "h2", text: "Email + password pairs" },
+      { type: "p", text: "Down 47% in 2 years. Saturation. Combo-lists are abundant; the marginal price of one more email-password pair is close to zero. Implication: defenders should assume credential exposure is universal." },
+      { type: "h2", text: "Session cookies (stealer logs)" },
+      { type: "p", text: "Up 220%. Active session cookies are the new premium product because they bypass MFA entirely. Daily-refreshed cookie packs for SaaS apps now sell for $40–$120 each." },
+      { type: "h2", text: "Government IDs" },
+      { type: "p", text: "Stable-to-up. Aadhaar fragments $8–$15, PAN $5–$10, US SSN $4–$8, EU national IDs $10–$25. Bundles with selfie verification sell for 4–6× the base." },
+      { type: "h2", text: "Deepfake commissions" },
+      { type: "p", text: "A new category. Custom deepfake video of a named individual now starts at $200 for 30 seconds. Voice cloning is sub-$50 for a 60-second clip." },
+    ],
+  },
+  "dpdp-act-implications": {
+    author: "Track The Breach Privacy & Compliance",
+    blocks: [
+      { type: "lead", text: "India's Digital Personal Data Protection Act creates real obligations for any business processing Indian personal data — domestic or foreign. Here is the practical compliance playbook." },
+      { type: "h2", text: "Who is in scope?" },
+      { type: "p", text: "Any Data Fiduciary processing Indian residents' personal data — including SaaS, e-commerce, fintech, healthcare, edtech, and gaming. Extraterritorial reach: foreign companies offering goods/services to Indian users are covered." },
+      { type: "h2", text: "Core obligations" },
+      { type: "list", items: [
+        "Clear, specific, granular consent — pre-checked boxes are not consent",
+        "Data minimization: only collect what is needed for the stated purpose",
+        "Breach notification to the Data Protection Board within prescribed timelines",
+        "Appoint a Data Protection Officer for Significant Data Fiduciaries",
+        "Honor user rights: access, correction, erasure, grievance redressal",
+      ]},
+      { type: "h2", text: "Operationalizing in 60 days" },
+      { type: "p", text: "Run a data-flow inventory, map cross-border transfers, deploy a consent management platform, update your privacy notice, build a breach IR runbook, and train staff. Most teams underestimate the breach-notification workflow — automate it." },
+    ],
+  },
+  "case-study-fintech-impersonation": {
+    author: "Track The Breach Customer Success",
+    blocks: [
+      { type: "lead", text: "Within 24 hours of onboarding, Track The Breach surfaced 14 dark-web listings tied to a Series-C fintech's CFO. Here is how we shut them down inside 72 hours." },
+      { type: "h2", text: "The discovery" },
+      { type: "p", text: "Our continuous-monitoring sweep flagged a Telegram group selling 'verified' executive identities from the company — complete with email addresses, deepfake voice samples, and forged ID documents." },
+      { type: "h2", text: "The response" },
+      { type: "p", text: "We rotated impacted credentials, filed takedowns with platform legal teams, briefed the company's fraud-prevention vendor on the vector, and instrumented behavioral analytics on the CFO's accounts." },
+      { type: "h2", text: "The outcome" },
+      { type: "p", text: "Zero successful fraud attempts in the 90 days following discovery. The company's external attack-surface score improved 38 points on the Track The Breach risk model." },
+    ],
+  },
+  "identity-theft-2026-mega-guide": {
+    author: "Track The Breach Editorial",
+    blocks: [
+      { type: "lead", text: "Identity theft is no longer a single attack — it's a chain of small compromises that compound. This mega-guide walks through the modern landscape and how to defend each link." },
+      { type: "h2", text: "Step 1: discover your exposure surface" },
+      { type: "p", text: "Audit every email, phone, social handle, and ID number you have ever used. Run an exposure scan to see what already exists on the dark web. You can't defend what you can't see." },
+      { type: "h2", text: "Step 2: cut off the easy attacks" },
+      { type: "list", items: [
+        "Replace SMS MFA with hardware keys or app-based MFA on every financial account",
+        "Place credit freezes with all bureaus (US: Equifax, Experian, TransUnion; India: CIBIL)",
+        "Enable carrier-side SIM-PIN and port-out lock",
+        "Audit and revoke OAuth grants you no longer use",
+      ]},
+      { type: "h2", text: "Step 3: monitor continuously" },
+      { type: "p", text: "Set up real-time monitoring on email, phone, government IDs, photo, and social handles. The earlier you catch a new exposure, the cheaper and easier the response." },
+      { type: "h2", text: "Step 4: have an IR plan for when (not if) something happens" },
+      { type: "p", text: "Pre-write your bank-fraud script, carrier-call script, and platform takedown templates. The first hour after discovery is decisive — don't waste it figuring out what to do." },
+    ],
+  },
+  "romance-scam-deep-dive": {
+    author: "Track The Breach Investigations",
+    blocks: [
+      { type: "lead", text: "Over six months our investigations team traced the structure of a global romance-scam ring that operates like a SaaS company. Here is what we found." },
+      { type: "h2", text: "An industry, not a hobby" },
+      { type: "p", text: "Modern romance scams are run by 8–25-person teams using shared scripts, deepfake video tooling, and translation pipelines. Average victim contact lasts 47 days before the first money request." },
+      { type: "h2", text: "Defenses that actually work" },
+      { type: "list", items: [
+        "Mandate a live video call before any financial conversation",
+        "Reverse-image search every profile photo within the first 3 days",
+        "Refuse to move communication off the original platform too quickly",
+        "Set a personal rule: no money transfers to anyone you haven't met in person",
+      ]},
+    ],
+  },
+  "credentials-breach-2025-review": {
+    author: "Track The Breach Threat Research",
+    blocks: [
+      { type: "lead", text: "2025 was the year credential exposure became universal. We logged 1,247 publicly disclosed breaches and likely 10× that in undisclosed leaks." },
+      { type: "h2", text: "Top 5 breaches by impact" },
+      { type: "list", items: [
+        "Global telco compromise — 184M records",
+        "Healthcare insurer aggregator — 91M records",
+        "Travel-booking platform — 76M records",
+        "Crypto-exchange KYC leak — 38M records",
+        "Government-payroll vendor — 14M records",
+      ]},
+      { type: "h2", text: "What to expect in 2026" },
+      { type: "p", text: "Expect attackers to combine breach data with AI-driven targeting to deliver hyper-personalized phishing at industrial scale. The defense playbook shifts from 'detect bad emails' to 'eliminate identity exposure at the source.'" },
+    ],
+  },
+};

@@ -40,13 +40,11 @@ export default function Footer() {
         {/* Top brand row */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
           <div className="lg:col-span-4">
-            <Link to="/" className="flex items-center gap-2.5" data-testid="footer-logo">
-              <img src={LOGO_URL} alt="Track The Breach" className="w-10 h-10 object-contain" />
-              <div className="flex flex-col leading-tight">
-                <span className="font-display font-bold text-slate-900 text-[15px]">Track The Breach</span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-blue-600/80">{BRAND_MOTTO}</span>
-              </div>
+            <Link to="/" className="flex items-center gap-3" data-testid="footer-logo">
+              <img src={LOGO_URL} alt="Track The Breach" className="w-11 h-11 object-contain" />
+              <span className="font-display font-bold text-slate-900 text-[17px] tracking-tight">Track The Breach</span>
             </Link>
+            <p className="mt-2 text-xs font-mono uppercase tracking-[0.18em] text-blue-600/80">{BRAND_MOTTO}</p>
             <p className="mt-4 text-sm text-slate-600 max-w-sm leading-relaxed">
               AI-powered Digital Identity Protection and Breach Intelligence for individuals, families, professionals, and enterprises worldwide.
             </p>
