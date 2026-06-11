@@ -47,7 +47,15 @@ Brand motto (header): *Stay Safe, Stay Protected*
 - **Footer**: removed "Free Tools & SEO" heading + "See all plans →" link. SEO link grid kept intact.
 - testing_agent_v3 → 100% pass (15/15 acceptance criteria).
 
-### Feb 12, 2026 — Blog details + SEO + design polish (iteration 3)
+### Feb 12, 2026 — Live SMTP, one-time credits, mobile accordion drawer (iteration 5 + 6)
+- **Live Gmail SMTP**: `/api/contact` now really sends email via Gmail SMTP (smtp.gmail.com:587, hello@trackthebreach.com + App Password). SMTP call wrapped in `asyncio.to_thread` so it doesn't block the FastAPI event loop. Submissions also persisted to MongoDB `contact_submissions`.
+- **One-time credit packs**: Pricing flipped from monthly subscription to one-time purchases. All 5 plans now show `period: "one-time"` and an emerald "Credits never expire" badge under the credits chip. FAQ updated.
+- **New pricing headline**: "Pricing built to defend you — from today's breaches and tomorrow's threats." with subtitle "Pay once. Use credits whenever you need a scan. They never expire — keep them for years if you want."
+- **Bolder desktop nav**: `text-[15px] font-semibold` on every nav item (Product/Solutions/Resources/Company/Pricing/Contact/Log in) and submenu Links.
+- **Footer credit**: "Designed & developed by **People's Choice Tech**" → https://peopleschoice.tech/ (target=_blank) added to bottom row.
+- **Mobile drawer rebuilt**: Floating rounded-3xl glass card with slide-in entry transition (translate-y + opacity 300ms ease-out). Each top-level section (Product / Solutions / Resources / Company) is a single-open accordion — sub-items hidden until tapped. Body scroll locked while open.
+- **Mobile drawer portal fix**: Drawer + backdrop rendered via `React.createPortal(<>…</>, document.body)` so the dim/blur backdrop escapes the `<header>`'s `backdrop-filter` containing block (which was collapsing the overlay to height:0). Backdrop now visible AND clickable on real devices.
+- testing_agent_v3 → 100% backend (7/7 pytest, live SMTP delivery confirmed) + 100% frontend (mobile drawer + portal + all desktop regressions).
 - **Blog post detail pages**: real BlogPost.jsx component with full body, author, table-of-contents sidebar, subscribe card, related articles section. 9 articles each with 600-1200 chars of body content stored in `BLOG_BODIES`.
 - **SEO foundation**:
   - JSON-LD in index.html: `Organization`, `WebSite`, `SoftwareApplication` schemas (with 5 plan offers + aggregate rating).
