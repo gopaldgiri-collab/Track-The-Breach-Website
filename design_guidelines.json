@@ -1,0 +1,149 @@
+{
+  "theme_and_archetype": {
+    "theme": "dark",
+    "archetype": "Archetype 4 (Swiss & High-Contrast) + Dashboard/Glassmorphism Hybrid",
+    "rationale": "To achieve a venture-backed cybersecurity startup aesthetic (CrowdStrike, SentinelOne), we combine the authority and precision of Archetype 4 with the modern, immersive data-viz language of dark mode dashboards. The UI must feel like a high-end threat intelligence platform rather than a generic marketing site."
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Plus Jakarta Sans, sans-serif",
+      "weights": ["600", "700", "800"],
+      "tracking": "tracking-tight",
+      "usage": "H1-H4. Used for high-impact section titles and hero messaging to provide a modern, geometric tech startup feel."
+    },
+    "body": {
+      "font_family": "Inter, sans-serif",
+      "weights": ["400", "500"],
+      "tracking": "tracking-normal",
+      "usage": "Paragraphs, data tables, labels, and standard UI text. Optimized for legibility in dense data layouts."
+    },
+    "monospace": {
+      "font_family": "JetBrains Mono, ui-monospace, SFMono-Regular, monospace",
+      "weights": ["400", "500"],
+      "tracking": "tracking-tight",
+      "usage": "Risk scores, IP addresses, threat intel data points, and code snippets to reinforce the 'cybersecurity command center' aesthetic."
+    },
+    "scale_rules": {
+      "h1": "text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter",
+      "h2": "text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight",
+      "h3": "text-xl md:text-2xl font-semibold",
+      "body_large": "text-lg md:text-xl text-slate-300",
+      "body_default": "text-base text-slate-400",
+      "micro_label": "text-xs font-bold uppercase tracking-[0.2em] text-indigo-400"
+    }
+  },
+  "colors": {
+    "background": {
+      "default": "#050816",
+      "description": "Deep Space Blue/Black - Core application background"
+    },
+    "surface": {
+      "card": "#0F172A",
+      "elevated": "#1E293B",
+      "glass": "rgba(15, 23, 42, 0.6)",
+      "description": "Slate 900 for cards, slightly lighter for elevated modals. Glass uses Slate 900 with opacity."
+    },
+    "primary": {
+      "default": "#4F46E5",
+      "hover": "#4338CA",
+      "glow": "rgba(79, 70, 229, 0.5)",
+      "description": "Indigo 600 - Main call to action, active states, progress indicators."
+    },
+    "secondary": {
+      "default": "#06B6D4",
+      "hover": "#0891B2",
+      "glow": "rgba(6, 182, 212, 0.5)",
+      "description": "Cyan 500 - Data visualization accents, secondary buttons, interactive highlights."
+    },
+    "status": {
+      "success": "#22C55E",
+      "warning": "#F59E0B",
+      "danger": "#EF4444",
+      "info": "#3B82F6"
+    },
+    "text": {
+      "primary": "#F8FAFC",
+      "secondary": "#94A3B8",
+      "muted": "#64748B"
+    },
+    "border": {
+      "default": "rgba(255, 255, 255, 0.1)",
+      "focus": "rgba(79, 70, 229, 0.5)"
+    }
+  },
+  "layout_and_spacing": {
+    "marketing_sections": "py-24 md:py-32 container mx-auto px-6",
+    "bento_grid": "grid grid-cols-1 md:grid-cols-12 gap-6",
+    "dashboard_grid": "grid grid-cols-1 md:grid-cols-4 gap-4",
+    "card_padding": "p-6 md:p-8",
+    "optical_alignment": "Align text left for readability in data-heavy contexts. Use center alignment strictly for Hero headers and Section headers (H2) if they span full width."
+  },
+  "surfaces": {
+    "glassmorphism": "backdrop-blur-xl bg-[#0F172A]/70 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]",
+    "solid_card": "bg-[#0F172A] border border-white/5 rounded-2xl shadow-xl",
+    "tracing_beam_card": "relative overflow-hidden rounded-2xl bg-[#0F172A] border border-white/10 before:absolute before:inset-0 before:bg-gradient-to-r before:from-indigo-500/0 before:via-indigo-500/20 before:to-indigo-500/0 before:translate-x-[-100%] hover:before:animate-[shimmer_2s_infinite]",
+    "nav_header": "fixed top-0 w-full z-50 backdrop-blur-xl bg-[#050816]/80 border-b border-white/5"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-all shadow-[0_0_20px_rgba(79,70,229,0.3)] hover:shadow-[0_0_30px_rgba(79,70,229,0.5)]",
+      "secondary": "bg-transparent border border-white/20 hover:border-cyan-500 hover:text-cyan-400 text-white font-medium py-3 px-6 rounded-lg transition-all",
+      "ghost": "text-slate-300 hover:text-white hover:bg-white/5 transition-colors"
+    },
+    "inputs": "bg-[#0F172A] border border-white/10 text-white rounded-lg focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all",
+    "badges": "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-500/10 text-indigo-400 border border-indigo-500/20",
+    "data_viz": "Use Recharts. Use secondary (#06B6D4) and primary (#4F46E5) for lines/bars. Implement tooltips with Glassmorphism surface."
+  },
+  "motion": {
+    "hover_states": "-translate-y-1 shadow-lg transition-all duration-300",
+    "page_transitions": "Fade in with slight upward translation on mount (Framer Motion: { opacity: 0, y: 20 } to { opacity: 1, y: 0 })",
+    "staggered_lists": "Stagger children by 0.1s for feature grids and threat cards."
+  },
+  "images": {
+    "hero_backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1727434032773-af3cd98375ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBkYXJrJTIwbmV0d29yayUyMG5vZGVzfGVufDB8fHx8MTc4MTE3NjI0OXww&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract technology / network node background for Hero Section (Requires heavy dark overlay to ensure text contrast)."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBkYXJrJTIwbmV0d29yayUyMG5vZGVzfGVufDB8fHx8MTc4MTE3NjI0OXww&ixlib=rb-4.1.0&q=85",
+        "description": "Blue data lines, excellent for 'How it Works' or 'Platform Overview' background."
+      }
+    ],
+    "cyber_visuals": [
+      {
+        "url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwaGFja2VyJTIwdGVybWluYWwlMjBjb2RlfGVufDB8fHx8MTc4MTE3NjI0OXww&ixlib=rb-4.1.0&q=85",
+        "description": "Matrix/Terminal code for Threat Landscape section headers or abstract feature representations."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1532522750741-628fde798c73?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHw0fHxjeWJlcnNlY3VyaXR5JTIwaGFja2VyJTIwdGVybWluYWwlMjBjb2RlfGVufDB8fHx8MTc4MTE3NjI0OXww&ixlib=rb-4.1.0&q=85",
+        "description": "Terminal prompt for 'Solutions for Developers/Security Teams' cards."
+      }
+    ],
+    "office_team": [
+      {
+        "url": "https://images.unsplash.com/photo-1615803697515-3cb782c2a65a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwdGVhbSUyMGRhcmslMjBvZmZpY2V8ZW58MHx8fHwxNzgxMTc2MjYzfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Dark office for 'About Us' or 'Enterprise Solutions' backdrop."
+      }
+    ],
+    "logos_for_trust_stats": [
+      {
+        "url": "https://images.unsplash.com/photo-1760138270903-d95903188730?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBsb2dvfGVufDB8fHx8MTc4MTE3NjI2M3ww&ixlib=rb-4.1.0&q=85",
+        "description": "Corporate logo 1"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1780666040997-935b0212fa14?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxjb3Jwb3JhdGUlMjBsb2dvfGVufDB8fHx8MTc4MTE3NjI2M3ww&ixlib=rb-4.1.0&q=85",
+        "description": "Corporate logo 2"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "You are building a venture-backed cybersecurity marketing/SaaS hybrid site. Dark mode is strictly enforced using #050816 as the base background.",
+    "HTML structure MUST be used for marketing grid layouts (Bento grids). Use Shadcn components strictly for forms, inputs, and interactive data elements.",
+    "Lucide React or Phosphor Icons are mandatory for threat categories (Shield, Eye, AlertTriangle, Fingerprint).",
+    "Every hero or heavy image background MUST have a dark overlay (e.g., bg-black/60) to ensure the white/slate text meets APCA/WCAG contrast ratios.",
+    "Implement Lucide icons with custom sizes to act as 'threat badges'.",
+    "Mock up the 'Platform Dashboard' section using real Recharts line/area charts and metric cards (using Inter monospace fonts for numbers) to make it look like a functioning SaaS.",
+    "CRITICAL: ALL interactive elements (buttons, links, form inputs) and key informational metrics (risk scores, threat alerts) MUST include a 'data-testid' attribute in kebab-case representing their role. Example: data-testid='hero-cta-button', data-testid='risk-score-value'."
+  ]
+}
