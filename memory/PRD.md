@@ -47,6 +47,25 @@ Brand motto (header): *Stay Safe, Stay Protected*
 - **Footer**: removed "Free Tools & SEO" heading + "See all plans →" link. SEO link grid kept intact.
 - testing_agent_v3 → 100% pass (15/15 acceptance criteria).
 
+### Feb 12, 2026 — Blog details + SEO + design polish (iteration 3)
+- **Blog post detail pages**: real BlogPost.jsx component with full body, author, table-of-contents sidebar, subscribe card, related articles section. 9 articles each with 600-1200 chars of body content stored in `BLOG_BODIES`.
+- **SEO foundation**:
+  - JSON-LD in index.html: `Organization`, `WebSite`, `SoftwareApplication` schemas (with 5 plan offers + aggregate rating).
+  - Per-article `Article` JSON-LD injected by BlogPost.jsx.
+  - `/public/sitemap.xml` with 71 URLs (all pages + 9 blog posts).
+  - `/public/robots.txt`.
+  - Canonical link in index.html.
+- **Design polish**:
+  - Site-wide `.container` capped at **1240px max-width** with progressive horizontal padding (1.25→2→3 rem) — content no longer touches edges on 1920px screens.
+  - Headline letter-spacing relaxed via CSS overrides (`h1/h2/h3/h4` get -0.01em; `tracking-tighter` softened to -0.015em).
+  - New transparent-background logo (`Logo_1-removebg-preview.png`) replaces previous version.
+  - "Identity Intelligence" subtitle removed from Navbar; only "Track The Breach" brand text shown.
+  - Footer keeps the "Stay Safe, Stay Protected" motto under the brand block.
+- testing_agent_v3 → 100% pass (14/14 acceptance criteria + iteration-2 regression).
+
+### IMPORTANT (operational note)
+CRA dev server does NOT hot-reload `/public/index.html`. After editing schema/meta in that file, run `sudo supervisorctl restart frontend`.
+
 ## P0 / P1 / P2 Backlog
 
 ### P0
