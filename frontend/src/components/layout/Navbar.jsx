@@ -57,10 +57,10 @@ export default function Navbar() {
           <Link
             to="/"
             data-testid="navbar-logo"
-            className="flex items-center gap-3 group absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0"
+            className="flex items-center gap-2.5 lg:gap-3 group absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0"
           >
-            <img src={LOGO_URL} alt="Track The Breach" className="w-10 h-10 lg:w-11 lg:h-11 object-contain" />
-            <span className="font-display font-bold text-slate-900 tracking-tight text-[15px] lg:text-[17px]">Track The Breach</span>
+            <img src={LOGO_URL} alt="Track The Breach" className="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 object-contain" />
+            <span className="font-display font-bold text-slate-900 tracking-tight text-[14px] sm:text-[15px] lg:text-[17px] whitespace-nowrap">Track The Breach</span>
           </Link>
 
           {/* Spacer on mobile to balance the hamburger so brand stays visually centered */}
