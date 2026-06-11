@@ -48,7 +48,7 @@ export default function Pricing() {
               >
                 {p.highlight && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-indigo-600 text-white text-[10px] font-bold uppercase tracking-wider">
-                    Most popular
+                    Most Popular
                   </div>
                 )}
                 <div className="text-xs font-mono uppercase tracking-[0.18em] text-cyan-300/80 mb-2">{p.name}</div>
