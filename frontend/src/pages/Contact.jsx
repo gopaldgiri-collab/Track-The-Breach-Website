@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PageHero from "../components/PageHero";
-import { Mail, Phone, MapPin, ArrowRight, MessageSquare, Building2, Newspaper, TrendingUp, ShieldCheck, Handshake } from "lucide-react";
+import { Mail, Clock, MapPin, ArrowRight, MessageSquare, Building2, Newspaper, TrendingUp, ShieldCheck, Handshake } from "lucide-react";
 import { toast } from "sonner";
 
 const REASONS = [
@@ -125,16 +125,16 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Phone className="w-4 h-4 mt-0.5 text-blue-600" />
+                  <Clock className="w-4 h-4 mt-0.5 text-blue-600" />
                   <div>
-                    <div className="text-slate-800">+1 (415) 555-0142</div>
-                    <div className="text-xs text-slate-500">Sales · Mon–Fri · 09:00–18:00 PT</div>
+                    <div className="text-slate-800">Sales · Mon–Fri · 09:00–18:00 PT</div>
+                    <div className="text-xs text-slate-500">Or chat with us live below ↓</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 mt-0.5 text-blue-600" />
                   <div>
-                    <div className="text-slate-800">Global HQ · Bengaluru, India</div>
+                    <div className="text-slate-800">Global HQ · Pune, Bengaluru, India</div>
                     <div className="text-xs text-slate-500">Satellites: NYC · London · Singapore</div>
                   </div>
                 </div>
