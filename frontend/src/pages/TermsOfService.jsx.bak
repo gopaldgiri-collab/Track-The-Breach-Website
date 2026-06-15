@@ -1,0 +1,215 @@
+import PageHero from "../components/PageHero";
+
+export default function TermsOfService() {
+  return (
+    <div>
+      <PageHero
+        eyebrow="LEGAL"
+        title="Terms of Service"
+        subtitle="Terms governing the use of Track The Breach products, services, website, and platform."
+      />
+
+      <section className="py-16">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="prose prose-slate max-w-none">
+
+            <h2>Acceptance of Terms</h2>
+
+            <p>
+              By accessing or using Track The Breach, you agree to be bound
+              by these Terms of Service and all applicable laws and
+              regulations.
+            </p>
+
+            <p>
+              If you do not agree with any portion of these terms, you
+              should discontinue use of the platform immediately.
+            </p>
+
+            <h2>About Track The Breach</h2>
+
+            <p>
+              Track The Breach is an AI-powered Digital Identity Protection
+              and Breach Intelligence platform that helps individuals,
+              professionals, families, businesses, and enterprises monitor
+              digital exposure risks.
+            </p>
+
+            <p>
+              Services may include breach monitoring, exposure detection,
+              identity intelligence, risk scoring, digital footprint
+              monitoring, and related cybersecurity services.
+            </p>
+
+            <h2>User Accounts</h2>
+
+            <p>
+              Users are responsible for maintaining the confidentiality of
+              account credentials and for all activity occurring under their
+              accounts.
+            </p>
+
+            <ul>
+              <li>Provide accurate information.</li>
+              <li>Keep login credentials secure.</li>
+              <li>Notify us of unauthorized access.</li>
+              <li>Comply with applicable laws.</li>
+            </ul>
+
+            <h2>Permitted Use</h2>
+
+            <p>
+              Users may use the platform solely for lawful purposes and
+              authorized monitoring of information they own, control, or are
+              legally authorized to monitor.
+            </p>
+
+            <p>Users must not:</p>
+
+            <ul>
+              <li>Attempt unauthorized access to systems.</li>
+              <li>Interfere with platform operations.</li>
+              <li>Upload malicious software.</li>
+              <li>Misuse monitoring capabilities.</li>
+              <li>Violate privacy or security laws.</li>
+            </ul>
+
+            <h2>Service Availability</h2>
+
+            <p>
+              While we strive for continuous availability, services may be
+              interrupted due to maintenance, upgrades, security events, or
+              factors beyond our control.
+            </p>
+
+            <p>
+              We do not guarantee uninterrupted access at all times.
+            </p>
+
+            <h2>Threat Intelligence & Monitoring</h2>
+
+            <p>
+              Track The Breach uses automated systems, artificial
+              intelligence, threat intelligence sources, and publicly
+              available information to identify potential risks.
+            </p>
+
+            <p>
+              Monitoring results represent risk indicators and intelligence
+              findings and should not be interpreted as guarantees of future
+              security outcomes.
+            </p>
+
+            <h2>Subscription & Payments</h2>
+
+            <p>
+              Certain services may require paid subscriptions.
+            </p>
+
+            <ul>
+              <li>Fees are billed according to selected plans.</li>
+              <li>Subscriptions may renew automatically.</li>
+              <li>Users may cancel according to plan terms.</li>
+              <li>Taxes may apply based on jurisdiction.</li>
+            </ul>
+
+            <h2>Intellectual Property</h2>
+
+            <p>
+              All software, branding, logos, reports, content, designs,
+              technology, and intellectual property associated with Track
+              The Breach remain the exclusive property of Track The Breach
+              and its licensors.
+            </p>
+
+            <p>
+              Users may not copy, reverse engineer, distribute, or exploit
+              proprietary technology without written authorization.
+            </p>
+
+            <h2>Privacy</h2>
+
+            <p>
+              Use of the platform is also governed by our Privacy Policy.
+            </p>
+
+            <h2>Limitation of Liability</h2>
+
+            <p>
+              To the maximum extent permitted by law, Track The Breach shall
+              not be liable for indirect, incidental, consequential,
+              special, punitive, or exemplary damages arising from use of
+              the platform.
+            </p>
+
+            <p>
+              Users acknowledge that cybersecurity risks cannot be
+              completely eliminated and that no service can guarantee total
+              prevention of cyber incidents.
+            </p>
+
+            <h2>Indemnification</h2>
+
+            <p>
+              Users agree to defend, indemnify, and hold harmless Track The
+              Breach from claims arising from misuse of the platform,
+              violation of these terms, or unlawful activities.
+            </p>
+
+            <h2>Termination</h2>
+
+            <p>
+              We may suspend or terminate access to services if users:
+            </p>
+
+            <ul>
+              <li>Violate these terms.</li>
+              <li>Engage in unlawful activities.</li>
+              <li>Create security risks.</li>
+              <li>Abuse platform resources.</li>
+            </ul>
+
+            <h2>Compliance</h2>
+
+            <p>
+              Users are responsible for complying with applicable privacy,
+              cybersecurity, data protection, and regulatory requirements
+              within their jurisdictions.
+            </p>
+
+            <h2>Changes To Terms</h2>
+
+            <p>
+              We may update these Terms of Service periodically.
+            </p>
+
+            <p>
+              Continued use of the platform following updates constitutes
+              acceptance of revised terms.
+            </p>
+
+            <h2>Contact Information</h2>
+
+            <p>
+              Legal Team: legal@trackthebreach.com
+            </p>
+
+            <p>
+              Support Team: hello@trackthebreach.com
+            </p>
+
+            <p>
+              Security Team: security@trackthebreach.com
+            </p>
+
+            <p>
+              Track The Breach<br />
+              Pune & Bengaluru, India
+            </p>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

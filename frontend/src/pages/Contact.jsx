@@ -15,28 +15,61 @@ const REASONS = [
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", company: "", reason: "Sales", message: "" });
   const [submitting, setSubmitting] = useState(false);
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    setSubmitting(true);
-    try {
-      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      const data = await res.json();
-      if (data.ok) {
-        toast.success(data.message || "Thanks — our team will reply within 4 business hours.");
-        setForm({ name: "", email: "", company: "", reason: "Sales", message: "" });
-      } else {
-        toast.error("Something went wrong. Please email hello@trackthebreach.com directly.");
-      }
-    } catch (err) {
-      toast.error("Network error. Please email hello@trackthebreach.com directly.");
-    } finally {
-      setSubmitting(false);
-    }
-  };
+const onSubmit = async (e) => {
+e.preventDefault();
+setSubmitting(true);
+
+try {
+const backendUrl =
+process.env.REACT_APP_BACKEND_URL ||
+window.location.origin;
+
+const res = await fetch(
+  `${backendUrl}/api/contact`,
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(form),
+  }
+);
+
+const data = await res.json();
+
+console.log("Contact API Response:", data);
+
+if (res.ok && data.ok) {
+  toast.success(
+    data.message ||
+      "Thanks — our team will reply within 4 business hours."
+  );
+
+  setForm({
+    name: "",
+    email: "",
+    company: "",
+    reason: "Sales",
+    message: "",
+  });
+} else {
+  toast.error(
+    data.message ||
+      "Something went wrong. Please try again."
+  );
+}
+
+} catch (err) {
+console.error("Contact Form Error:", err);
+
+toast.error(
+  "Unable to connect. Please email hello@trackthebreach.com directly."
+);
+
+} finally {
+setSubmitting(false);
+}
+};
 
   return (
     <div data-testid="contact-page">

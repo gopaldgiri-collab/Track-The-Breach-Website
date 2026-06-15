@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { Twitter, Linkedin, Github, Youtube, Globe2 } from "lucide-react";
+import { Twitter, Linkedin, Facebook, Instagram, Globe2 } from "lucide-react";
 import { NAV, LOGO_URL, BRAND_MOTTO } from "../../data/content";
 
 const SOCIAL = [
-  { Icon: Twitter, href: "https://twitter.com", label: "twitter" },
-  { Icon: Linkedin, href: "https://linkedin.com", label: "linkedin" },
-  { Icon: Github, href: "https://github.com", label: "github" },
-  { Icon: Youtube, href: "https://youtube.com", label: "youtube" },
+  { Icon: Twitter, href: "https://x.com/trackthe_breach", label: "twitter" },
+  { Icon: Linkedin, href: "https://www.linkedin.com/company/track-the-breach/", label: "linkedin" },
+  { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61589777196401", label: "facebook" },
+  { Icon: Instagram, href: "https://www.instagram.com/trackthebreach/", label: "instagram" },
 ];
 
 const SEO_LINKS = [
@@ -112,11 +112,29 @@ export default function Footer() {
             </span>
           </div>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-slate-500">
-            <Link to="/trust-center" data-testid="footer-trust" className="hover:text-blue-600">Trust Center</Link>
-            <Link to="/trust-center#privacy" data-testid="footer-privacy" className="hover:text-blue-600">Privacy Policy</Link>
-            <Link to="/trust-center#terms" data-testid="footer-terms" className="hover:text-blue-600">Terms</Link>
-            <Link to="/trust-center#gdpr" data-testid="footer-gdpr" className="hover:text-blue-600">GDPR</Link>
-            <Link to="/trust-center#dpdp" data-testid="footer-dpdp" className="hover:text-blue-600">DPDP</Link>
+		<Link to="/trust-center" data-testid="footer-trust" className="hover:text-blue-600">
+  Trust Center
+</Link>
+
+<Link to="/privacy-policy" data-testid="footer-privacy" className="hover:text-blue-600">
+  Privacy Policy
+</Link>
+
+<Link to="/terms-of-service" data-testid="footer-terms" className="hover:text-blue-600">
+  Terms of Service
+</Link>
+
+<Link to="/gdpr-compliance" data-testid="footer-gdpr" className="hover:text-blue-600">
+  GDPR Compliance
+</Link>
+
+<Link to="/dpdp-compliance" data-testid="footer-dpdp" className="hover:text-blue-600">
+  DPDP Compliance
+</Link>
+
+<Link to="/responsible-disclosure" data-testid="footer-disclosure" className="hover:text-blue-600">
+  Responsible Disclosure
+</Link>
             <a href="https://status.trackthebreach.com" className="hover:text-blue-600 inline-flex items-center gap-1.5" data-testid="footer-status">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
               All systems operational

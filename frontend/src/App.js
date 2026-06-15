@@ -1,7 +1,9 @@
 import { Toaster } from "sonner";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Layout from "@/components/layout/Layout";
+
 import Home from "@/pages/Home";
 import Pricing from "@/pages/Pricing";
 import Contact from "@/pages/Contact";
@@ -14,9 +16,16 @@ import FAQPage from "@/pages/FAQPage";
 import BlogPost from "@/pages/BlogPost";
 import CategoryPage from "@/pages/CategoryPage";
 
-// Page routes mapped to slugs in /app/frontend/src/data/content.js -> PAGES
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsOfService from "@/pages/TermsOfService";
+import GDPRCompliance from "@/pages/GDPRCompliance";
+import DPDPCompliance from "@/pages/DPDPCompliance";
+import ResponsibleDisclosure from "@/pages/ResponsibleDisclosure";
+
+import SecurityOverview from "@/pages/SecurityOverview";
+import DataProcessingAddendum from "@/pages/DataProcessingAddendum";
+
 const CATEGORY_ROUTES = [
-  // Product
   "platform",
   "email-monitoring",
   "phone-monitoring",
@@ -28,7 +37,7 @@ const CATEGORY_ROUTES = [
   "digital-footprint-monitoring",
   "ai-risk-intelligence",
   "continuous-monitoring",
-  // Solutions
+
   "individuals",
   "families",
   "professionals",
@@ -38,7 +47,7 @@ const CATEGORY_ROUTES = [
   "enterprise",
   "researchers",
   "security-teams",
-  // Investor
+
   "why-track-the-breach",
   "our-vision",
   "our-mission",
@@ -47,14 +56,14 @@ const CATEGORY_ROUTES = [
   "security-architecture",
   "company-overview",
   "cybersecurity-future",
-  // Enterprise
+
   "executive-protection",
   "employee-monitoring",
   "brand-protection",
   "enterprise-monitoring",
   "incident-intelligence",
   "identity-protection-for-business",
-  // SEO
+
   "check-email-breach",
   "email-leak-checker",
   "phone-leak-checker",
@@ -90,22 +99,47 @@ function App() {
             <Route path="/partners" element={<Partners />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+
             <Route path="/help" element={<FAQPage />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/learn" element={<Blog />} />
             <Route path="/breach-library" element={<Blog />} />
             <Route path="/press" element={<About />} />
+
             <Route path="/trust-center" element={<TrustCenter />} />
 
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/gdpr-compliance" element={<GDPRCompliance />} />
+            <Route path="/dpdp-compliance" element={<DPDPCompliance />} />
+            <Route path="/responsible-disclosure" element={<ResponsibleDisclosure />} />
+
+            <Route path="/security" element={<SecurityOverview />} />
+            <Route
+              path="/data-processing-addendum"
+              element={<DataProcessingAddendum />}
+            />
+
             {CATEGORY_ROUTES.map((slug) => (
-              <Route key={slug} path={`/${slug}`} element={<CategoryPage slug={slug} />} />
+              <Route
+                key={slug}
+                path={`/${slug}`}
+                element={<CategoryPage slug={slug} />}
+              />
             ))}
 
-            <Route path="*" element={<CategoryPage slug="__missing__" />} />
+            <Route
+              path="*"
+              element={<CategoryPage slug="__missing__" />}
+            />
           </Routes>
         </Layout>
       </BrowserRouter>
-      <Toaster theme="dark" position="bottom-right" />
+
+      <Toaster
+        theme="dark"
+        position="bottom-right"
+      />
     </div>
   );
 }
