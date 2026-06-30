@@ -192,18 +192,35 @@ export const SOLUTIONS_CARDS = [
 ];
 
 export const TESTIMONIALS = [
-  { quote: "Track The Breach found my email leaked in 12 old breaches. I changed my passwords and turned on 2-factor right away. So easy to understand.", name: "Riya Sharma", role: "Student · Delhi", initials: "RS" },
-  { quote: "My phone number was on 8 random websites — I didn't even know! They showed me each one and helped me get it removed. Now my spam calls are gone.", name: "Aman Verma", role: "Software engineer · Bengaluru", initials: "AV" },
-  { quote: "I found a fake Instagram account using my photos. The team filed the takedown and the account was gone in 3 days. Lifesaver for a parent.", name: "Sneha Iyer", role: "Mom of two · Pune", initials: "SI" },
-  { quote: "My passport scan was uploaded to a sketchy website. Track The Breach helped me get it taken down and locked. Honestly, this should be free for everyone.", name: "Karan Mehta", role: "Frequent traveller · Mumbai", initials: "KM" },
-  { quote: "A deepfake video using my face was floating around on Telegram. They detected it, removed it and gave me a clear report I could share with my family.", name: "Priya N.", role: "Content creator · Hyderabad", initials: "PN" },
-  { quote: "The report is like a school report card — green, yellow, red. Even my dad understood it in 2 minutes. We checked the whole family in one evening.", name: "Devansh Kapoor", role: "Designer · Gurugram", initials: "DK" },
-  { quote: "I had no idea my old Yahoo email was leaked years ago. The free scan showed me everything. I fixed it the same day. Took 10 minutes.", name: "Meera Joshi", role: "Teacher · Ahmedabad", initials: "MJ" },
-  { quote: "My Aadhaar number was showing up on a public site. Track The Breach guided me step-by-step to file a complaint and get it removed. I felt heard.", name: "Suresh Pillai", role: "Father · Kochi", initials: "SP" },
-  { quote: "Someone was using my photos on a dating app to scam people. The team caught it, removed it and even gave me a PDF I sent to my lawyer.", name: "Anjali R.", role: "Marketing pro · Bengaluru", initials: "AR" },
-  { quote: "I scanned my wife's email and three of my kids' emails. Found leaks on each one. The dashboard shows exactly where the data is — no jargon.", name: "Rohit Singh", role: "Family of 5 · Noida", initials: "RS" },
-  { quote: "My WhatsApp number was leaked along with my city. Strangers started messaging. Track The Breach showed the source and helped me lock things down.", name: "Tanvi Desai", role: "College student · Mumbai", initials: "TD" },
-  { quote: "I was getting weird emails after a website hack. The scan showed exactly which site leaked my password. Quick, clear and actually useful.", name: "Vikram Rao", role: "Retired engineer · Chennai", initials: "VR" },
+  { quote: "Track The Breach found my email leaked in 12 old breaches. I changed my passwords and turned on 2-factor right away. So easy to understand.", name: "Riya Sharma", role: "Student · Delhi, India", initials: "RS" },
+  { quote: "My phone number was on 8 random websites — I didn't even know! They showed me each one and helped me get it removed. Now my spam calls are gone.", name: "Aman Verma", role: "Software engineer · Bengaluru, India", initials: "AV" },
+  { quote: "I found a fake Instagram account using my photos. The team filed the takedown and the account was gone in 3 days. Lifesaver for a parent.", name: "Sneha Iyer", role: "Mom of two · Pune, India", initials: "SI" },
+  { quote: "My passport scan was uploaded to a sketchy website. Track The Breach helped me get it taken down and locked. Honestly, this should be free for everyone.", name: "Karan Mehta", role: "Frequent traveller · Mumbai, India", initials: "KM" },
+  { quote: "A deepfake video using my face was floating around on Telegram. They detected it, removed it and gave me a clear report I could share with my family.", name: "Priya N.", role: "Content creator · Hyderabad, India", initials: "PN" },
+  { quote: "The report is like a school report card — green, yellow, red. Even my dad understood it in 2 minutes. We checked the whole family in one evening.", name: "Devansh Kapoor", role: "Designer · Gurugram, India", initials: "DK" },
+  { quote: "I had no idea my old Yahoo email was leaked years ago. The free scan showed me everything. I fixed it the same day. Took 10 minutes.", name: "Meera Joshi", role: "Teacher · Ahmedabad, India", initials: "MJ" },
+  { quote: "My Aadhaar number was showing up on a public site. Track The Breach guided me step-by-step to file a complaint and get it removed. I felt heard.", name: "Suresh Pillai", role: "Father · Kochi, India", initials: "SP" },
+  { quote: "Someone was using my photos on a dating app to scam people. The team caught it, removed it and even gave me a PDF I sent to my lawyer.", name: "Anjali R.", role: "Marketing pro · Bengaluru, India", initials: "AR" },
+  { quote: "I scanned my wife's email and three of my kids' emails. Found leaks on each one. The dashboard shows exactly where the data is — no jargon.", name: "Rohit Singh", role: "Family of 5 · Noida, India", initials: "RS" },
+  { quote: "My WhatsApp number was leaked along with my city. Strangers started messaging. Track The Breach showed the source and helped me lock things down.", name: "Tanvi Desai", role: "College student · Mumbai, India", initials: "TD" },
+  { quote: "I was getting weird emails after a website hack. The scan showed exactly which site leaked my password. Quick, clear and actually useful.", name: "Vikram Rao", role: "Retired engineer · Chennai, India", initials: "VR" },
+
+  // ─── Global users ───
+  { quote: "I scanned my work email and personal Gmail — both were on the dark web. The dashboard listed every site. I rotated passwords in 15 minutes flat.", name: "Wei Lin Tan", role: "Banker · Singapore", initials: "WT" },
+  { quote: "My phone number was being used for scam calls across the Gulf. Track The Breach traced where it leaked and helped me get it scrubbed. Peace of mind, finally.", name: "Mohammed Al Suwaidi", role: "Father of three · Dubai, UAE", initials: "MA" },
+  { quote: "Found my old uni email in a massive 2017 breach. The team explained what data was exposed and how to lock down my LinkedIn. Super clear instructions.", name: "Olivia Bennett", role: "Marketing manager · London, UK", initials: "OB" },
+  { quote: "My driver's license photo was floating on a random forum. They helped me get it removed and reported. As a single mom in NYC, this honestly saved my sanity.", name: "Jessica Morales", role: "Mom · New York, USA", initials: "JM" },
+  { quote: "Mi correo apareció en tres filtraciones distintas. La herramienta es súper fácil — mi madre también la usó. Recomiendo a todos en mi familia.", name: "Diego Fernández", role: "Photographer · Madrid, Spain", initials: "DF" },
+  { quote: "Many of us in Kabul worry about our identities being exposed online. Track The Breach showed me where my email and phone leaked and gave me steps in plain English.", name: "Ahmad Rahimi", role: "Journalist · Kabul, Afghanistan", initials: "AR" },
+  { quote: "My passport number leaked through an airline breach. The team in India helped me file removal requests and monitor for misuse. Highly recommended across Africa.", name: "Chioma Okafor", role: "Entrepreneur · Lagos, Nigeria", initials: "CO" },
+  { quote: "I'm based in Cape Town. My old emails were in breaches I'd completely forgotten about. The report was clean, simple and I shared it with my whole family WhatsApp group.", name: "Thandiwe Nkosi", role: "Nurse · Cape Town, South Africa", initials: "TN" },
+  { quote: "Discovered my Telegram handle, phone and address all linked together in a leak. Track The Breach mapped the whole exposure and helped me clean it up step by step.", name: "Lucas Müller", role: "Freelancer · Berlin, Germany", initials: "LM" },
+  { quote: "After a phishing scare I scanned my whole family. Two emails were on the dark web. Loved how my 70-year-old mum could read the report on her own.", name: "Aiko Tanaka", role: "Daughter & caregiver · Tokyo, Japan", initials: "AT" },
+  { quote: "My credit-card number popped up on a Tor market. The team confirmed the source, walked me through replacing the card and monitoring my identity. Brilliant service.", name: "Liam O'Sullivan", role: "Accountant · Dublin, Ireland", initials: "LO" },
+  { quote: "Three of our co-founders had their emails in breach dumps before our launch. Fixed everything in one afternoon. Now part of our onboarding checklist.", name: "Aarav Kapoor", role: "Founder, e-commerce startup · Bengaluru, India", initials: "AK" },
+  { quote: "We run a food-delivery brand — impersonators were copying our managers on WhatsApp. Track The Breach detected and removed the fake profiles fast.", name: "Fatima Al-Mansoori", role: "Head of Ops, food-delivery company · Dubai, UAE", initials: "FA" },
+  { quote: "I'm head of an online fashion brand. We used Track The Breach to check exposure for every employee. Found 18 leaks across 9 staff. Cleaned up in a week.", name: "Sofia Rossi", role: "Head, e-commerce brand · Milan, Italy", initials: "SR" },
+  { quote: "I lead a cloud-kitchen startup in Sydney. Personal phone numbers of our delivery riders were being scraped. They tracked the source and helped us remove it.", name: "James Patterson", role: "Founder, cloud-kitchen brand · Sydney, Australia", initials: "JP" },
 ];
 
 export const FAQ_ITEMS = [
