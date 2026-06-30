@@ -285,3 +285,15 @@ h1, h2, h3, h4 {
     background-size: 200% 100%;
     animation: shimmer 3s linear infinite;
 }
+
+/* Vertical marquee used in Hero testimonial column */
+@keyframes marquee-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+.marquee-vertical {
+  animation: marquee-up 40s linear infinite;
+}
+.marquee-vertical:hover {
+  animation-play-state: paused;
+}

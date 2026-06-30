@@ -6,7 +6,6 @@ import TrustStats from "../components/sections/TrustStats";
 import HowAIWorks from "../components/sections/HowAIWorks";
 import WhatWeMonitor from "../components/sections/WhatWeMonitor";
 import UserJourney from "../components/sections/UserJourney";
-import SampleReport from "../components/sections/SampleReport";
 import WhyUpgrade from "../components/sections/WhyUpgrade";
 import JivaAI from "../components/sections/JivaAI";
 import WhoNeedsTTB from "../components/sections/WhoNeedsTTB";
@@ -35,23 +34,21 @@ export default function Home() {
       <WhatWeMonitor />
       {/* 8. User Journey — 7 steps */}
       <UserJourney />
-      {/* 9. Sample Report */}
-      <SampleReport />
-      {/* 10. Why upgrade */}
+      {/* 9. Why upgrade */}
       <WhyUpgrade />
-      {/* 11. Pricing comparison (short) */}
+      {/* 10. Pricing comparison (short) */}
       <ComparisonTable variant="short" />
-      {/* 12. Jiva AI */}
+      {/* 11. Jiva AI */}
       <JivaAI />
-      {/* 13. Who needs TTB */}
+      {/* 12. Who needs TTB */}
       <WhoNeedsTTB />
-      {/* 14. Trust pillars */}
+      {/* 13. Trust pillars */}
       <TrustSection />
-      {/* 15. Testimonials */}
+      {/* 14. Testimonials */}
       <Testimonials />
-      {/* 16. FAQ */}
+      {/* 15. FAQ */}
       <FAQ limit={10} />
-      {/* 17. Final FREE Scan CTA before footer */}
+      {/* 16. Final FREE Scan CTA before footer */}
       <FinalScanCTA />
     </div>
   );
