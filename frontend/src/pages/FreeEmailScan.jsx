@@ -41,21 +41,21 @@ export default function FreeEmailScan() {
               <CheckCircle2 className="w-3 h-3" /> 100% Free · No Credit Card
             </div>
             <h1 className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.1] font-bold tracking-tight text-slate-900">
-              Run a <span className="gradient-text">FREE Email Breach Scan</span> in under 2 minutes.
+              Run a <span className="gradient-text">Free Email ID Breach Scan</span> in under 2 minutes.
             </h1>
             <p className="mt-6 text-lg text-slate-600 max-w-2xl leading-relaxed">
               Find out instantly if your email is leaked on the dark web. Get your <strong className="text-slate-900">Digital Identity Score</strong>, an AI Security Summary and a preview of every breach tied to your identity — powered by Track The Breach AI.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <a href={`${APP_URL}/signup`} data-testid="free-scan-cta-hero" className="group inline-flex items-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-base font-semibold transition shadow-[0_12px_40px_-12px_rgba(37,99,235,0.55)]">
-                Start FREE Email Scan <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+                Start Scanning — Free <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
               </a>
               <Link to="/sample-report" data-testid="free-scan-sample" className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl border border-slate-300 bg-white hover:border-blue-500 hover:text-blue-600 text-slate-900 text-base font-semibold transition">
                 View Sample Report
               </Link>
             </div>
             <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs">
-              <span className="inline-flex items-center gap-1.5 text-emerald-700 font-semibold"><CheckCircle2 className="w-3.5 h-3.5" /> 1 FREE Scan</span>
+              <span className="inline-flex items-center gap-1.5 text-emerald-700 font-semibold"><CheckCircle2 className="w-3.5 h-3.5" /> Free Email ID Scan</span>
               <span className="text-slate-300">·</span>
               <span className="inline-flex items-center gap-1.5 text-emerald-700 font-semibold"><CheckCircle2 className="w-3.5 h-3.5" /> AI Powered</span>
               <span className="text-slate-300">·</span>
@@ -122,7 +122,7 @@ export default function FreeEmailScan() {
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a href={`${APP_URL}/signup`} data-testid="free-scan-cta-bottom" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-slate-900 hover:bg-slate-100 font-semibold transition">
-                  Start FREE Scan <ArrowRight className="w-4 h-4" />
+                  Start Scanning Free <ArrowRight className="w-4 h-4" />
                 </a>
                 <Link to="/sample-report" className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-white/20 hover:border-white/40 text-white text-sm font-semibold transition">
                   View Sample Report

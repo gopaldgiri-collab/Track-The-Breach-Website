@@ -39,7 +39,7 @@ export default function UserJourney() {
 
         <div className="mt-12 flex justify-center">
           <a href={`${APP_URL}/signup`} data-testid="journey-cta" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold transition shadow-[0_12px_40px_-12px_rgba(37,99,235,0.55)]">
-            Start FREE Email Scan
+            Start Scanning — Free
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
           </a>
         </div>

@@ -33,11 +33,11 @@ export default function SampleReport() {
               See what your <span className="gradient-text">real report</span> will look like.
             </h1>
             <p className="mt-5 text-lg text-slate-600 max-w-2xl leading-relaxed">
-              This is a redacted sample of the Executive Report we generate. Run your <strong className="text-slate-900">FREE Email Scan</strong> to see your own — then unlock the full report for just $1.99 / ₹149.
+              This is a redacted sample of the Executive Report we generate. Run your <strong className="text-slate-900">Free Email ID Scan</strong> to see your own — then unlock the full report for just $1.99 / ₹149.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a href={`${APP_URL}/signup`} data-testid="sample-cta-hero" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold transition shadow">
-                Start FREE Scan <ArrowRight className="w-4 h-4" />
+                Start Scanning Free <ArrowRight className="w-4 h-4" />
               </a>
               <Link to="/pricing" data-testid="sample-cta-pricing" className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-300 bg-white hover:border-blue-500 hover:text-blue-600 text-slate-900 font-semibold transition">
                 See Pricing

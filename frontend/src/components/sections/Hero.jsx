@@ -46,11 +46,11 @@ export default function Hero() {
             </div>
 
             <h1 className="mt-5 font-display text-4xl sm:text-5xl lg:text-[55px] leading-[1.15] font-bold tracking-tight text-slate-900">
-             Know what the internet <span className="gradient-text">knows about you.</span> <br />
+             Check the exposure &amp; breaches of your <span className="gradient-text">personal information</span> over the internet. <br />
 	  </h1>
 
             <p className="mt-6 text-base md:text-base text-slate-600 max-w-xl leading-relaxed">
-              Track The Breach uses AI to analyze billions of breach records, threat intelligence sources, and public data to reveal where your <strong className="text-slate-900">email, phone number, social accounts, photos and digital identity</strong> are exposed online. Start with one <strong className="text-slate-900">FREE Email Scan</strong> — no credit card required.
+              Track The Breach uses AI to analyze billions of breach records, threat intelligence sources, and public data to reveal where your <strong className="text-slate-900">email ID, phone number, social accounts, photos and digital identity</strong> are exposed online. <span className="block mt-2 text-slate-800 font-semibold">Protect yourself from hackers — we are here to help you.</span>
             </p>
 
             <div className="mt-5 flex flex-wrap items-center gap-3">
@@ -59,7 +59,7 @@ export default function Hero() {
                 data-testid="hero-cta-primary"
                 className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold transition shadow-[0_12px_40px_-12px_rgba(37,99,235,0.55)]"
               >
-                Start FREE Email Scan
+                Check Your Email Breach &amp; Exposure — Free
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
               </a>
               <button
@@ -73,7 +73,7 @@ export default function Hero() {
               </button>
             </div>
             <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs">
-              <span className="inline-flex items-center gap-1.5 text-emerald-700 font-semibold"><CheckCircle2 className="w-3.5 h-3.5" /> 1 FREE Scan</span>
+              <span className="inline-flex items-center gap-1.5 text-emerald-700 font-semibold"><CheckCircle2 className="w-3.5 h-3.5" /> Free Email ID Scan</span>
               <span className="text-slate-300">·</span>
               <span className="inline-flex items-center gap-1.5 text-emerald-700 font-semibold"><CheckCircle2 className="w-3.5 h-3.5" /> No Credit Card</span>
               <span className="text-slate-300">·</span>

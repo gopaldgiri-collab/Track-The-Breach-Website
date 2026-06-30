@@ -24,7 +24,7 @@ export default function Pricing() {
       <PageHero
         eyebrow="PRICING"
         title="Pay once. Use credits forever. Start free."
-        subtitle="Every plan is a one-time credit pack — credits never expire. Start with a FREE Email Scan (no credit card), then unlock the full Executive Report from just $1.99 / ₹149."
+        subtitle="Every plan is a one-time credit pack — credits never expire. Start with a Free Email ID Scan (no credit card), then unlock the full Executive Report from just $1.99 / ₹149."
         icon="ShieldCheck"
       >
         <div className="inline-flex items-center gap-1 p-1 rounded-xl bg-white border border-slate-200 shadow-sm" data-testid="currency-toggle">

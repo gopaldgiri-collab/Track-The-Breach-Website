@@ -160,7 +160,7 @@ export default function Navbar() {
               data-testid="navbar-signup"
               className="group relative inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-sm font-bold transition shadow-[0_10px_30px_-8px_rgba(37,99,235,0.65)] ring-2 ring-blue-500/0 hover:ring-blue-500/30"
             >
-              Start FREE Scan
+              Start Scanning Free
               <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform" />
             </a>
           </div>
@@ -240,7 +240,7 @@ export default function Navbar() {
                     Sample Report
                   </Link>
                   <Link to="/free-email-scan" data-testid="mobile-free-scan" className="rounded-2xl border border-slate-200/70 bg-white/60 px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-blue-50 hover:text-blue-600 transition text-center">
-                    Free Email Scan
+                    Free Email ID Scan
                   </Link>
                   <Link to="/contact" data-testid="mobile-contact" className="rounded-2xl border border-slate-200/70 bg-white/60 px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-blue-50 hover:text-blue-600 transition text-center">
                     Contact
@@ -257,7 +257,7 @@ export default function Navbar() {
                     data-testid="mobile-signup"
                     className="rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-sm font-semibold px-4 py-3 text-center shadow-[0_12px_30px_-12px_rgba(37,99,235,0.55)]"
                   >
-                    Start FREE Scan
+                    Start Scanning Free
                   </a>
                 </div>
               </div>

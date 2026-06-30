@@ -200,8 +200,8 @@ export const TESTIMONIALS = [
 
 export const FAQ_ITEMS = [
   { q: "What is Track The Breach?", a: "Track The Breach is an AI-powered Digital Identity Intelligence platform. We help individuals, families and businesses discover where their email, phone, government ID, social profiles, photos and videos are exposed across the open web, dark web and underground forums — and what to do about it." },
-  { q: "Is the email scan really free?", a: "Yes. Every account gets 1 FREE Email Scan with no credit card required at sign-up. You'll instantly see your Digital Identity Score, AI Security Summary and a preview of breaches tied to your email." },
-  { q: "What do I get with the Free plan?", a: "Free includes 1 Email Scan, Digital Identity Score, AI Security Summary, Risk Score, Email Breach Count, Basic Recommendations and a Dashboard History. To see full breach details, exposed fields, timelines and the Executive PDF report, upgrade to Starter for just $1.99 / ₹149." },
+  { q: "Is the email scan really free?", a: "Yes. Every account gets a Free Email ID Scan with no credit card required at sign-up. You'll instantly see your Digital Identity Score, AI Security Summary and a preview of breaches tied to your email." },
+  { q: "What do I get with the Free plan?", a: "Free includes a free Email ID Scan, Digital Identity Score, AI Security Summary, Risk Score, Email Breach Count, Basic Recommendations and a Dashboard History. To see full breach details, exposed fields, timelines and the Executive PDF report, upgrade to Starter for just $1.99 / ₹149." },
   { q: "Why upgrade from Free to Starter?", a: "Starter unlocks the complete Executive Report: every breach name, every exposed data field, the full breach timeline, provider intelligence, dark-web intelligence and a downloadable AI PDF report. It's a one-time $1.99 / ₹149 — credits never expire." },
   { q: "How is this different from a simple breach checker?", a: "Email breach lookup is one capability. Track The Breach unifies email, phone, government ID, social, photo, video, deepfake and dark-web intelligence into one AI-powered Digital Identity Graph — with a quantified Risk Score and prioritized remediation steps." },
   { q: "How does the pricing model work?", a: "All paid plans are one-time credit packs — you pay once, and credits never expire. Use them whenever you want to run a scan. There's no monthly subscription you have to remember to cancel." },
@@ -230,11 +230,11 @@ export const PRICING_PLANS = [
     priceINR: "Free",
     period: "forever free",
     creditNote: "No credit card required",
-    credits: "1 Free Email Scan",
-    cta: "Start FREE Scan",
+    credits: "Free Email ID Scan",
+    cta: "Start Scanning Free",
     outcome: "See whether your email is leaked — in under 2 minutes.",
     features: [
-      "1 Free Email Scan",
+      "Free Email ID Scan",
       "Preview Report",
       "Digital Identity Score",
       "Risk Score & AI Summary",
@@ -366,7 +366,7 @@ export const COMPARISON_PLANS = ["Free", "Starter", "Professional", "Business", 
 export const COMPARISON_FEATURES = [
   { group: "Pricing & Credits", items: [
     { feature: "Price", values: ["Free", "$1.99 / ₹149", "$9.99 / ₹899", "$49.99 / ₹4,499", "$99.99 / ₹8,999", "From $249.99 / ₹23,999"] },
-    { feature: "Credits Included", values: ["1 Free Email Scan", "40", "300", "2,500", "6,000", "Concierge support"] },
+    { feature: "Credits Included", values: ["Free Email ID Scan", "40", "300", "2,500", "6,000", "Concierge support"] },
     { feature: "Credits Never Expire", values: ["—", true, true, true, true, true] },
   ]},
   { group: "Core Intelligence", items: [
@@ -386,7 +386,7 @@ export const COMPARISON_FEATURES = [
     { feature: "Executive PDF Report", values: [false, true, true, true, true, true] },
   ]},
   { group: "Scan Modules", items: [
-    { feature: "Email Scan", values: ["1 Free", true, true, true, true, true] },
+    { feature: "Email ID Scan", values: ["Free", true, true, true, true, true] },
     { feature: "Phone Scan", values: ["Credits required", "Credits required", true, true, true, true] },
     { feature: "Social Media Scan", values: ["Credits required", "Credits required", "Credits required", true, true, true] },
     { feature: "Government ID Scan", values: ["Credits required", "Credits required", "Credits required", true, true, true] },
@@ -408,7 +408,7 @@ export const COMPARISON_FEATURES = [
 ];
 
 export const CREDIT_USAGE = [
-  { service: "Email Breach Scan", credits: 20, icon: "Mail" },
+  { service: "Email ID Breach Scan", credits: 20, icon: "Mail" },
   { service: "Phone Number Exposure", credits: 40, icon: "Phone" },
   { service: "Social Account Duplicates", credits: 80, icon: "AtSign" },
   { service: "Government ID Exposure", credits: 100, icon: "BadgeCheck" },

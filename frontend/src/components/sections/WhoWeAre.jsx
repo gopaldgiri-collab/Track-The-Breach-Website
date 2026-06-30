@@ -20,7 +20,7 @@ export default function WhoWeAre() {
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <a href={`${APP_URL}/signup`} data-testid="who-we-are-cta" className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-sm font-semibold transition shadow">
-                Start FREE Email Scan <ArrowRight className="w-4 h-4" />
+                Start Scanning — Free <ArrowRight className="w-4 h-4" />
               </a>
               <Link to="/sample-report" data-testid="who-we-are-sample" className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-300 bg-white hover:border-blue-500 hover:text-blue-600 text-slate-900 text-sm font-semibold transition">
                 View Sample Report

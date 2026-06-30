@@ -10,7 +10,7 @@ const SOCIAL = [
 ];
 
 const SEO_LINKS = [
-  { label: "Start FREE Email Scan", to: "/free-email-scan" },
+  { label: "Start Scanning — Free", to: "/free-email-scan" },
   { label: "View Sample Report", to: "/sample-report" },
   { label: "Check Email Breach", to: "/check-email-breach" },
   { label: "Email Leak Checker", to: "/email-leak-checker" },
@@ -59,7 +59,7 @@ export default function Footer() {
               data-testid="footer-free-scan-cta"
               className="mt-5 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-sm font-semibold transition shadow-[0_8px_24px_-8px_rgba(37,99,235,0.55)]"
             >
-              Start FREE Email Scan <ArrowRight className="w-4 h-4" />
+              Start Scanning — Free <ArrowRight className="w-4 h-4" />
             </a>
             <div className="mt-6 flex items-center gap-2">
               {SOCIAL.map(({ Icon, href, label }) => (
@@ -144,10 +144,6 @@ export default function Footer() {
 <Link to="/responsible-disclosure" data-testid="footer-disclosure" className="hover:text-blue-600">
   Responsible Disclosure
 </Link>
-            <a href="https://status.trackthebreach.com" className="hover:text-blue-600 inline-flex items-center gap-1.5" data-testid="footer-status">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              All systems operational
-            </a>
           </div>
         </div>
       </div>

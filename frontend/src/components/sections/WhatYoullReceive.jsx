@@ -41,7 +41,7 @@ export default function WhatYoullReceive() {
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <a href={`${APP_URL}/signup`} data-testid="receive-cta" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold transition shadow-[0_12px_40px_-12px_rgba(37,99,235,0.55)]">
-            Start FREE Email Scan <ArrowRight className="w-4 h-4" />
+            Start Scanning — Free <ArrowRight className="w-4 h-4" />
           </a>
           <Link to="/sample-report" data-testid="receive-sample" className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-300 bg-white hover:border-blue-500 hover:text-blue-600 text-slate-900 font-semibold transition">
             View Sample Report
