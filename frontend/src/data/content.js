@@ -5,6 +5,8 @@ export const BRAND_MOTTO = "Stay Safe, Stay Protected";
 
 export const NAV = {
   product: [
+    { label: "Free Email ID Scan", to: "/free-email-scan", desc: "Run a free scan in under 2 minutes" },
+    { label: "Sample Report", to: "/sample-report", desc: "Preview your Executive Identity Report" },
     { label: "Platform Overview", to: "/platform", desc: "Unified digital identity protection" },
     { label: "Email Monitoring", to: "/email-monitoring", desc: "Detect leaked email credentials" },
     { label: "Phone Monitoring", to: "/phone-monitoring", desc: "Track SIM swap & number exposure" },

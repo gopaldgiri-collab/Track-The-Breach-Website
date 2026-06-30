@@ -127,24 +127,6 @@ export default function Navbar() {
                 Pricing
               </Link>
             </li>
-            <li>
-              <Link
-                to="/sample-report"
-                data-testid="nav-sample-report"
-                className="px-4 py-2 text-[15px] font-semibold text-slate-800 hover:text-blue-600 transition rounded-lg"
-              >
-                Sample Report
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/free-email-scan"
-                data-testid="nav-free-scan"
-                className="px-4 py-2 text-[15px] font-semibold text-blue-700 hover:text-blue-800 transition rounded-lg"
-              >
-                Free Scan
-              </Link>
-            </li>
           </ul>
 
           <div className="hidden lg:flex items-center gap-2">
@@ -158,7 +140,7 @@ export default function Navbar() {
             <a
               href={`${APP_URL}/signup`}
               data-testid="navbar-signup"
-              className="group relative inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-sm font-bold transition shadow-[0_10px_30px_-8px_rgba(37,99,235,0.65)] ring-2 ring-blue-500/0 hover:ring-blue-500/30"
+              className="group relative inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-sm font-bold transition shadow-[0_10px_30px_-8px_rgba(37,99,235,0.65)] ring-2 ring-blue-500/0 hover:ring-blue-500/30 whitespace-nowrap"
             >
               Start Scanning Free
               <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform" />
@@ -232,18 +214,9 @@ export default function Navbar() {
                 })}
 
                 {/* Direct links */}
-                <div className="grid grid-cols-2 gap-2 mt-2">
+                <div className="grid grid-cols-1 gap-2 mt-2">
                   <Link to="/pricing" data-testid="mobile-pricing" className="rounded-2xl border border-slate-200/70 bg-white/60 px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-blue-50 hover:text-blue-600 transition text-center">
                     Pricing
-                  </Link>
-                  <Link to="/sample-report" data-testid="mobile-sample-report" className="rounded-2xl border border-slate-200/70 bg-white/60 px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-blue-50 hover:text-blue-600 transition text-center">
-                    Sample Report
-                  </Link>
-                  <Link to="/free-email-scan" data-testid="mobile-free-scan" className="rounded-2xl border border-slate-200/70 bg-white/60 px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-blue-50 hover:text-blue-600 transition text-center">
-                    Free Email ID Scan
-                  </Link>
-                  <Link to="/contact" data-testid="mobile-contact" className="rounded-2xl border border-slate-200/70 bg-white/60 px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-blue-50 hover:text-blue-600 transition text-center">
-                    Contact
                   </Link>
                 </div>
 
