@@ -1,9 +1,15 @@
+import { useState } from "react";
 import { TESTIMONIALS } from "../../data/content";
-import { Quote, Star } from "lucide-react";
+import { Quote, Star, ChevronDown, ChevronUp } from "lucide-react";
 
 const AVATARS = ["bg-blue-600", "bg-cyan-600", "bg-fuchsia-600", "bg-emerald-600", "bg-orange-500", "bg-purple-600"];
+const INITIAL_COUNT = 6;
 
 export default function Testimonials() {
+  const [expanded, setExpanded] = useState(false);
+  const visible = expanded ? TESTIMONIALS : TESTIMONIALS.slice(0, INITIAL_COUNT);
+  const hasMore = TESTIMONIALS.length > INITIAL_COUNT;
+
   return (
     <section data-testid="testimonials-section" className="relative py-28 border-y border-slate-200/70 bg-white/40 backdrop-blur-sm">
       <div className="container mx-auto px-6 lg:px-8">
@@ -11,7 +17,7 @@ export default function Testimonials() {
           <div className="md:col-span-2">
             <div className="text-xs font-mono uppercase tracking-[0.2em] text-blue-600/80">Testimonials</div>
             <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
-              Trusted by CISOs, creators, and families.
+              Trusted by individuals, creators, and families <span className="gradient-text">worldwide.</span>
             </h2>
           </div>
           <div className="md:text-right">
@@ -23,7 +29,7 @@ export default function Testimonials() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {TESTIMONIALS.map((t, i) => (
+          {visible.map((t, i) => (
             <div
               key={i}
               data-testid={`testimonial-${i}`}
@@ -41,6 +47,29 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
+
+        {hasMore && (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setExpanded((v) => !v)}
+              data-testid="testimonials-toggle"
+              className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-300 bg-white hover:border-blue-500 hover:text-blue-600 text-slate-900 text-sm font-semibold transition shadow-sm"
+            >
+              {expanded ? (
+                <>
+                  Show less
+                  <ChevronUp className="w-4 h-4 group-hover:-translate-y-0.5 transition" />
+                </>
+              ) : (
+                <>
+                  Show more reviews ({TESTIMONIALS.length - INITIAL_COUNT} more)
+                  <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition" />
+                </>
+              )}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
