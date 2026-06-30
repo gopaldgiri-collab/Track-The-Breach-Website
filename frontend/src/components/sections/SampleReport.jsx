@@ -1,4 +1,4 @@
-import { Download, FileText, ShieldAlert, CheckCircle2, AlertTriangle, ListChecks } from "lucide-react";
+import { Download, FileText, ShieldAlert, CheckCircle2, AlertTriangle, ListChecks, Sparkles } from "lucide-react";
 
 const EVIDENCE = [
   { source: "stealer_logs_2026_q1.txt", line: "primary@you.com:H4ll0!P@ss · IP 102.45.10.x · TS 2026-02-08", sev: "Critical" },
@@ -32,6 +32,10 @@ export default function SampleReport() {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-4 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold">
+              <Sparkles className="w-3.5 h-3.5" />
+              This is a sample. Your report will be personalized to your identity.
+            </div>
             <div className="text-xs font-mono uppercase tracking-[0.2em] text-cyan-600">Sample report</div>
             <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
               Every finding. Every source. Every recommendation.

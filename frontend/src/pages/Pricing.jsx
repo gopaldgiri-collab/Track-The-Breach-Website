@@ -5,8 +5,10 @@ import * as Icons from "lucide-react";
 import PageHero from "../components/PageHero";
 import FAQ from "../components/sections/FAQ";
 import FinalCTA from "../components/sections/FinalCTA";
+import ComparisonTable from "../components/sections/ComparisonTable";
 
 const PLAN_COLORS = [
+  { grad: "from-slate-600 to-slate-800", chip: "bg-slate-100 text-slate-700 border-slate-200", glow: "shadow-[0_20px_60px_-20px_rgba(71,85,105,0.35)]" },
   { grad: "from-blue-500 to-indigo-500", chip: "bg-blue-50 text-blue-700 border-blue-200", glow: "shadow-[0_20px_60px_-20px_rgba(37,99,235,0.35)]" },
   { grad: "from-purple-500 to-fuchsia-500", chip: "bg-purple-50 text-purple-700 border-purple-200", glow: "shadow-[0_20px_60px_-20px_rgba(168,85,247,0.35)]" },
   { grad: "from-cyan-500 to-blue-500", chip: "bg-cyan-50 text-cyan-700 border-cyan-200", glow: "shadow-[0_20px_60px_-20px_rgba(6,182,212,0.4)]" },
@@ -21,8 +23,8 @@ export default function Pricing() {
     <div data-testid="pricing-page">
       <PageHero
         eyebrow="PRICING"
-        title="Pricing built to defend you — from today's breaches and tomorrow's threats."
-        subtitle="Pay once. Use credits whenever you need a scan. They never expire — keep them for years if you want. Account creation is free, no credit card required at sign-up."
+        title="Pay once. Use credits forever. Start free."
+        subtitle="Every plan is a one-time credit pack — credits never expire. Start with a FREE Email Scan (no credit card), then unlock the full Executive Report from just $1.99 / ₹149."
         icon="ShieldCheck"
       >
         <div className="inline-flex items-center gap-1 p-1 rounded-xl bg-white border border-slate-200 shadow-sm" data-testid="currency-toggle">
@@ -50,8 +52,8 @@ export default function Pricing() {
             <div className="text-xs font-mono uppercase tracking-[0.2em] text-blue-600/80">For individuals & growing teams</div>
             <h2 className="mt-2 font-display text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Choose how you start.</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {PRICING_PLANS.slice(0, 3).map((p, i) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {PRICING_PLANS.slice(0, 4).map((p, i) => {
               const c = PLAN_COLORS[i];
               return (
                 <div
@@ -76,6 +78,9 @@ export default function Pricing() {
                     {p.tagline}
                   </div>
                   <p className="text-xs text-slate-500 min-h-[40px]">{p.audience}</p>
+                  {p.outcome && (
+                    <p className="text-xs text-slate-700 italic mt-2 leading-relaxed">{p.outcome}</p>
+                  )}
 
                   <div className="mt-5 flex items-baseline gap-1.5">
                     <span className="font-display text-4xl font-extrabold text-slate-900 tracking-tighter">
@@ -145,8 +150,8 @@ export default function Pricing() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-            {PRICING_PLANS.slice(3).map((p, idx) => {
-              const i = idx + 3;
+            {PRICING_PLANS.slice(4).map((p, idx) => {
+              const i = idx + 4;
               const c = PLAN_COLORS[i];
               return (
                 <div
@@ -168,6 +173,9 @@ export default function Pricing() {
                         {p.tagline}
                       </div>
                       <p className="text-xs text-slate-500">{p.audience}</p>
+                      {p.outcome && (
+                        <p className="text-xs text-slate-700 italic mt-2 leading-relaxed">{p.outcome}</p>
+                      )}
 
                       <div className="mt-5 flex items-baseline gap-1.5 flex-wrap">
                         <span className="font-display text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tighter">
@@ -249,6 +257,9 @@ export default function Pricing() {
           </div>
         </div>
       </section>
+
+      {/* Full feature comparison */}
+      <ComparisonTable variant="full" />
 
       {/* Credit usage */}
       <section className="py-20 border-y border-slate-200/70 bg-white/60 backdrop-blur-sm">

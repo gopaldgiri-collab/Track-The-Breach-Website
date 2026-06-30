@@ -24,6 +24,8 @@ import ResponsibleDisclosure from "@/pages/ResponsibleDisclosure";
 
 import SecurityOverview from "@/pages/SecurityOverview";
 import DataProcessingAddendum from "@/pages/DataProcessingAddendum";
+import FreeEmailScan from "@/pages/FreeEmailScan";
+import SampleReport from "@/pages/SampleReport";
 
 const CATEGORY_ROUTES = [
   "platform",
@@ -92,6 +94,8 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/free-email-scan" element={<FreeEmailScan />} />
+            <Route path="/sample-report" element={<SampleReport />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />

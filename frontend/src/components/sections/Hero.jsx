@@ -46,11 +46,11 @@ export default function Hero() {
             </div>
 
             <h1 className="mt-5 font-display text-4xl sm:text-5xl lg:text-[55px] leading-[1.15] font-bold tracking-tight text-slate-900">
-             Let's Protect Your <span className="gradient-text"> Digital Identity</span> Before Hackers Exploit It <br />
+             Know what the internet <span className="gradient-text">knows about you.</span> <br />
 	  </h1>
 
-            <p className="mt-6 text-base md:text-sm text-slate-600 max-w-xl leading-relaxed">
-              Check where your Email ID, Phone Number, Government ID, Social Accounts, Photos, or Videos are breached & exposed online. Detect impersonation, identity theft risks, leaked credentials, and AI-generated deepfakes. Get a detailed exposure report in minutes.
+            <p className="mt-6 text-base md:text-base text-slate-600 max-w-xl leading-relaxed">
+              Track The Breach uses AI to analyze billions of breach records, threat intelligence sources, and public data to reveal where your <strong className="text-slate-900">email, phone number, social accounts, photos and digital identity</strong> are exposed online. Start with one <strong className="text-slate-900">FREE Email Scan</strong> — no credit card required.
             </p>
 
             <div className="mt-5 flex flex-wrap items-center gap-3">
@@ -59,13 +59,27 @@ export default function Hero() {
                 data-testid="hero-cta-primary"
                 className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold transition shadow-[0_12px_40px_-12px_rgba(37,99,235,0.55)]"
               >
-                Get Your Breach & Exposure Report
+                Start FREE Email Scan
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
               </a>
-              <div className="flex flex-col gap-0.5 text-xs">
-                <span className="inline-flex items-center gap-1.5 text-emerald-700 font-semibold"><CheckCircle2 className="w-3.5 h-3.5" /> Free Account Signup</span>
-                <span className="inline-flex items-center gap-1.5 text-emerald-700 font-semibold"><CheckCircle2 className="w-3.5 h-3.5" /> No Credit Card Required</span>
-              </div>
+              <button
+                type="button"
+                onClick={() => setOpen(true)}
+                data-testid="hero-cta-secondary"
+                className="group inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-300 bg-white hover:border-blue-500 hover:text-blue-600 text-slate-900 font-semibold transition"
+              >
+                View Sample Report
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+              </button>
+            </div>
+            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs">
+              <span className="inline-flex items-center gap-1.5 text-emerald-700 font-semibold"><CheckCircle2 className="w-3.5 h-3.5" /> 1 FREE Scan</span>
+              <span className="text-slate-300">·</span>
+              <span className="inline-flex items-center gap-1.5 text-emerald-700 font-semibold"><CheckCircle2 className="w-3.5 h-3.5" /> No Credit Card</span>
+              <span className="text-slate-300">·</span>
+              <span className="inline-flex items-center gap-1.5 text-emerald-700 font-semibold"><CheckCircle2 className="w-3.5 h-3.5" /> AI Powered</span>
+              <span className="text-slate-300">·</span>
+              <span className="inline-flex items-center gap-1.5 text-emerald-700 font-semibold"><Clock className="w-3.5 h-3.5" /> Results in under 2 minutes</span>
             </div>
 
             <div className="mt-8">

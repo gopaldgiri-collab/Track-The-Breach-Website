@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { Twitter, Linkedin, Facebook, Instagram, Globe2 } from "lucide-react";
-import { NAV, LOGO_URL, BRAND_MOTTO } from "../../data/content";
+import { Twitter, Linkedin, Facebook, Instagram, Globe2, ArrowRight } from "lucide-react";
+import { NAV, LOGO_URL, BRAND_MOTTO, APP_URL } from "../../data/content";
 
 const SOCIAL = [
   { Icon: Twitter, href: "https://x.com/trackthe_breach", label: "twitter" },
@@ -10,6 +10,8 @@ const SOCIAL = [
 ];
 
 const SEO_LINKS = [
+  { label: "Start FREE Email Scan", to: "/free-email-scan" },
+  { label: "View Sample Report", to: "/sample-report" },
   { label: "Check Email Breach", to: "/check-email-breach" },
   { label: "Email Leak Checker", to: "/email-leak-checker" },
   { label: "Phone Leak Checker", to: "/phone-leak-checker" },
@@ -52,6 +54,13 @@ export default function Footer() {
               <Globe2 className="w-3.5 h-3.5" />
               <span>Operating in 50+ countries</span>
             </div>
+            <a
+              href={`${APP_URL}/signup`}
+              data-testid="footer-free-scan-cta"
+              className="mt-5 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-sm font-semibold transition shadow-[0_8px_24px_-8px_rgba(37,99,235,0.55)]"
+            >
+              Start FREE Email Scan <ArrowRight className="w-4 h-4" />
+            </a>
             <div className="mt-6 flex items-center gap-2">
               {SOCIAL.map(({ Icon, href, label }) => (
                 <a
