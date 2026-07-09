@@ -26,15 +26,15 @@ export default function Hero() {
           <div className="lg:col-span-7">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass border border-blue-200 text-xs font-mono uppercase tracking-[0.18em]">
               <Search className="w-3 h-3 text-blue-600" />
-              <span className="text-blue-700">Breach Detection & Digital Identity Protection Platform</span>
+              <span className="text-blue-700">FREE AI DIGITAL IDENTITY ASSESSMENT</span>
             </div>
 
             <h1 className="mt-5 font-display text-4xl sm:text-5xl lg:text-[55px] leading-[1.15] font-bold tracking-tight text-slate-900">
-              Discover Your <span className="gradient-text">Online Exposure & Breaches</span> in Minutes.
+              We Protect Your <span className="gradient-text">Digital Identity</span> in Minutes.
             </h1>
 
             <p className="mt-6 text-base md:text-base text-slate-600 max-w-xl leading-relaxed">
-              Track The Breach Scan your email address, phone number, social accounts, photos, videos, and government IDs to uncover <strong className="text-slate-900">data breaches, online exposure, privacy risks, and digital threats.</strong> Receive an AI-powered security report with practical recommendations to protect yourself and your business.
+              Track The Breach Check Scan your Email ID, Phone Number, Social Media Accounts, Government ID, Photos and Videos to <strong className="text-slate-900">discover data breaches, online exposure, impersonation risks and privacy threats.</strong> Receive an AI-powered security report with practical recommendations to protect yourself.
               <span className="block mt-4 text-slate-800 font-semibold"> We help You From Breach Detection To Proactive Protection. </span>
             </p>
 
