@@ -35,7 +35,7 @@ export default function BlogPost() {
     publisher: {
       "@type": "Organization",
       name: "Track The Breach",
-      logo: { "@type": "ImageObject", url: "https://customer-assets.emergentagent.com/job_threat-monitor-83/artifacts/jdbmqmpe_Logo_1-removebg-preview.png" },
+      logo: { "@type": "ImageObject", url: "/images/brand/logo-transparent.png" },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": typeof window !== "undefined" ? window.location.href : "" },
   };

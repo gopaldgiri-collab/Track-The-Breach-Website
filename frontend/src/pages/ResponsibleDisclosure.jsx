@@ -6,9 +6,8 @@ const sections = [
 title: "Our Commitment",
 content: (
 <> <p>
-Security is a core part of Track The Breach's mission. We appreciate
-security researchers, ethical hackers, customers, and community
-members who help identify vulnerabilities and security weaknesses. </p>
+Security is a core part of Track The Breach's mission.
+ </p>
 
       <p>
         This Responsible Disclosure Policy explains how to report
@@ -157,26 +156,6 @@ members who help identify vulnerabilities and security weaknesses. </p>
         <li>Spam-related reports</li>
         <li>Third-party service vulnerabilities</li>
         <li>Rate-limit findings without demonstrated impact</li>
-      </ul>
-    </>
-  )
-},
-
-{
-  title: "Bug Bounty Program",
-  content: (
-    <>
-      <p>
-        Track The Breach may offer bug bounty rewards for qualifying
-        vulnerabilities at its sole discretion.
-      </p>
-
-      <ul className="list-disc pl-6">
-        <li>Severity of the issue</li>
-        <li>Quality of the report</li>
-        <li>Originality of the finding</li>
-        <li>Potential customer impact</li>
-        <li>Ease of exploitation</li>
       </ul>
     </>
   )

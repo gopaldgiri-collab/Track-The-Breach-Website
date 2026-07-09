@@ -1,6 +1,6 @@
 // Site-wide content configuration: all 60+ pages use this config
 export const APP_URL = "https://app.trackthebreach.com";
-export const LOGO_URL = "https://customer-assets.emergentagent.com/job_threat-monitor-83/artifacts/jdbmqmpe_Logo_1-removebg-preview.png";
+export const LOGO_URL = "/images/brand/logo-transparent.png";
 export const BRAND_MOTTO = "Stay Safe, Stay Protected";
 
 export const NAV = {
@@ -755,7 +755,6 @@ export const PAGES = {
       { icon: "ShieldCheck", title: "Continuous attestation", desc: "Automated SOC 2 / ISO 27001 evidence collection 24/7." },
       { icon: "Activity", title: "Real-time anomaly detection", desc: "Our own platform watches our infrastructure for misuse." },
       { icon: "Cloud", title: "Region-pinned storage", desc: "Honor data residency for EU, India, UAE, Singapore tenants." },
-      { icon: "FileText", title: "Public bug bounty", desc: "Top-tier disclosure program with named hall-of-fame and bounties." },
     ],
   },
   "trust-center": {
@@ -766,7 +765,6 @@ export const PAGES = {
       { icon: "FileText", title: "ISO 27001", desc: "Information security management certified end-to-end." },
       { icon: "Globe2", title: "GDPR + DPDP aligned", desc: "DPO-led program with regional subprocessors disclosed." },
       { icon: "Lock", title: "Data Processing Addendum", desc: "Standard contractual clauses available on request." },
-      { icon: "AlertTriangle", title: "Responsible disclosure", desc: "Public security@ inbox plus monetary bug bounty." },
       { icon: "Activity", title: "Live status page", desc: "Real-time component status with subscription notifications." },
     ],
   },

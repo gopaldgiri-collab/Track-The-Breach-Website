@@ -26,16 +26,16 @@ export default function Hero() {
           <div className="lg:col-span-7">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass border border-blue-200 text-xs font-mono uppercase tracking-[0.18em]">
               <Search className="w-3 h-3 text-blue-600" />
-              <span className="text-blue-700">AI-powered Data Breach Detection Platform</span>
+              <span className="text-blue-700">Breach Detection & Digital Identity Protection Platform</span>
             </div>
 
             <h1 className="mt-5 font-display text-4xl sm:text-5xl lg:text-[55px] leading-[1.15] font-bold tracking-tight text-slate-900">
-              Check The Exposure &amp; Breaches Of Your <span className="gradient-text">Personal Information</span> Over The Internet.
+              Discover Your <span className="gradient-text">Online Exposure & Breaches</span> in Minutes.
             </h1>
 
             <p className="mt-6 text-base md:text-base text-slate-600 max-w-xl leading-relaxed">
-              Track The Breach uses AI to analyze billions of breach records, threat intelligence sources, and public data to reveal where your <strong className="text-slate-900">email ID, phone number, social accounts, photos and digital identity</strong> are exposed online.
-              <span className="block mt-2 text-slate-800 font-semibold">Protect yourself from hackers — we are here to help you.</span>
+              Track The Breach Scan your email address, phone number, social accounts, photos, videos, and government IDs to uncover <strong className="text-slate-900">data breaches, online exposure, privacy risks, and digital threats.</strong> Receive an AI-powered security report with practical recommendations to protect yourself and your business.
+              <span className="block mt-4 text-slate-800 font-semibold"> We help You From Breach Detection To Proactive Protection. </span>
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -44,7 +44,7 @@ export default function Hero() {
                 data-testid="hero-cta-primary"
                 className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold transition shadow-[0_12px_40px_-12px_rgba(37,99,235,0.55)]"
               >
-                Check Your Email Breach &amp; Exposure — Free
+                Start Free Email Scan
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
               </a>
             </div>

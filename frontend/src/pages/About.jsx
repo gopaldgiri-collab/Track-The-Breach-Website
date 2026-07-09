@@ -19,10 +19,8 @@ const VALUES = [
 ];
 
 const LEADERS = [
-  { name: "A. Sharma", role: "Co-founder & CEO", bg: "from-blue-500 to-indigo-500", initials: "AS" },
-  { name: "R. Kapoor", role: "Co-founder & CTO", bg: "from-fuchsia-500 to-rose-500", initials: "RK" },
-  { name: "M. Chen", role: "Chief Security Officer", bg: "from-emerald-500 to-cyan-500", initials: "MC" },
-  { name: "L. Okafor", role: "VP Research", bg: "from-amber-500 to-orange-500", initials: "LO" },
+  { name: "Gopal Giri", role: "Co-founder & CEO", bg: "from-blue-500 to-indigo-500", initials: "GG" },
+  { name: "Divya Bharti", role: "Co-founder & CTO", bg: "from-fuchsia-500 to-rose-500", initials: "DB" },
 ];
 
 export default function About() {
