@@ -142,9 +142,7 @@ async def submit_contact(submission: ContactSubmission):
         doc["email_error"] = str(e)
         sent = False
 
-    # Save only if MongoDB is configured
-    # MongoDB disabled for marketing site
-    pass
+    await db.contact_submissions.insert_one(doc)
     return {
         "ok": True,
         "email_sent": sent,
