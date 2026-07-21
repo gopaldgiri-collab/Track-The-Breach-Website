@@ -1125,6 +1125,431 @@ export const BLOG_POSTS = [
   { slug: "identity-theft-2026-mega-guide", title: "The 2026 identity theft prevention mega-guide", category: "Identity Theft", date: "Jan 02, 2026", reading: "14 min read", excerpt: "Everything you need to know to defend yourself, your family, and your team from identity theft in 2026.", tag: "guides" },
   { slug: "romance-scam-deep-dive", title: "Inside the romance scam economy", category: "Scams", date: "Dec 20, 2025", reading: "10 min read", excerpt: "A 6-month investigation into how romance scams are professionalized and industrialized today.", tag: "scams" },
   { slug: "credentials-breach-2025-review", title: "The credential exposure year-in-review: 2025", category: "Data Breaches", date: "Dec 14, 2025", reading: "9 min read", excerpt: "The biggest credential breaches of 2025 and what they tell us about the year ahead.", tag: "breaches" },
+{ 
+    slug: "seoul-ttareungi-bike-breach-fallout", 
+    title: "Seoul bike-sharing service to compensate 4 million users after data breach", 
+    category: "Data Breaches", 
+    date: "Jul 21, 2026", 
+    reading: "5 min read", 
+    excerpt: "Over 4 million users affected by a 2024 data breach will receive 30-day passes for Seoul's Ttareungi bike-sharing service in a massive compensation rollout.", 
+    tag: "breaches" 
+  },
+  { 
+    slug: "unlimited-systems-healthcare-breach-2026", 
+    title: "Unlimited Systems data breach exposes patient health and PII", 
+    category: "Healthcare Threats", 
+    date: "Jul 20, 2026", 
+    reading: "6 min read", 
+    excerpt: "A major healthcare software vendor discloses a breach nine months later, prompting class-action investigations over exposed medical and demographic data.", 
+    tag: "privacy" 
+  },
+  { 
+    slug: "hugging-face-ai-agent-breach", 
+    title: "Hugging Face confirms data breach caused by autonomous AI agent", 
+    category: "AI Threats", 
+    date: "Jul 18, 2026", 
+    reading: "8 min read", 
+    excerpt: "The AI agentic attacker scenario is here. How an autonomous framework exploited dataset-processing pipelines to breach production infrastructure.", 
+    tag: "ai" 
+  },
+  { 
+    slug: "go2-health-brisbane-delayed-disclosure", 
+    title: "GO2 Health clinic waited almost three months to alert hacked patients", 
+    category: "Compliance & Regulation", 
+    date: "Jul 15, 2026", 
+    reading: "5 min read", 
+    excerpt: "A Brisbane medical clinic is under fire for delayed breach notification, highlighting the critical importance of rapid incident communication.", 
+    tag: "compliance" 
+  },
+  { 
+    slug: "q3-2026-ransomware-extortion-shifts", 
+    title: "Q3 2026 Ransomware trends: The shift to pure extortion", 
+    category: "Threat Intelligence", 
+    date: "Jul 12, 2026", 
+    reading: "7 min read", 
+    excerpt: "Encryption is becoming secondary. Threat actors in 2026 are increasingly relying on pure data-exfiltration and multi-tiered extortion models.", 
+    tag: "threat-intel" 
+  },
+  { 
+    slug: "supply-chain-attacks-saas-2026", 
+    title: "SaaS supply chain attacks: Defending the interconnected enterprise", 
+    category: "Platform Security", 
+    date: "Jul 05, 2026", 
+    reading: "9 min read", 
+    excerpt: "Third-party vendor compromise remains the top initial access vector in 2026. Here is how to audit your shadow IT and SaaS sprawl.", 
+    tag: "guides" 
+  },
+  { 
+    slug: "synthetic-identity-fraud-banking", 
+    title: "Synthetic identity fraud is costing banks billions in 2026", 
+    category: "Fraud Prevention", 
+    date: "Jun 28, 2026", 
+    reading: "10 min read", 
+    excerpt: "Criminals are combining real ID fragments with AI-generated personas to build synthetic credit profiles. How financial institutions are fighting back.", 
+    tag: "fraud" 
+  },
+  { 
+    slug: "post-quantum-cryptography-timeline", 
+    title: "The CISO's timeline for Post-Quantum Cryptography (PQC)", 
+    category: "Future Threats", 
+    date: "Jun 22, 2026", 
+    reading: "8 min read", 
+    excerpt: "With NIST finalizing algorithms, the 'harvest now, decrypt later' threat is accelerating. It's time to inventory your cryptographic assets.", 
+    tag: "guides" 
+  },
+  { 
+    slug: "zero-trust-cloud-infrastructure", 
+    title: "Why legacy VPNs are dead: The era of Universal Zero Trust", 
+    category: "Architecture", 
+    date: "Jun 15, 2026", 
+    reading: "7 min read", 
+    excerpt: "Perimeter security failed the modern remote workforce. A deep dive into identity-aware proxies and continuous authentication.", 
+    tag: "architecture" 
+  },
+  { 
+    slug: "dark-web-botnet-rentals", 
+    title: "Residential proxies and botnets: The new dark web gig economy", 
+    category: "Dark Web", 
+    date: "Jun 08, 2026", 
+    reading: "6 min read", 
+    excerpt: "Attackers are renting out compromised smart TVs and IoT devices by the hour to bypass IP blacklists. Inside the underground proxy market.", 
+    tag: "dark-web" 
+  }
+  { 
+    slug: "june-2026-stealer-logs-56m-emails", 
+    title: "The June 2026 Stealer Logs: 56 million emails exposed", 
+    category: "Data Breaches", 
+    date: "Jun 20, 2026", 
+    reading: "7 min read", 
+    excerpt: "A massive corpus of aggregated info-stealer logs surfaced this month, exposing 56 million unique email addresses and 124 million passwords.", 
+    tag: "breaches" 
+  },
+  { 
+    slug: "navia-api-breach-phone-numbers", 
+    title: "Unsecured APIs: How Navia exposed 2.7 million phone numbers", 
+    category: "API Security", 
+    date: "May 28, 2026", 
+    reading: "6 min read", 
+    excerpt: "A misconfigured API endpoint led to the compromise of 2.7 million individuals' contact details and SSNs. A breakdown of the Navia breach.", 
+    tag: "threat-intel" 
+  },
+  { 
+    slug: "verizon-dbir-2026-smishing-rise", 
+    title: "2026 DBIR Insights: Why stolen phone numbers are the new primary target", 
+    category: "Threat Intelligence", 
+    date: "May 15, 2026", 
+    reading: "8 min read", 
+    excerpt: "Verizon's 2026 Data Breach Investigations Report highlights a massive shift: attackers are abandoning traditional email phishing in favor of mobile SMS attacks.", 
+    tag: "threat-intel" 
+  },
+  { 
+    slug: "synthient-credential-stuffing-2-billion", 
+    title: "The Synthient leak: 2 billion credentials fueling 2026's stuffing attacks", 
+    category: "Dark Web", 
+    date: "Apr 22, 2026", 
+    reading: "9 min read", 
+    excerpt: "A staggering 2-billion record database of email-password pairs surfaced on the dark web. How this mega-breach is driving a surge in automated account takeovers.", 
+    tag: "dark-web" 
+  },
+  { 
+    slug: "dentaquest-vendor-breach-contact-data", 
+    title: "Third-party peril: DentaQuest breach leaks 2.6M contact records", 
+    category: "Healthcare Threats", 
+    date: "Jun 03, 2026", 
+    reading: "5 min read", 
+    excerpt: "Emails, phone numbers, and Medicaid IDs for 2.6 million patients were exfiltrated in one of the largest dental benefits administrator breaches of 2026.", 
+    tag: "case-studies" 
+  }
+{ 
+    slug: "craneware-healthcare-supply-chain-breach", 
+    title: "Healthcare supply chain attack: Craneware confirms major data breach", 
+    category: "Healthcare Threats", 
+    date: "Jul 20, 2026", 
+    reading: "6 min read", 
+    excerpt: "British healthcare software firm Craneware, which services thousands of US hospitals, confirms a breach exposing customer, employee, and partner data.", 
+    tag: "breaches" 
+  },
+  { 
+    slug: "india-nuclear-plant-reliance-data-leak", 
+    title: "Dark web leak exposes blueprints for India's largest nuclear plant", 
+    category: "Critical Infrastructure", 
+    date: "Jul 15, 2026", 
+    reading: "8 min read", 
+    excerpt: "The World Leaks ransomware group published 14.3 GB of sensitive blueprints and meeting records for the Kudankulam Nuclear Power Plant after breaching a third-party contractor.", 
+    tag: "dark-web" 
+  },
+  { 
+    slug: "tata-electronics-world-leaks-ransomware", 
+    title: "Tata Electronics investigates massive ransomware data leak", 
+    category: "Manufacturing Security", 
+    date: "Jul 17, 2026", 
+    reading: "7 min read", 
+    excerpt: "Over 200,000 files—including alleged Apple and Tesla component designs—have been published by the World Leaks extortion cartel.", 
+    tag: "threat-intel" 
+  },
+  { 
+    slug: "bajaj-auto-ransomware-incident", 
+    title: "Pune-based Bajaj Auto hit by targeted ransomware attack", 
+    category: "Automotive Threats", 
+    date: "Jul 18, 2026", 
+    reading: "5 min read", 
+    excerpt: "One of India's largest automakers disclosed a significant ransomware incident affecting its IT infrastructure and its technology subsidiary.", 
+    tag: "case-studies" 
+  },
+  { 
+    slug: "oxford-university-careerconnect-breach", 
+    title: "Oxford University discloses data breach via third-party careers platform", 
+    category: "Education Security", 
+    date: "Jul 16, 2026", 
+    reading: "5 min read", 
+    excerpt: "Student PII and encrypted passwords were stolen after hackers compromised a third-party vendor servicing multiple major UK universities.", 
+    tag: "privacy" 
+  }
+{ 
+    slug: "dhs-hsin-breach-world-cup", 
+    title: "DHS confirms breach of Homeland Security Information Network (HSIN)", 
+    category: "Government Threats", 
+    date: "Jul 18, 2026", 
+    reading: "7 min read", 
+    excerpt: "An unauthorized third-party breached a critical DHS information-sharing platform, potentially exposing security planning data for upcoming World Cup events.", 
+    tag: "breaches" 
+  },
+  { 
+    slug: "instructure-canvas-lms-shinyhunters", 
+    title: "The Instructure LMS breach: 275 million edtech users exposed", 
+    category: "Education Security", 
+    date: "Jul 12, 2026", 
+    reading: "8 min read", 
+    excerpt: "The notorious ShinyHunters collective breached Instructure's Canvas platform, disrupting final exams and stealing data from millions of students and faculty.", 
+    tag: "case-studies" 
+  },
+  { 
+    slug: "servicenow-cve-2026-6875-active-exploitation", 
+    title: "Active in the wild: Exploiting ServiceNow pre-auth RCE (CVE-2026-6875)", 
+    category: "Vulnerability Intel", 
+    date: "Jul 21, 2026", 
+    reading: "6 min read", 
+    excerpt: "Attackers are actively exploiting a critical pre-authentication vulnerability in the ServiceNow AI platform to execute code remotely. Patch immediately.", 
+    tag: "threat-intel" 
+  },
+  { 
+    slug: "clover-health-social-engineering-breach", 
+    title: "Clover Health breach highlights the persistence of social engineering", 
+    category: "Healthcare Threats", 
+    date: "Jul 20, 2026", 
+    reading: "5 min read", 
+    excerpt: "A sophisticated social engineering campaign bypassed standard technical controls, compromising three employee accounts and exposing protected health information.", 
+    tag: "privacy" 
+  },
+  { 
+    slug: "accenture-source-code-azure-token-theft", 
+    title: "Source code and Azure tokens: Inside the Accenture data theft claim", 
+    category: "Cloud Security", 
+    date: "Jul 09, 2026", 
+    reading: "5 min read", 
+    excerpt: "A threat actor claims to have exfiltrated 35GB of sensitive data, including Azure personal access tokens and SSH keys, from a private DevOps repository.", 
+    tag: "cloud-security" 
+  }
+{ 
+    slug: "singapore-telecom-unc3886-breach-2026", 
+    title: "Operation CYBER GUARDIAN: Inside the breach of Singapore's telecom grid", 
+    category: "Nation-State Threats", 
+    date: "Jul 22, 2026", 
+    reading: "8 min read", 
+    excerpt: "A China-linked APT successfully compromised all four of Singapore's major telecommunications providers. How authorities executed an 11-month counter-operation to evict them.", 
+    tag: "threat-intel" 
+  },
+  { 
+    slug: "apac-deepfake-agentic-ai-fraud", 
+    title: "Agentic AI and Deepfakes: The $25M Hong Kong scam is just the beginning", 
+    category: "AI Threats", 
+    date: "Jul 14, 2026", 
+    reading: "7 min read", 
+    excerpt: "INTERPOL reports a 600% surge in deepfake discussions among Southeast Asian threat actors. Inside the shift toward autonomous, AI-driven financial fraud in APAC.", 
+    tag: "ai" 
+  },
+  { 
+    slug: "australia-partnered-health-medicare-breach", 
+    title: "Australian healthcare under fire: The Partnered Health Medicare breach", 
+    category: "Healthcare Threats", 
+    date: "Jul 10, 2026", 
+    reading: "6 min read", 
+    excerpt: "Following a ransomware intrusion, an Australian GP network confirmed the exposure of sensitive patient healthcare data, including Medicare and DVA numbers.", 
+    tag: "privacy" 
+  },
+  { 
+    slug: "indonesia-whatsapp-apk-sideloading-campaign", 
+    title: "The $2 Million WhatsApp APK campaign targeting Indonesian banks", 
+    category: "Mobile Security", 
+    date: "Jun 25, 2026", 
+    reading: "6 min read", 
+    excerpt: "Threat actors abused 16 trusted government and financial brands in a massive social engineering campaign relying on malicious Android APK sideloading.", 
+    tag: "fraud" 
+  },
+  { 
+    slug: "thailand-ddos-india-gentlemen-ransomware", 
+    title: "APAC threat landscape: Thailand's DDoS spike and 'The Gentlemen' ransomware", 
+    category: "Threat Intelligence", 
+    date: "Jun 18, 2026", 
+    reading: "7 min read", 
+    excerpt: "Regional intelligence reveals a massive 161% surge in hacktivist DDoS attacks hitting Thailand, while manufacturing sectors in India and Taiwan face a new ransomware syndicate.", 
+    tag: "dark-web" 
+  }
+{ 
+    slug: "building-realtime-identity-graph-scale", 
+    title: "How we built a real-time identity graph for 1.6B breach records", 
+    category: "Engineering", 
+    date: "Jul 21, 2026", 
+    reading: "10 min read", 
+    excerpt: "A look inside Track The Breach's core data pipeline: sub-10ms query performance across billions of interconnected leaked identity fragments.", 
+    tag: "tech" 
+  },
+  { 
+    slug: "ciso-board-reporting-breach-exposure", 
+    title: "How CISOs should present dark web exposure metrics to the board", 
+    category: "Executive Defense", 
+    date: "Jul 19, 2026", 
+    reading: "6 min read", 
+    excerpt: "Stop presenting raw breach counters. Here is the framework for translating identity exposure into business risk and capital allocation.", 
+    tag: "guides" 
+  },
+  { 
+    slug: "active-stealer-log-containment-checklist", 
+    title: "The 30-minute stealer log containment checklist for IR teams", 
+    category: "Incident Response", 
+    date: "Jul 14, 2026", 
+    reading: "5 min read", 
+    excerpt: "When an active stealer log containing employee session cookies hits Telegram, every minute counts. Step-by-step triage for SOC leads.", 
+    tag: "case-studies" 
+  },
+  { 
+    slug: "threat-actor-profile-scattered-spider-2026", 
+    title: "Threat actor breakdown: How Scattered Spider evolved in 2026", 
+    category: "Threat Intelligence", 
+    date: "Jul 08, 2026", 
+    reading: "8 min read", 
+    excerpt: "From SIM swapping to AI-voice helpdesk social engineering: an analysis of the adversary tactics, techniques, and procedures (TTPs).", 
+    tag: "threat-intel" 
+  },
+  { 
+    slug: "sec-72-hour-materiality-assessment-framework", 
+    title: "Determining 'materiality' under SEC breach disclosure rules: A framework", 
+    category: "Compliance", 
+    date: "Jun 30, 2026", 
+    reading: "7 min read", 
+    excerpt: "A practical guide for security and legal teams to evaluate when a cybersecurity incident crosses the threshold of material impact.", 
+    tag: "privacy" 
+  }
+  { slug: "what-is-a-data-breach", title: "What is a data breach? The ultimate guide", category: "Basics", date: "Jul 21, 2026", reading: "5 min read", excerpt: "A complete breakdown of what a data breach actually is, what gets stolen, and why it matters to your business.", tag: "education" },
+  { slug: "how-hackers-steal-data", title: "How hackers do it: Anatomy of a cyberattack", category: "Basics", date: "Jul 20, 2026", reading: "7 min read", excerpt: "From phishing to info-stealers, here is exactly how threat actors bypass security to access your network.", tag: "education" },
+  { slug: "what-is-cybercrime", title: "What is cybercrime and how is it organized today?", category: "Basics", date: "Jul 19, 2026", reading: "6 min read", excerpt: "Cybercrime is no longer a lone hacker in a basement. It is a multi-billion dollar industrial economy.", tag: "dark-web" },
+  { slug: "how-to-handle-a-breach", title: "How to handle a cyberattack: First 24 hours", category: "Incident Response", date: "Jul 18, 2026", reading: "8 min read", excerpt: "Your network has been compromised. Here is the step-by-step playbook on how to contain the damage.", tag: "guides" },
+  { slug: "us-sec-cyber-rules-2026", title: "USA Data Rules: The SEC 4-day disclosure mandate", category: "Compliance", date: "Jul 17, 2026", reading: "5 min read", excerpt: "Public companies in the US must disclose material breaches within 4 days. Here is what constitutes a material breach.", tag: "privacy" },
+  { slug: "india-dpdp-cert-in-rules", title: "India Cybersecurity Rules: CERT-In and the DPDP Act", category: "Compliance", date: "Jul 16, 2026", reading: "7 min read", excerpt: "Indian businesses face strict 6-hour breach reporting to CERT-In, while preparing for full DPDP Act enforcement in 2027.", tag: "privacy" },
+  { slug: "europe-gdpr-nis2-omnibus", title: "EU Rules 2026: The Digital Omnibus, GDPR, and NIS2", category: "Compliance", date: "Jul 15, 2026", reading: "6 min read", excerpt: "Europe is shifting its breach reporting timelines. Here is how the Digital Omnibus impacts GDPR and NIS2 obligations.", tag: "privacy" },
+  { slug: "global-data-privacy-laws", title: "Comparing global data privacy laws in 2026", category: "Compliance", date: "Jul 14, 2026", reading: "9 min read", excerpt: "A cheat sheet comparing US, European, and Asian data protection and breach notification timelines.", tag: "privacy" },
+  { slug: "cost-of-non-compliance", title: "The real cost of regulatory non-compliance", category: "Compliance", date: "Jul 13, 2026", reading: "4 min read", excerpt: "Regulatory fines are just the beginning. Understanding the hidden costs of failing to protect user data.", tag: "privacy" },
+  { slug: "free-email-breach-check", title: "Why you should check if your email is breached", category: "FAQ", date: "Jul 12, 2026", reading: "3 min read", excerpt: "Checking your email against known leaks is step one of personal security. Here is how to do it safely.", tag: "guides" },
+  { slug: "what-is-identity-exposure", title: "What is identity exposure?", category: "FAQ", date: "Jul 11, 2026", reading: "4 min read", excerpt: "It is more than just a leaked password. Identity exposure includes your digital and physical footprint.", tag: "education" },
+  { slug: "password-reuse-danger", title: "The extreme danger of password reuse", category: "FAQ", date: "Jul 10, 2026", reading: "3 min read", excerpt: "Why using the same password for Netflix and your bank is a catastrophic security risk.", tag: "education" },
+  { slug: "what-is-phishing", title: "Phishing 101: Spotting a fake email", category: "FAQ", date: "Jul 09, 2026", reading: "4 min read", excerpt: "Social engineering remains the top entry point for hackers. Learn the red flags of a modern phishing email.", tag: "education" },
+  { slug: "hardware-mfa-vs-sms", title: "Why SMS MFA is failing in 2026", category: "FAQ", date: "Jul 08, 2026", reading: "5 min read", excerpt: "Text-message security codes are easily intercepted via SIM swapping. It is time to upgrade to hardware keys.", tag: "guides" },
+  { slug: "stealer-malware-explained", title: "What is infostealer malware?", category: "FAQ", date: "Jul 07, 2026", reading: "4 min read", excerpt: "The silent malware that steals your active browser cookies and bypasses your passwords entirely.", tag: "threat-intel" },
+  { slug: "how-track-the-breach-supports-you", title: "How Track The Breach supports your security team", category: "Solutions", date: "Jul 06, 2026", reading: "5 min read", excerpt: "From real-time alerts to incident response assistance, here is how our platform defends your enterprise.", tag: "case-studies" },
+  { slug: "continuous-dark-web-monitoring", title: "The value of continuous dark web monitoring", category: "Solutions", date: "Jul 05, 2026", reading: "4 min read", excerpt: "You can't fight what you can't see. How our sensors detect your exposed corporate credentials in real time.", tag: "tech" },
+  { slug: "executive-digital-protection", title: "Protecting the C-Suite: Executive digital protection", category: "Solutions", date: "Jul 04, 2026", reading: "5 min read", excerpt: "Hackers target leadership. How Track The Breach sanitizes the digital footprint of your highest-value targets.", tag: "case-studies" },
+  { slug: "smb-cybersecurity-solutions", title: "Enterprise-grade breach protection for SMBs", category: "Solutions", date: "Jul 03, 2026", reading: "4 min read", excerpt: "Small businesses are the primary target of ransomware. How our platform scales to protect growing teams.", tag: "tech" },
+  { slug: "track-the-breach-api-integration", title: "Automate your defense with the Track The Breach API", category: "Solutions", date: "Jul 02, 2026", reading: "6 min read", excerpt: "Integrate our 1.6 billion record identity graph directly into your SIEM, SOAR, or custom application.", tag: "tech" }
+{ 
+    slug: "complete-data-breach-remediation-guide", 
+    title: "My data was leaked in a breach: What to do next (Complete 2026 playbook)", 
+    category: "Remediation", 
+    date: "Jul 21, 2026", 
+    reading: "7 min read", 
+    excerpt: "Discovered your email, phone, or password on the dark web? Here is the step-by-step complete recovery playbook from Track The Breach.", 
+    tag: "guides" 
+  },
+  { 
+    slug: "end-to-end-enterprise-breach-response-solution", 
+    title: "End-to-end breach solution for businesses: From exposure detection to full recovery", 
+    category: "Enterprise Solutions", 
+    date: "Jul 20, 2026", 
+    reading: "9 min read", 
+    excerpt: "When an exposure occurs, detection is only 10% of the battle. How Track The Breach delivers 360° containment, token neutralization, and board-level reporting.", 
+    tag: "case-studies" 
+  },
+  { 
+    slug: "how-to-remove-leaked-data-from-dark-web", 
+    title: "Can you remove leaked data from the dark web? Myths vs. operational reality", 
+    category: "Dark Web Defense", 
+    date: "Jul 18, 2026", 
+    reading: "6 min read", 
+    excerpt: "A realistic breakdown of how to neutralize exposed credentials, file automated platform takedowns, and render dark web dumps useless to attackers.", 
+    tag: "dark-web" 
+  },
+  { 
+    slug: "complete-solution-for-breached-clients-and-users", 
+    title: "Why point-solution alerts fail: The case for continuous identity neutralization", 
+    category: "Solutions", 
+    date: "Jul 15, 2026", 
+    reading: "8 min read", 
+    excerpt: "Getting a text saying 'your password was leaked' isn't a solution—it's a notification. Discover how Track The Breach automates active response.", 
+    tag: "tech" 
+  },
+  { 
+    slug: "post-breach-identity-restoration-playbook", 
+    title: "Post-breach identity restoration: Protecting VIPs, executives, and users", 
+    category: "Identity Protection", 
+    date: "Jul 11, 2026", 
+    reading: "6 min read", 
+    excerpt: "How to lock down high-value targets, invalidate compromised stealer log cookies, and restore digital perimeter hygiene after a major leak.", 
+    tag: "guides" 
+  }
+{ 
+    slug: "fintech-api-abuse-2026", 
+    title: "Why Fintechs are the #1 target for API abuse in 2026", 
+    category: "Financial Services", 
+    date: "Jul 22, 2026", 
+    reading: "6 min read", 
+    excerpt: "Financial APIs are under siege from automated botnets. Here is how threat actors bypass standard rate limiting to harvest financial data.", 
+    tag: "finance" 
+  },
+  { 
+    slug: "healthcare-black-market-value", 
+    title: "The dark web economy: Why medical records cost 10x more than credit cards", 
+    category: "Healthcare", 
+    date: "Jul 20, 2026", 
+    reading: "7 min read", 
+    excerpt: "A deep dive into why protected health information (PHI) remains the most lucrative commodity for identity thieves and ransomware cartels.", 
+    tag: "healthcare" 
+  },
+  { 
+    slug: "ecommerce-botnet-defense", 
+    title: "Defending retail: Credential stuffing and inventory denial in e-commerce", 
+    category: "Retail", 
+    date: "Jul 18, 2026", 
+    reading: "5 min read", 
+    excerpt: "How retail brands can protect their customer loyalty accounts and payment gateways from automated account takeover (ATO) attacks.", 
+    tag: "retail" 
+  },
+  { 
+    slug: "manufacturing-it-ot-convergence", 
+    title: "Manufacturing at risk: The security cost of IT/OT convergence", 
+    category: "Manufacturing", 
+    date: "Jul 15, 2026", 
+    reading: "8 min read", 
+    excerpt: "When assembly lines connect to the cloud, air-gaps disappear. How to secure the modern smart factory from devastating ransomware downtime.", 
+    tag: "manufacturing" 
+  },
+  { 
+    slug: "law-firms-third-party-vector", 
+    title: "Law firms in the crosshairs: The ultimate third-party risk", 
+    category: "Professional Services", 
+    date: "Jul 12, 2026", 
+    reading: "6 min read", 
+    excerpt: "Threat actors know legal practices hold the keys to M&A data and corporate secrets. How law firms must adapt to client security demands.", 
+    tag: "case-studies" 
+  }
 ];
 
 export const JOBS = [
@@ -1287,4 +1712,724 @@ export const BLOG_BODIES = {
       { type: "p", text: "Expect attackers to combine breach data with AI-driven targeting to deliver hyper-personalized phishing at industrial scale. The defense playbook shifts from 'detect bad emails' to 'eliminate identity exposure at the source.'" },
     ],
   },
+  {
+  "seoul-ttareungi-bike-breach-fallout": {
+    author: "Track The Breach Threat Research",
+    blocks: [
+      { type: "lead", text: "In a massive compensation rollout, Seoul's public bike-sharing service, Ttareungi, has announced it will issue 30-day free passes to over 4 million users affected by a 2024 data breach." },
+      { type: "h2", text: "The Breach Anatomy" },
+      { type: "p", text: "In June 2024, two teenagers successfully compromised the Ttareungi server infrastructure, exfiltrating the personal data of approximately 4.62 million riders. The stolen data included account IDs, mobile phone numbers, physical addresses, dates of birth, and physical metrics like weight and gender." },
+      { type: "p", text: "While the attackers were apprehended and referred to prosecutors early this year, the sheer volume of exposed data required extensive coordination with the National Police Agency and the Personal Information Protection Commission to finalize the impact radius." },
+      { type: "h2", text: "The Fallout and Compensation" },
+      { type: "p", text: "Beginning July 21, 2026, the Seoul Facilities Corporation initiated rolling text message notifications to affected users, detailing the specific data exposed and providing a 30-day bike pass (valued at approximately $3.40) via the app. While authorities report no evidence of secondary financial damage or dark web distribution, the incident underscores the vulnerability of municipal IoT and transit infrastructure to relatively unsophisticated threat actors." },
+      { type: "h2", text: "Lessons for Municipal Platforms" },
+      { type: "list", items: [
+        "Audit and harden public-facing APIs, which are frequently targeted by script kiddies.",
+        "Implement aggressive data minimization—ask if transit apps truly need user weight or exact birth dates.",
+        "Ensure incident response plans include clear timelines for user notification to avoid multi-year regulatory drag."
+      ]}
+    ]
+  },
+  "unlimited-systems-healthcare-breach-2026": {
+    author: "Track The Breach Privacy & Compliance",
+    blocks: [
+      { type: "lead", text: "Unlimited Technology Systems, a major healthcare software and revenue cycle management vendor, is facing class-action investigations following the disclosure of a data breach that exposed sensitive patient PII and PHI." },
+      { type: "h2", text: "A Delayed Disclosure" },
+      { type: "p", text: "According to filings with state attorney generals in July 2026, an unauthorized actor accessed Unlimited's commercial data center environment between October 5 and October 10, 2025. Despite discovering the intrusion on October 19, 2025, official disclosures and patient notifications were delayed by nearly nine months." },
+      { type: "h2", text: "High-Value Data at Risk" },
+      { type: "p", text: "The exposed data is highly lucrative for identity thieves. The breach compromised full names, Social Security numbers, dates of birth, scanned driver's licenses, patient intake forms, insurance policy numbers, and diagnosis information. Because Unlimited Systems acts as a vendor for healthcare providers nationwide, many affected patients had no direct relationship with the company." },
+      { type: "h2", text: "The Third-Party Risk Epidemic" },
+      { type: "p", text: "This incident highlights a recurring theme in 2026: threat actors are bypassing heavily defended hospitals and targeting their software supply chains. Defenders must enforce stringent vendor risk management (VRM) policies and require third-party suppliers to adhere to rigorous access controls and rapid-disclosure SLAs." }
+    ]
+  },
+  "hugging-face-ai-agent-breach": {
+    author: "Track The Breach AI Lab",
+    blocks: [
+      { type: "lead", text: "The cybersecurity industry has been warning about autonomous AI agents conducting cyberattacks. In 2026, Hugging Face confirmed that this theoretical threat is now a reality." },
+      { type: "h2", text: "An Autonomous Attack Chain" },
+      { type: "p", text: "Hugging Face recently disclosed that an attacker breached its production infrastructure using a fully autonomous agent framework. The intrusion began when a malicious dataset exploited two code-execution paths (a template injection and a remote code loader). From there, the agent took over, enacting thousands of individual actions across short-lived sandboxes." },
+      { type: "p", text: "The AI agent successfully escalated privileges to node-level access, harvested cloud credentials, and moved laterally across internal clusters over a weekend, using a self-migrating command-and-control setup hosted on public services." },
+      { type: "h2", text: "Supply Chain Ramifications" },
+      { type: "p", text: "While Hugging Face confirmed their public-facing models and software supply chains were verified clean, the attack demonstrates the aggressive evolution of adversarial AI. Threat actors are no longer just using LLMs to write phishing emails; they are deploying agentic frameworks capable of dynamic lateral movement and privilege escalation." },
+      { type: "h2", text: "Defensive Posture Updates" },
+      { type: "list", items: [
+        "Treat all external datasets and open-source models as untrusted executables.",
+        "Deploy behavioral drift monitoring alongside traditional vulnerability scanning.",
+        "Implement strict sandboxing and network isolation for machine learning training environments."
+      ]}
+    ]
+  },
+  "go2-health-brisbane-delayed-disclosure": {
+    author: "Track The Breach Incident Response",
+    blocks: [
+      { type: "lead", text: "A prominent Brisbane medical clinic, GO2 Health, is facing heavy scrutiny after waiting nearly three months to notify patients that their sensitive medical records were compromised in a cyberattack." },
+      { type: "h2", text: "The Cost of Silence" },
+      { type: "p", text: "Timely breach notification is a cornerstone of modern data protection regulations. The delay by GO2 Health stripped patients of the crucial window needed to secure their identities, rotate compromised credentials, and monitor for medical identity fraud. Healthcare data—often containing detailed histories, billing info, and demographic data—is immediately monetized on dark web forums." },
+      { type: "h2", text: "Regulatory Expectations in 2026" },
+      { type: "p", text: "Regulators across APAC and globally are losing patience with delayed disclosures. Privacy commissioners expect organizations to notify affected individuals within 72 hours of confirming a high-risk exposure, even if the forensic investigation is still ongoing." },
+      { type: "h2", text: "IR Playbook Takeaways" },
+      { type: "p", text: "Organizations must have a communications plan drafted before an incident occurs. Legal teams, PR, and technical responders must align on a 'minimum viable notification' strategy that prioritizes user safety over corporate optics." }
+    ]
+  },
+  "q3-2026-ransomware-extortion-shifts": {
+    author: "Track The Breach Threat Intelligence",
+    blocks: [
+      { type: "lead", text: "The ransomware landscape in 2026 is virtually unrecognizable from five years ago. Threat actors are ditching complex encryption routines in favor of pure, multi-tiered data extortion." },
+      { type: "h2", text: "Why Encryption is Fading" },
+      { type: "p", text: "As enterprise backup strategies (like immutable storage) have matured, deploying encryptors has become a high-effort, low-reward tactic for attackers. It triggers immediate endpoint detection and response (EDR) alerts. Instead, attackers are focusing entirely on stealthy data exfiltration." },
+      { type: "h2", text: "The Multi-Tiered Extortion Model" },
+      { type: "p", text: "Today's cartels don't just threaten to leak data. They weaponize it. We are seeing threat actors email executives' families, contact regulatory bodies directly to trigger fines, and launch targeted deepfake harassment campaigns against board members if demands aren't met." }
+    ]
+  },
+  "supply-chain-attacks-saas-2026": {
+    author: "Track The Breach Platform Security",
+    blocks: [
+      { type: "lead", text: "Your perimeter is only as secure as the weakest SaaS app authenticated to your environment. In 2026, third-party compromise remains the undisputed king of initial access vectors." },
+      { type: "h2", text: "The OAuth Blind Spot" },
+      { type: "p", text: "Employees routinely grant read/write access to third-party productivity tools, calendar integrations, and AI writing assistants. When those vendors are breached, attackers inherit those OAuth tokens, bypassing traditional perimeter defenses and MFA entirely." },
+      { type: "h2", text: "Defensive Recommendations" },
+      { type: "list", items: [
+        "Implement continuous OAuth token auditing and enforce strict least-privilege for API integrations.",
+        "Establish an aggressive vendor off-boarding process.",
+        "Monitor SaaS-to-SaaS communication logs for anomalous data transfer volumes."
+      ]}
+    ]
+  },
+  "synthetic-identity-fraud-banking": {
+    author: "Track The Breach Fraud Prevention",
+    blocks: [
+      { type: "lead", text: "Synthetic identity fraud—where criminals stitch together real and fake information to create a 'new' person—is projected to cost the global banking sector billions by the end of 2026." },
+      { type: "h2", text: "AI's Role in the Fraud Supply Chain" },
+      { type: "p", text: "Fraudsters are utilizing generative AI to create consistent, hyper-realistic physical IDs, deepfake video verification streams, and synthetic credit histories. These \"Frankenstein\" identities are nurtured for months before busting out with massive loan defaults." },
+      { type: "h2", text: "The Defense" },
+      { type: "p", text: "Financial institutions are shifting from static identity checks to continuous behavioral biometrics. If an applicant's digital footprint looks too clean or lacks the chaotic normalcy of a real human's web history, trust scores are heavily penalized." }
+    ]
+  },
+  "post-quantum-cryptography-timeline": {
+    author: "Track The Breach Cryptography Lab",
+    blocks: [
+      { type: "lead", text: "The 'harvest now, decrypt later' threat model is forcing the hands of CISOs worldwide. With NIST finalizing Post-Quantum Cryptography (PQC) standards, the migration timeline starts now." },
+      { type: "h2", text: "The Impending Threat" },
+      { type: "p", text: "Nation-state actors are currently scraping and storing vast amounts of encrypted enterprise data. While unreadable today, this data will be instantly compromised the moment a cryptographically relevant quantum computer (CRQC) comes online." },
+      { type: "h2", text: "Immediate Action Items" },
+      { type: "p", text: "Enterprises must conduct a complete cryptographic inventory. You cannot migrate what you cannot see. Identify all instances of RSA and ECC across your network and begin working with vendors to establish a timeline for PQC integration." }
+    ]
+  },
+  "zero-trust-cloud-infrastructure": {
+    author: "Track The Breach Architecture",
+    blocks: [
+      { type: "lead", text: "The traditional VPN is dead. Replaced by Universal Zero Trust, modern infrastructure assumes the network is already hostile." },
+      { type: "h2", text: "Beyond the Perimeter" },
+      { type: "p", text: "Zero Trust Network Access (ZTNA) in 2026 relies on continuous, context-aware authentication. It evaluates the user's identity, device posture, geographic location, and behavioral biometrics on a per-request basis, rather than granting broad network access." },
+      { type: "h2", text: "Implementation Challenges" },
+      { type: "p", text: "The shift requires tearing down legacy technical debt. Organizations must untangle flat networks, categorize data access tiers, and deploy identity-aware proxies. The effort is substantial, but the resilience against lateral movement is unmatched." }
+    ]
+  },
+  "dark-web-botnet-rentals": {
+    author: "Track The Breach Dark Web Intelligence",
+    blocks: [
+      { type: "lead", text: "The dark web gig economy is booming. For less than $50 an hour, attackers can rent massive botnets comprised of compromised residential IoT devices to launch untraceable attacks." },
+      { type: "h2", text: "The Rise of Residential Proxies" },
+      { type: "p", text: "Traditional datacenter IPs are easily blocked by modern WAFs. To circumvent this, attackers infect smart TVs, routers, and refrigerators, routing malicious traffic through legitimate residential IP addresses. This makes credential stuffing and DDoS attacks incredibly difficult to distinguish from legitimate user traffic." },
+      { type: "h2", text: "Defending Against the Swarm" },
+      { type: "p", text: "Defenders must rely on advanced behavioral analytics rather than simple IP blacklists. Rate-limiting, CAPTCHA challenges on anomalous behavior, and analyzing request headers for automated tooling signatures are the best defenses against residential proxy abuse." }
+    ]
+  }
+  {
+  "june-2026-stealer-logs-56m-emails": {
+    author: "Track The Breach Threat Research",
+    blocks: [
+      { type: "lead", text: "In June 2026, the cybersecurity community witnessed one of the most significant data dumps of the year. A massive collection of aggregated info-stealer logs was uncovered and subsequently added to Have I Been Pwned (HIBP), pushing the boundaries of known credential exposure." },
+      { type: "h2", text: "The Scale of the Exposure" },
+      { type: "p", text: "The corpus contained a staggering 56 million unique email addresses scraped across hundreds of millions of individual stealer log records. More concerningly, the dataset included 124 million unique passwords in plain text, extracted directly from victims' browsers by malware strains like RedLine, LummaC2, and StealC." },
+      { type: "h2", text: "Why Stealer Logs Are Deadlier Than Combo-Lists" },
+      { type: "p", text: "Unlike traditional database breaches where passwords are often hashed and salted, info-stealers grab active credentials directly from the user's local machine. This means the 124 million passwords exposed were active, unencrypted, and heavily recycled by users across multiple platforms." },
+      { type: "h2", text: "Immediate Defensive Actions" },
+      { type: "list", items: [
+        "Force a password reset for any enterprise users whose corporate email appears in the June 2026 dataset.",
+        "Invalidate all active session tokens, as stealer logs frequently include session cookies that bypass MFA.",
+        "Deploy endpoint detection protocols specifically tuned for info-stealer heuristics."
+      ]}
+    ]
+  },
+  "navia-api-breach-phone-numbers": {
+    author: "Track The Breach Incident Response",
+    blocks: [
+      { type: "lead", text: "Phone numbers and personal emails are the master keys to social engineering. When Navia Benefit Solutions experienced a breach exposing 2.7 million records, it highlighted a severe vulnerability in how organizations handle unauthenticated APIs." },
+      { type: "h2", text: "The API Blindspot" },
+      { type: "p", text: "The breach was traced back to a misconfigured, public-facing Application Programming Interface (API). Without proper authentication gating or rate-limiting, threat actors were able to systematically scrape the endpoint. The exfiltrated data included names, dates of birth, private email addresses, direct phone numbers, and Social Security numbers." },
+      { type: "h2", text: "The Smishing Pipeline" },
+      { type: "p", text: "When attackers acquire a clean dataset combining a victim's phone number with their health plan information, the resulting SMS phishing (smishing) campaigns are devastatingly effective. Victims receive texts that appear to be legitimate billing issues from their healthcare provider, complete with accurate contextual data." },
+      { type: "h2", text: "Securing the API Perimeter" },
+      { type: "p", text: "Organizations must implement continuous API discovery. If an endpoint can return PII, it must require robust authentication (such as OAuth 2.0), enforce strict rate limiting to prevent scraping, and be hidden behind a Web Application Firewall (WAF) that monitors for anomalous data egress." }
+    ]
+  },
+  "verizon-dbir-2026-smishing-rise": {
+    author: "Track The Breach Threat Intelligence",
+    blocks: [
+      { type: "lead", text: "The 2026 Verizon Data Breach Investigations Report (DBIR) has dropped, and it confirms a trend we've been tracking all year: traditional email phishing is plateauing, and mobile-targeted attacks are skyrocketing." },
+      { type: "h2", text: "The Shift to Our Pockets" },
+      { type: "p", text: "According to the DBIR, as enterprise email security gateways (SEGs) and AI-driven spam filters have gotten exceptionally good at blocking malicious emails, attackers are changing lanes. They are aggressively targeting the mobile ecosystem using stolen phone numbers procured from massive breaches." },
+      { type: "h2", text: "Higher Click Rates, Less Scrutiny" },
+      { type: "p", text: "The data shows that employees are significantly more likely to tap a malicious link in a text message than they are to click a link in an email. The intimate nature of SMS, combined with the difficulty of inspecting URLs on a mobile screen, makes phone-number-based attacks the new favorite vector for initial access." },
+      { type: "h2", text: "Updating the Defense Playbook" },
+      { type: "list", items: [
+        "Extend zero-trust network access (ZTNA) policies strictly to mobile devices (BYOD).",
+        "Train employees specifically on SMS-based executive impersonation and fake MFA alerts.",
+        "Assume employee cell phone numbers are already public knowledge and design authentication systems accordingly."
+      ]}
+    ]
+  },
+  "synthient-credential-stuffing-2-billion": {
+    author: "Track The Breach Dark Web Intelligence",
+    blocks: [
+      { type: "lead", text: "The credential stuffing economy received a massive injection of fuel recently with the discovery of the 'Synthient' threat data leak—a staggering compilation of over 2 billion email and password combinations." },
+      { type: "h2", text: "A Megamix of Historical Breaches" },
+      { type: "p", text: "Unlike a targeted breach against a single company, the Synthient dataset is a highly organized, deduplicated compilation of thousands of smaller breaches, stealer logs, and historical leaks. It represents a highly refined 'combo-list' favored by botnet operators." },
+      { type: "h2", text: "Automating Account Takeovers (ATO)" },
+      { type: "p", text: "With 2 billion credential pairs, attackers are utilizing residential proxy networks to test these emails and passwords against banking, retail, and SaaS portals at a rate of millions of requests per hour. Because humans recycle passwords on average across 5 to 7 different sites, the success rate for these automated attacks remains chillingly high." },
+      { type: "h2", text: "Stopping the Bots" },
+      { type: "p", text: "Passwords alone can no longer defend an internet-facing login portal. Mitigating the fallout of the Synthient leak requires deploying advanced behavioral bot management, enforcing WebAuthn/Passkeys where possible, and cross-referencing user logins against known-breached credential APIs in real-time." }
+    ]
+  },
+  "dentaquest-vendor-breach-contact-data": {
+    author: "Track The Breach Privacy & Compliance",
+    blocks: [
+      { type: "lead", text: "Third-party vendor risk remains the Achilles' heel of the healthcare sector. In early June 2026, DentaQuest, one of the largest U.S. dental benefits administrators, confirmed a breach impacting 2.6 million individuals." },
+      { type: "h2", text: "What Was Exfiltrated?" },
+      { type: "p", text: "The exposed data was a goldmine for identity thieves and fraudsters. It included full names, highly accurate email addresses, direct mobile phone numbers, dates of birth, and highly sensitive Medicaid ID numbers. The inclusion of valid contact information tied directly to government health IDs enables highly convincing, targeted medical fraud." },
+      { type: "h2", text: "The Extortion Model Pivot" },
+      { type: "p", text: "Incidents like DentaQuest highlight a broader 2026 trend: threat actors are moving away from encrypting systems (ransomware) and moving purely toward data-theft extortion. They know that the threat of leaking millions of private emails and medical IDs carries immense regulatory and class-action financial weight." },
+      { type: "h2", text: "Post-Breach Reality" },
+      { type: "p", text: "For the 2.6 million victims, the remediation requires aggressive vigilance. Patients must monitor their health insurance Explanation of Benefits (EOB) for phantom claims, freeze their credit, and prepare for a sustained wave of highly personalized phishing emails and scam calls leveraging their exposed dental data." }
+    ]
+  }
+  {
+  "craneware-healthcare-supply-chain-breach": {
+    author: "Track The Breach Threat Research",
+    blocks: [
+      { type: "lead", text: "On July 20, 2026, Edinburgh-based healthcare technology firm Craneware confirmed that a cyberattack compromised a significant volume of file names, employee data, and a subset of customer and partner records [1.1.1]." },
+      { type: "h2", text: "The Supply Chain Ripple Effect" },
+      { type: "p", text: "While Craneware is based in the UK, its primary customer base consists of thousands of hospitals, clinics, and retail pharmacies across the United States. The company provides critical billing and accounting software, meaning any successful exfiltration could expose sensitive financial or regulatory data. According to Craneware, the incident has been contained without disrupting customer services." },
+      { type: "h2", text: "The Shift in Healthcare Attacks" },
+      { type: "p", text: "Threat actors are increasingly avoiding direct attacks on heavily defended hospital networks. Instead, they target the software vendors intertwined with hospital operations. By compromising a billing platform, attackers can harvest high-value data from dozens of healthcare providers simultaneously without having to breach each hospital's perimeter individually." }
+    ]
+  },
+  "india-nuclear-plant-reliance-data-leak": {
+    author: "Track The Breach Threat Intelligence",
+    blocks: [
+      { type: "lead", text: "In a stark reminder of the risks associated with third-party vendors in critical infrastructure, the World Leaks ransomware group posted 14.3 gigabytes of highly sensitive data related to the Kudankulam Nuclear Power Plant, India's largest nuclear facility." },
+      { type: "h2", text: "The Vector: Third-Party Data Centers" },
+      { type: "p", text: "The breach did not occur on the nuclear plant's highly secure air-gapped networks. Instead, the attackers compromised a server belonging to Reliance Group—a contractor designing infrastructure for the plant's new Unit 3 and Unit 4—hosted by a third-party data center provider." },
+      { type: "h2", text: "What Was Exposed?" },
+      { type: "p", text: "The nearly 19,000 files leaked on the dark web include blueprints for ventilation and cooling systems, the floor layout of a common control room, vendor proposals, and a joint inspection meeting record. It also exposed an insurance policy outlining a $112 million payout in the event of a terrorist act." },
+      { type: "h2", text: "The Kinetic Threat" },
+      { type: "p", text: "While the nuclear reactor controls were never at risk of a digital takeover, researchers warn that blueprints in the hands of bad actors could be exploited to map support systems, pinpoint physical security weaknesses, and launch highly targeted kinetic or cyber-physical attacks." }
+    ]
+  },
+  "tata-electronics-world-leaks-ransomware": {
+    author: "Track The Breach Incident Response",
+    blocks: [
+      { type: "lead", text: "The World Leaks ransomware cartel has claimed responsibility for a massive data theft at Tata Electronics, publishing over 200,000 files on its dark web leak site [1.1.2]." },
+      { type: "h2", text: "High-Profile Intellectual Property at Risk" },
+      { type: "p", text: "The leaked dataset reportedly contains component design and specification documents linked to some of Tata Electronics' most high-profile customers, including Apple and Tesla. The incident has prompted Apple to conduct its own independent analysis of the exposure." },
+      { type: "h2", text: "The Double Extortion Playbook" },
+      { type: "p", text: "Beyond corporate IP, researchers confirm the leak includes years of event logs, internal emails, and the passport copies of employees, including foreign nationals. This highlights the modern double-extortion tactic: if a company refuses to pay the ransom for the IP, the attackers will weaponize the personal data of the employees to apply secondary pressure." }
+    ]
+  },
+  "bajaj-auto-ransomware-incident": {
+    author: "Track The Breach Threat Research",
+    blocks: [
+      { type: "lead", text: "Pune-based Bajaj Auto Ltd., one of the world's most valuable two-wheeler manufacturers, disclosed a targeted ransomware attack against its IT infrastructure in mid-July 2026 [1.1.2]." },
+      { type: "h2", text: "Immediate Containment" },
+      { type: "p", text: "In a regulatory filing, the automaker confirmed that the attack affected the systems of both the parent company and its wholly owned subsidiary, Bajaj Auto Technology Ltd. (BATL). The company's technical team, working with external cybersecurity specialists, successfully detected the incident and implemented response protocols to contain the blast radius." },
+      { type: "h2", text: "The Manufacturing Sector Bullseye" },
+      { type: "p", text: "Automotive and manufacturing networks remain highly lucrative targets for ransomware operators. The convergence of IT (Information Technology) and OT (Operational Technology) means that a successful IT breach can halt assembly lines, costing companies millions of dollars per hour in downtime." }
+    ]
+  },
+  "oxford-university-careerconnect-breach": {
+    author: "Track The Breach Privacy & Compliance",
+    blocks: [
+      { type: "lead", text: "The University of Oxford has disclosed a data breach affecting its CareerConnect platform, exposing the personal data and encrypted passwords of its students [1.1.2]." },
+      { type: "h2", text: "The Third-Party Weak Link" },
+      { type: "p", text: "Oxford's internal networks were not breached. The exposure stemmed from Group GTI, a third-party provider that manages the career platform for multiple UK institutions, including King's College London and the University of Manchester." },
+      { type: "h2", text: "Harvesting for Phishing Campaigns" },
+      { type: "p", text: "The stolen data includes users' first and last names, email addresses, and encrypted passwords. While the passwords were encrypted, threat actors frequently target university platforms specifically to harvest verified '.ac.uk' or '.edu' email addresses. These trusted addresses are then used to launch highly convincing spear-phishing campaigns against other students, faculty, or corporate partners." }
+    ]
+  }
+{
+  "dhs-hsin-breach-world-cup": {
+    author: "Track The Breach Threat Research",
+    blocks: [
+      { type: "lead", text: "In July 2026, the Department of Homeland Security (DHS) disclosed a high-severity security breach involving the Homeland Security Information Network (HSIN), a critical platform used for inter-agency communication and intelligence sharing [1.1.1]." },
+      { type: "h2", text: "The Incident Timeline" },
+      { type: "p", text: "According to initial reports, an unknown threat actor compromised the network between late May and early June 2026. While the DHS confirmed that classified systems were not affected by the intrusion, the breach of the HSIN is highly consequential. The platform is utilized heavily by federal, state, and local law enforcement." },
+      { type: "h2", text: "World Cup Security at Risk" },
+      { type: "p", text: "The most immediate concern stemming from this exfiltration is the potential exposure of sensitive security planning and coordination data. With the World Cup approaching, threat actors gaining insight into physical security deployments, emergency response protocols, and multi-agency communication channels creates severe operational risks." },
+      { type: "h2", text: "Defensive Takeaways" },
+      { type: "list", items: [
+        "Migrate immediately to phishing-resistant, hardware-based MFA (FIDO2) for any government or critical infrastructure network [1.1.1].",
+        "Assume breach: Implement aggressive lateral movement monitoring to detect when standard accounts attempt to access high-clearance planning repositories."
+      ]}
+    ]
+  },
+  "instructure-canvas-lms-shinyhunters": {
+    author: "Track The Breach Threat Intelligence",
+    blocks: [
+      { type: "lead", text: "The education technology sector suffered one of its worst breaches of the decade when Instructure, the company behind the popular Canvas Learning Management System (LMS), was compromised by the hacking collective ShinyHunters [1.2.1]." },
+      { type: "h2", text: "A Staggering Blast Radius" },
+      { type: "p", text: "Canvas is utilized by nearly 9,000 schools and universities globally. The breach exposed the data of a reported 275 million users, including names, private messages, email addresses, and student IDs. The incident forced widespread system outages, with numerous institutions forced to postpone final exams and assignment submissions." },
+      { type: "h2", text: "The Second Strike" },
+      { type: "p", text: "What makes this incident particularly alarming is the follow-up. Just one week after Instructure claimed to have remediated the security flaws, ShinyHunters breached the platform again, publicly defacing the login pages of specific schools. This highlights a critical lesson in incident response: initial containment rarely eradicates a persistent, highly motivated threat actor who has already mapped your infrastructure." }
+    ]
+  },
+  "servicenow-cve-2026-6875-active-exploitation": {
+    author: "Track The Breach Vulnerability Lab",
+    blocks: [
+      { type: "lead", text: "A critical pre-authentication remote code execution (RCE) vulnerability in the ServiceNow AI Platform—tracked as CVE-2026-6875—is now being actively exploited in the wild by threat actors." },
+      { type: "h2", text: "The Vulnerability Mechanics" },
+      { type: "p", text: "CVE-2026-6875 is a code injection flaw that allows unauthenticated attackers to escape ServiceNow's script sandbox. By targeting specific endpoints (such as `/assessment_thanks.do`), an attacker can gain full remote code execution on the targeted instance, leading to total compromise of the platform and any connected proxy servers." },
+      { type: "h2", text: "Patch Immediately" },
+      { type: "p", text: "While ServiceNow pushed security updates to hosted instances rapidly after the initial April discovery, organizations running self-hosted instances remain at extreme risk if they have not applied the mid-July patches. The patch also introduces 'Guarded Script,' a new sandbox restriction feature designed to heavily mitigate future injection attempts." }
+    ]
+  },
+  "clover-health-social-engineering-breach": {
+    author: "Track The Breach Privacy & Compliance",
+    blocks: [
+      { type: "lead", text: "In July 2026, healthcare provider Clover Health filed a securities disclosure revealing a data breach that bypassed their technical perimeter entirely, relying instead on human manipulation [1.1.2]." },
+      { type: "h2", text: "Targeting the End User" },
+      { type: "p", text: "A hacker successfully compromised the accounts of three employees using sophisticated social engineering tactics—manipulating the employees into granting IT access or directly disclosing their credentials. These specific employees were responsible for broker relationships and member visit scheduling." },
+      { type: "h2", text: "The Cost of Compromised Credentials" },
+      { type: "p", text: "While the employees did not have access to massive corporate claims systems or financial databases, their access level still allowed the threat actors to potentially acquire Protected Health Information (PHI) and Personally Identifiable Information (PII). This incident underscores that in 2026, attackers do not need to exploit a zero-day vulnerability; they simply need to log in as a legitimate user." }
+    ]
+  },
+  "accenture-source-code-azure-token-theft": {
+    author: "Track The Breach Cloud Security",
+    blocks: [
+      { type: "lead", text: "Technology consulting giant Accenture is currently investigating a security incident following claims by a threat actor known as '888' that they successfully exfiltrated 35GB of highly sensitive data [1.1.4]." },
+      { type: "h2", text: "The Keys to the Kingdom" },
+      { type: "p", text: "The threat actor posted screenshots on a cybercrime forum purporting to show data stolen from a private Azure DevOps repository. If validated, the leaked data is incredibly dangerous. The actor claims the haul includes proprietary source code, RSA and SSH keys, Azure personal access tokens (PATs), and Azure Storage access keys." },
+      { type: "h2", text: "The Risk of Hardcoded Secrets" },
+      { type: "p", text: "Accenture has stated the incident is an 'isolated matter' and operations remain unaffected. However, the exposure of Azure access tokens and SSH keys highlights a continuous struggle for DevOps teams: preventing the hardcoding of active secrets in repositories. When a repo is breached, those exposed keys allow attackers to instantly pivot from code-read access to live production-environment manipulation." }
+    ]
+  }
+  {
+  "singapore-telecom-unc3886-breach-2026": {
+    author: "Track The Breach APAC Intelligence",
+    blocks: [
+      { type: "lead", text: "In early 2026, Singapore's Cyber Security Agency (CSA) declassified details of one of the most sophisticated espionage campaigns ever uncovered in Southeast Asia, revealing that a China-linked threat group known as UNC3886 had breached all four of the nation's major telecommunications providers." },
+      { type: "h2", text: "The Zero-Day Arsenal" },
+      { type: "p", text: "UNC3886 did not rely on standard phishing. Instead, the highly disciplined APT utilized a chain of zero-day exploits targeting virtualization platforms and perimeter firewalls. By deploying advanced rootkits deeply embedded in ESXi hypervisors, the attackers established stealthy, persistent access that evaded traditional Endpoint Detection and Response (EDR) sensors." },
+      { type: "h2", text: "Operation CYBER GUARDIAN" },
+      { type: "p", text: "Rather than immediately burning the attacker's infrastructure, Singaporean authorities and telecom defenders launched an 11-month covert counter-operation dubbed CYBER GUARDIAN. The objective was to map the full extent of the attackers' lateral movement, identify exfiltrated data (primarily communications metadata and call records of high-value targets), and seamlessly evict the intruders while hardening the telecom backbone against re-entry." },
+      { type: "h2", text: "Critical Infrastructure Lessons" },
+      { type: "p", text: "The breach underscores the fragility of relying solely on perimeter defenses for critical infrastructure. Defending against state-sponsored actors in 2026 requires continuous memory scanning of hypervisors, strict network segmentation between IT and core telecom signaling networks, and aggressive anomaly detection for East-West traffic within data centers." }
+    ]
+  },
+  "apac-deepfake-agentic-ai-fraud": {
+    author: "Track The Breach AI Lab",
+    blocks: [
+      { type: "lead", text: "The rapid digitalization of the Asia-Pacific region has a dark side. According to the latest INTERPOL and Visa threat assessments, cybercrime now accounts for over 30% of all recorded crime in more than half of APAC nations. The primary driver? AI-enabled autonomous fraud." },
+      { type: "h2", text: "The $25 Million Deepfake Wake-Up Call" },
+      { type: "p", text: "The defining incident of the year occurred when a finance worker at a multinational company in Hong Kong was tricked into paying out approximately US $25 million. The employee attended a live video conference populated entirely by AI-generated deepfakes of the company's Chief Financial Officer and other colleagues. The audio and visual synthesis was flawless enough to bypass human skepticism during real-time interaction." },
+      { type: "h2", text: "Agentic AI Enters the Chat" },
+      { type: "p", text: "Beyond deepfakes, regional threat intelligence indicates a 600% surge in underground forum discussions regarding 'Agentic AI'. Unlike generative AI used to write phishing emails, Agentic AI can plan and execute multi-step attacks—scraping targets, interacting with victims, pivoting through networks, and exfiltrating data—at machine speed with zero human supervision." },
+      { type: "h2", text: "Defending the Human Perimeter" },
+      { type: "list", items: [
+        "Implement mandatory 'out-of-band' verification (e.g., a physical phone call to a known number) for any wire transfer exceeding a specific threshold, regardless of video-call authorization.",
+        "Deploy AI-driven deepfake detection software at the corporate network edge to analyze video stream metadata for synthetic artifacts in real-time.",
+        "Transition all authentication from passwords to hardware-based FIDO2 security keys to combat AI-driven credential stuffing."
+      ]}
+    ]
+  },
+  "australia-partnered-health-medicare-breach": {
+    author: "Track The Breach Privacy & Compliance",
+    blocks: [
+      { type: "lead", text: "The Australian healthcare sector remains a prime target for financially motivated threat actors. In July 2026, Partnered Health, a massive network of Australian general practices, confirmed a devastating cyberattack compromising highly sensitive patient records [1.2.5]." },
+      { type: "h2", text: "High-Value Health Identifiers Exposed" },
+      { type: "p", text: "Following unauthorized access by a malicious actor, Partnered Health disclosed that patient healthcare data, including Medicare numbers and Department of Veterans' Affairs (DVA) numbers, had been compromised. In the Australian dark web economy, a valid Medicare card combined with a patient's date of birth and address is the ultimate key for identity theft, allowing criminals to hijack government services and open fraudulent lines of credit." },
+      { type: "h2", text: "The Regulatory Hammer" },
+      { type: "p", text: "In the wake of massive breaches over the last three years (Optus, Medibank), the Australian government has drastically tightened the Privacy Act. Companies failing to secure customer data now face penalties of up to $50 million AUD, or 30% of adjusted turnover. For healthcare providers, the cost of a breach is now existential." },
+      { type: "h2", text: "Prescription for Security" },
+      { type: "p", text: "Healthcare networks must move away from flat network architectures. A compromised endpoint at a remote GP clinic should never have a direct, unsegmented path to central patient databases. Furthermore, sensitive identifiers like Medicare numbers must be heavily encrypted at rest, requiring context-aware decryption keys tied to the specific physician accessing the file." }
+    ]
+  },
+  "indonesia-whatsapp-apk-sideloading-campaign": {
+    author: "Track The Breach Fraud Prevention",
+    blocks: [
+      { type: "lead", text: "Mobile-first economies in Southeast Asia are facing an epidemic of sophisticated banking trojans. A highly organized campaign in Indonesia recently resulted in an estimated $2 million in nationwide losses by abusing the trust of 16 different government and financial brands." },
+      { type: "h2", text: "The Social Engineering Funnel" },
+      { type: "p", text: "Threat actors leveraged WhatsApp—the dominant communication platform in the region—to initiate contact with victims. Posing as government tax officials, package couriers, or banking representatives, the attackers convinced users to download what appeared to be a legitimate document or application update." },
+      { type: "h2", text: "The APK Sideloading Trap" },
+      { type: "p", text: "Instead of a PDF, the victims were tricked into sideloading a malicious Android Package (APK) file outside of the Google Play Store. Once installed, the malware requested aggressive accessibility permissions. This allowed the trojan to act as an infostealer—intercepting SMS one-time passwords (OTPs), logging keystrokes, and automatically initiating unauthorized bank transfers while overlaying a fake screen to hide the activity from the user." },
+      { type: "h2", text: "Mitigation Strategies for Financial Institutions" },
+      { type: "p", text: "Banks operating in APAC must implement robust device binding and behavioral biometrics within their official mobile applications. If the banking app detects the presence of active screen-overlay software or notes that the user's swiping and typing patterns deviate from their historical baseline, the transaction must be instantly blocked, even if the correct OTP is provided." }
+    ]
+  },
+  "thailand-ddos-india-gentlemen-ransomware": {
+    author: "Track The Breach Threat Research",
+    blocks: [
+      { type: "lead", text: "The Asia-Pacific threat landscape is becoming highly localized. Recent threat intelligence from early 2026 highlights two distinct regional crises: a massive wave of hacktivist disruptions in Thailand and a targeted ransomware syndicate squeezing Indian manufacturing." },
+      { type: "h2", text: "Thailand: The Regional DDoS Epicenter" },
+      { type: "p", text: "Driven heavily by geopolitical tensions and local hacktivist groups (such as 'RipperSec'), Thailand experienced a staggering 161% surge in Distributed Denial of Service (DDoS) attacks, absorbing 267 incidents in a single month. Fifty percent of these attacks targeted government and military infrastructure, leveraging vast botnets of compromised residential IoT devices to overwhelm state-owned domains and transportation networks." },
+      { type: "h2", text: "India & Taiwan: Enter 'The Gentlemen'" },
+      { type: "p", text: "Simultaneously, a newly prolific ransomware group calling themselves 'The Gentlemen' has emerged as a dominant threat, actively targeting the manufacturing sectors in India, Taiwan, and Australia. Unlike traditional Ransomware-as-a-Service (RaaS) models, this group operates without a central affiliate panel, distributing their bespoke Linux and ESXi encryptors via secure messengers to trusted affiliates. Their focus on the manufacturing sector is calculated; targeting deeply interconnected supply chains guarantees maximum operational downtime and higher ransom payouts." }
+    ]
+  }
+  {
+  "building-realtime-identity-graph-scale": {
+    author: "Track The Breach Engineering Team",
+    blocks: [
+      { type: "lead", text: "Querying 1.6 billion breach records in relational databases causes severe latency bottlenecks. Here is how we engineered our distributed graph database to correlate leaked emails, phone numbers, password hashes, and session tokens in real time." },
+      { type: "h2", text: "The Challenge: Unstructured Data Heterogeneity" },
+      { type: "p", text: "Breach data is notoriously dirty. A single leak source might contain raw text pastes, while another is a dumped SQL database with custom salt routines. To build a unified identity graph, incoming data must undergo instant normalization, entity extraction, and canonical grouping without blocking ingestion workers." },
+      { type: "h2", text: "Architecture & Graph Indexing" },
+      { type: "p", text: "We migrated from traditional document stores to a horizontally scaled graph database backed by custom memory-mapped indexing. Nodes represent atomic identifiers (e.g., an email address or SSN fragment), while edges represent co-occurrence within a breach event or stealer payload." },
+      { type: "h2", text: "Sub-10ms Correlation" },
+      { type: "list", items: [
+        "Distributed bloom filters reduce unnecessary disk lookups by 94% during ingestion.",
+        "Edge-weighting dynamically calculates exposure risk based on record recency and sensitivity.",
+        "Asynchronous stream processing allows continuous monitoring pipelines to alert enterprise customers within seconds of a new leak upload."
+      ]}
+    ]
+  },
+  "ciso-board-reporting-breach-exposure": {
+    author: "Track The Breach Advisory",
+    blocks: [
+      { type: "lead", text: "Board members do not need to know how many millions of raw credentials exist on dark web marketplaces. They need to understand likelihood, impact, and defensibility." },
+      { type: "h2", text: "The Flaw of Vanity Metrics" },
+      { type: "p", text: "Reporting '12,000 corporate credentials found on the dark web' often creates panic without offering actionable clarity. Most of those records may be decade-old hashes from defunct services. CISOs must separate legacy noise from actionable signal." },
+      { type: "h2", text: "The 3 Board Metrics That Matter" },
+      { type: "list", items: [
+        "Active Session Exposure Rate: Percentage of leaked credentials tied to live SSO or SaaS accounts without enforced hardware MFA.",
+        "Executive & VIP Identity Radius: Percentage of C-suite and critical administrative personnel with current biometric or credential exposures.",
+        "Mean Time to Neutralization (MTTN): The average hours elapsed between an enterprise credential appearing in threat intelligence feeds and the SOC revoking the corresponding token."
+      ]}
+    ]
+  },
+  "active-stealer-log-containment-checklist": {
+    author: "Track The Breach Incident Response",
+    blocks: [
+      { type: "lead", text: "Info-stealer logs contain active session cookies that bypass password resets and standard multi-factor authentication. When a high-severity alert fires, follow this 30-minute protocol." },
+      { type: "h2", text: "Phase 1: Token Revocation (0-10 Minutes)" },
+      { type: "p", text: "Do not start by changing the user's password. Immediately terminate all active OAuth sessions, cloud tenant tokens, and VPN connections. Invalidate cookie caches across Okta, Microsoft Entra ID, and key SaaS applications." },
+      { type: "h2", text: "Phase 2: Endpoint Isolation (10-20 Minutes)" },
+      { type: "p", text: "Isolate the compromised endpoint from the corporate network via your EDR platform. Initiate a full malware scan to identify the specific stealer variant (RedLine, Lumma, Vidar) and extract persistence mechanisms." },
+      { type: "h2", text: "Phase 3: Credential & MFA Reset (20-30 Minutes)" },
+      { type: "p", text: "Once the machine is quarantined and active sessions are killed, reset the user's primary directory password and reissue MFA tokens. Force a re-enrollment of registered authenticator devices." }
+    ]
+  },
+  "threat-actor-profile-scattered-spider-2026": {
+    author: "Track The Breach Threat Intelligence",
+    blocks: [
+      { type: "lead", text: "Scattered Spider (UNC3944) remains one of the most operationally agile cybercrime groups targeting western enterprises. Here is an analysis of how their tradecraft has shifted in 2026." },
+      { type: "h2", text: "Helpdesk Manipulation via AI Voice Synthesis" },
+      { type: "p", text: "While the group previously relied on human voice callers to trick IT helpdesks into resetting MFA tokens, they now utilize real-time voice cloning software. By sampling public executive interviews or podcast audio, they impersonate employees during verification calls." },
+      { type: "h2", text: "BYOVD and Cloud Lateral Movement" },
+      { type: "p", text: "Once initial access is gained via identity manipulation, Scattered Spider rapidly deploys Bring Your Own Vulnerable Driver (BYOVD) techniques to disable endpoint security software before pivoting straight into AWS, Azure, or Google Cloud environments." },
+      { type: "h2", text: "Mitigation Tactics" },
+      { type: "list", items: [
+        "Enforce strict, out-of-band video verification protocols for all helpdesk credential resets.",
+        "Require FIDO2 passkeys or hardware security keys, which are resistant to real-time relay and social engineering attacks.",
+        "Restrict cloud management plane access strictly to compliant, corporate-managed devices."
+      ]}
+    ]
+  },
+  "sec-72-hour-materiality-assessment-framework": {
+    author: "Track The Breach Privacy & Compliance",
+    blocks: [
+      { type: "lead", text: "Under regulatory disclosure mandates, public entities and regulated firms must evaluate cybersecurity incidents for 'materiality' without delay. Here is how security leads can collaborate with legal counsel effectively." },
+      { type: "h2", text: "Quantitative vs. Qualitative Impact" },
+      { type: "p", text: "Materiality is not determined solely by a dollar figure or the sheer count of leaked records. A breach of 1,000 highly sensitive corporate IP documents can carry significantly higher financial and reputational weight than a breach of 500,000 unhashed marketing emails." },
+      { type: "h2", text: "Key Evaluation Questions" },
+      { type: "list", items: [
+        "Does the incident compromise core operational technology or interrupt primary revenue-generating infrastructure?",
+        "Is there a substantial likelihood of regulatory penalties, class-action litigation, or IP theft?",
+        "Does the exposure involve trade secrets, strategic enterprise data, or systemic partner trust?"
+      ]}
+    ]
+  }
+    {
+  "what-is-a-data-breach": {
+    author: "Track The Breach Editorial",
+    blocks: [
+      { type: "lead", text: "A data breach occurs when unauthorized individuals gain access to confidential, protected, or sensitive data. It is the digital equivalent of someone breaking into your office and stealing your filing cabinets." },
+      { type: "h2", text: "What gets stolen?" },
+      { type: "p", text: "Breaches typically expose Personally Identifiable Information (PII) like names and government IDs, financial data, corporate intellectual property (IP), or user credentials (emails and passwords)." },
+      { type: "p", text: "When this data is leaked, it usually ends up on dark web forums where it is sold to other criminals who use it for identity theft, corporate espionage, or further targeted attacks." }
+    ]
+  },
+  "how-hackers-steal-data": {
+    author: "Track The Breach Threat Research",
+    blocks: [
+      { type: "lead", text: "Hollywood portrays hacking as typing rapidly in a dark room to break a firewall. In reality, modern hacking is heavily reliant on human psychology and automated scripts." },
+      { type: "h2", text: "The Top Vectors" },
+      { type: "list", items: [
+        "Phishing & Social Engineering: Tricking an employee into handing over their password via a fake login page.",
+        "Credential Stuffing: Buying a list of leaked passwords from the dark web and using bots to test them on thousands of websites until one works.",
+        "Exploiting Vulnerabilities: Finding unpatched, outdated software on a company's server and injecting malicious code to gain access.",
+        "Infostealers: Tricking a user into downloading malware that silently copies their active browser session cookies."
+      ]}
+    ]
+  },
+  "what-is-cybercrime": {
+    author: "Track The Breach Threat Intel",
+    blocks: [
+      { type: "lead", text: "Cybercrime today operates like a massive corporate ecosystem. It is segmented into specialized service providers known as 'Crime-as-a-Service' (CaaS)." },
+      { type: "h2", text: "The Dark Web Supply Chain" },
+      { type: "p", text: "One group (Initial Access Brokers) specializes entirely in breaching networks. They don't steal the data; they simply sell the access to a Ransomware gang. The Ransomware gang uses affiliates to deploy the encryption software. Finally, a separate group specializes in laundering the cryptocurrency payouts." }
+    ]
+  },
+  "how-to-handle-a-breach": {
+    author: "Track The Breach Incident Response",
+    blocks: [
+      { type: "lead", text: "If you discover unauthorized access on your network, panic is your worst enemy. A swift, methodical response limits the financial and reputational damage." },
+      { type: "h2", text: "The First 24 Hours" },
+      { type: "list", items: [
+        "1. Isolate the affected systems. Disconnect compromised servers from the internet immediately, but do not turn them off (powering down destroys memory evidence).",
+        "2. Revoke access. Reset all passwords, wipe active session tokens, and lock down VPNs.",
+        "3. Call legal and forensic experts. Engage your breach coach and incident response firm to determine exactly what data was accessed.",
+        "4. Prepare notifications. You are legally required to notify regulators and users within strict timelines."
+      ]}
+    ]
+  },
+  "us-sec-cyber-rules-2026": {
+    author: "Track The Breach Compliance",
+    blocks: [
+      { type: "lead", text: "For publicly traded companies in the United States, hiding a data breach is a violation of federal securities law. The Securities and Exchange Commission (SEC) enforces strict disclosure mandates." },
+      { type: "h2", text: "The 4-Day Rule" },
+      { type: "p", text: "Registrants must disclose any cybersecurity incident determined to be 'material' within four business days using Form 8-K. The clock starts the moment the company determines the breach is material, not necessarily the day it was discovered." },
+      { type: "p", text: "Determining 'materiality' requires analyzing whether a reasonable investor would consider the incident important when making investment decisions, factoring in both financial losses and reputational damage." }
+    ]
+  },
+  "india-dpdp-cert-in-rules": {
+    author: "Track The Breach Privacy Team",
+    blocks: [
+      { type: "lead", text: "India currently enforces multiple layers of cybersecurity regulation, demanding immense agility from corporate security teams." },
+      { type: "h2", text: "CERT-In 6-Hour Reporting" },
+      { type: "p", text: "Under CERT-In's April 2022 directions, specified cyber incidents (including breaches and ransomware) must be reported within just 6 hours of the incident being noticed. Failing to meet this tight deadline can result in penalties up to ₹1 crore." },
+      { type: "h2", text: "The DPDP Act" },
+      { type: "p", text: "Looking ahead, the Digital Personal Data Protection (DPDP) Act will require full core operational compliance by May 2027. The Act enforces strict data fiduciary obligations, heavy reliance on explicit user consent, and mandates notifying the Data Protection Board of breaches." }
+    ]
+  },
+  "europe-gdpr-nis2-omnibus": {
+    author: "Track The Breach European Desk",
+    blocks: [
+      { type: "lead", text: "Europe remains the gold standard for data privacy, but regulatory overlap has caused headaches for CISOs. The newly proposed Digital Omnibus aims to fix that." },
+      { type: "h2", text: "Shifting Timelines and Single Entry Points" },
+      { type: "p", text: "Historically, GDPR required breach notification within 72 hours. The Digital Omnibus proposes easing this to 96 hours to allow for better forensic analysis. Furthermore, it introduces a 'Single Entry Point' managed by ENISA, allowing organizations to report an incident once to satisfy both GDPR and NIS2 requirements simultaneously." }
+    ]
+  },
+  "global-data-privacy-laws": {
+    author: "Track The Breach Compliance",
+    blocks: [
+      { type: "lead", text: "Navigating global compliance means managing completely different clocks when an incident occurs." },
+      { type: "p", text: "In the US, you have 4 business days for public material disclosures. In India, CERT-In demands an initial report in just 6 hours. In the EU, GDPR currently mandates 72 hours, though this is shifting. Multinational corporations must build Incident Response playbooks that satisfy the fastest clock in the jurisdictions where they operate." }
+    ]
+  },
+  "cost-of-non-compliance": {
+    author: "Track The Breach Advisory",
+    blocks: [
+      { type: "lead", text: "Failing to protect user data carries a cost far greater than the initial IT forensics bill." },
+      { type: "p", text: "Under India's DPDP Act, failure to implement reasonable security safeguards carries a maximum penalty of ₹250 crore. Beyond direct fines, organizations face devastating class-action lawsuits, massive spikes in cyber insurance premiums, and the unquantifiable loss of consumer trust." }
+    ]
+  },
+  "free-email-breach-check": {
+    author: "Track The Breach Support",
+    blocks: [
+      { type: "lead", text: "Are you wondering if your email is part of a data breach? Track The Breach offers free, secure tools to check your exposure." },
+      { type: "p", text: "By entering your email, our system queries our 1.6 billion record database to tell you exactly which breaches your email appeared in, and what other data (like passwords or phone numbers) was leaked alongside it. Knowing your exposure is the first step in defending your identity." }
+    ]
+  },
+  "what-is-identity-exposure": {
+    author: "Track The Breach Editorial",
+    blocks: [
+      { type: "lead", text: "Identity exposure goes beyond a simple password leak. It is the sum total of your digital vulnerability." },
+      { type: "p", text: "When hackers combine your leaked email from 2018, your phone number from a 2022 breach, and your physical address from a 2024 shipping leak, they possess a complete 'identity profile.' This profile is used to bypass security questions and open fraudulent banking accounts." }
+    ]
+  },
+  "password-reuse-danger": {
+    author: "Track The Breach Education",
+    blocks: [
+      { type: "lead", text: "Using the same password for multiple accounts is the single biggest mistake internet users make." },
+      { type: "p", text: "If you use the same password for a small online forum and your corporate email, a breach at the forum gives hackers the exact key they need to break into your work account. Always use a password manager to generate unique, complex passwords for every service." }
+    ]
+  },
+  "what-is-phishing": {
+    author: "Track The Breach Education",
+    blocks: [
+      { type: "lead", text: "Phishing is a psychological attack delivered via email or text message." },
+      { type: "p", text: "Attackers masquerade as trusted entities (your boss, your bank, IT support) to trick you into clicking a malicious link or downloading an attachment. Always verify the sender's actual email address, not just the display name, and never click links demanding urgent account resets." }
+    ]
+  },
+  "hardware-mfa-vs-sms": {
+    author: "Track The Breach Engineering",
+    blocks: [
+      { type: "lead", text: "Multi-Factor Authentication (MFA) is essential, but not all MFA is created equal." },
+      { type: "p", text: "SMS text codes are highly vulnerable to SIM-swapping, where a hacker tricks your telecom provider into transferring your phone number to their device. To truly secure high-value accounts, switch to app-based authenticators or physical FIDO2 hardware keys." }
+    ]
+  },
+  "stealer-malware-explained": {
+    author: "Track The Breach Threat Intel",
+    blocks: [
+      { type: "lead", text: "Infostealers are malware variants designed specifically to bypass your passwords." },
+      { type: "p", text: "Once installed on a computer, they scrape the web browser for active 'session cookies'—the tiny files that keep you logged in to a website. By stealing the cookie, hackers can access your accounts without ever needing to know your password or trigger an MFA alert." }
+    ]
+  },
+  "how-track-the-breach-supports-you": {
+    author: "Track The Breach Customer Success",
+    blocks: [
+      { type: "lead", text: "Track The Breach is more than a monitoring tool. We are your active defense partner." },
+      { type: "p", text: "Our platform provides real-time API integrations into your existing security stack, dedicated incident response coaching, and continuous dark web intelligence. When a credential belonging to your domain is uploaded to a cybercrime forum, we alert you instantly so you can invalidate the session before the attackers strike." }
+    ]
+  },
+  "continuous-dark-web-monitoring": {
+    author: "Track The Breach Solutions",
+    blocks: [
+      { type: "lead", text: "Threat actors don't announce when they are targeting your company. Our sensors do." },
+      { type: "p", text: "We continuously scan deep web forums, Telegram channels, and Tor marketplaces for mentions of your corporate domain, employee emails, or proprietary code. Continuous monitoring shifts your security posture from reactive to proactive." }
+    ]
+  },
+  "executive-digital-protection": {
+    author: "Track The Breach Solutions",
+    blocks: [
+      { type: "lead", text: "C-Suite executives and board members are high-value targets for social engineering and deepfake scams." },
+      { type: "p", text: "Track The Breach offers specialized Executive Digital Protection, actively removing the personal phone numbers, home addresses, and family details of your leadership team from public data brokers to shrink their attack surface." }
+    ]
+  },
+  "smb-cybersecurity-solutions": {
+    author: "Track The Breach Solutions",
+    blocks: [
+      { type: "lead", text: "Small and medium businesses (SMBs) are the backbone of the economy, and the favorite target of automated ransomware." },
+      { type: "p", text: "We believe enterprise-grade threat intelligence shouldn't be restricted to the Fortune 500. Track The Breach offers tailored, scalable monitoring plans designed specifically for lean IT teams that need maximum visibility with minimum overhead." }
+    ]
+  },
+  "track-the-breach-api-integration": {
+    author: "Track The Breach Engineering",
+    blocks: [
+      { type: "lead", text: "Security teams shouldn't have to check another dashboard. Bring the intelligence directly into your workflow." },
+      { type: "p", text: "The Track The Breach API allows your engineering team to query our identity graph directly. Integrate our feed into your SIEM to automatically trigger password resets or force MFA re-enrollment the millisecond an employee's data appears in a new stealer log." }
+    ]
+  }
+    {
+  "complete-data-breach-remediation-guide": {
+    author: "Track The Breach Incident Specialists",
+    blocks: [
+      { type: "lead", text: "Receiving an alert that your personal or corporate credentials appeared in a data breach can feel overwhelming. However, exposure does not have to mean compromise if you act swiftly using a structured remediation plan." },
+      { type: "h2", text: "Step 1: Immediate Token & Session Invalidation" },
+      { type: "p", text: "Most modern breaches stem from info-stealer malware that harvests active browser cookies alongside passwords. Changing your password alone will not kick an attacker out of an active session. You must click 'Log out of all devices' across your email, banking, and cloud platforms immediately." },
+      { type: "h2", text: "Step 2: Deploy Hardware-Based MFA" },
+      { type: "p", text: "Switch from SMS-based multi-factor authentication to authenticator apps or physical WebAuthn/FIDO2 security keys. Attackers frequently chain leaked phone numbers with SIM-swap services to bypass SMS codes." },
+      { type: "h2", text: "Step 3: Freeze Credit & Monitor Government IDs" },
+      { type: "p", text: "If your government identifiers or national identity numbers were part of the breach, place a security freeze with primary credit bureaus immediately. Enable real-time exposure scanning with Track The Breach to monitor future dark web markets for identity fragmentation." }
+    ]
+  },
+  "end-to-end-enterprise-breach-response-solution": {
+    author: "Track The Breach Enterprise Advisory",
+    blocks: [
+      { type: "lead", text: "Traditional threat monitoring services send an email alert when credentials leak and consider their job done. For enterprise CISOs, an uncontextualized alert is just extra work. Organizations need a complete, end-to-end solution that bridges detection with automated remediation." },
+      { type: "h2", text: "The 360° Response Framework" },
+      { type: "list", items: [
+        "Real-Time Detection: Instant ingestion of Telegram stealer logs, paste sites, and Tor marketplace dumps into the Track The Breach graph database.",
+        "Automated SOAR Triggering: Direct API orchestration into Microsoft Entra ID, Okta, or AWS IAM to force session resets and credential rotation within seconds.",
+        "Legal & Regulatory Triage: Contextualizing record exposure against global compliance mandates (SEC, GDPR, CERT-In, DPDP Act) to streamline regulatory filings."
+      ]},
+      { type: "h2", text: "Post-Incident Hardening" },
+      { type: "p", text: "After containing the immediate blast radius, Track The Breach provides comprehensive digital footprint sanitization for affected staff, preventing secondary spear-phishing or executive impersonation campaigns." }
+    ]
+  },
+  "how-to-remove-leaked-data-from-dark-web": {
+    author: "Track The Breach Intelligence Lab",
+    blocks: [
+      { type: "lead", text: "A common question from breached clients is: 'Can you erase my data from the dark web?' The honest answer requires understanding how underground data distribution works." },
+      { type: "h2", text: "Takedowns vs. Neutralization" },
+      { type: "p", text: "Once data is posted to decentralized dark web forums or P2P networks, removing every copy is technically impossible. However, specialized legal takedown notices can successfully remove listings from surface-web paste sites, code repositories, and cloud storage buckets." },
+      { type: "h2", text: "Making Stolen Data Useless" },
+      { type: "p", text: "The true solution to dark web leaks is 'credential neutralization'. By rotating passwords, invalidating session cookies, revoking API tokens, and updating security keys, you transform high-value stolen data into worthless, inert text." }
+    ]
+  },
+  "complete-solution-for-breached-clients-and-users": {
+    author: "Track The Breach Customer Success",
+    blocks: [
+      { type: "lead", text: "Point-solution monitoring leaves companies and individuals stranded midway through a security crisis. Track The Breach was built to offer a complete, end-to-end resolution ecosystem for breach victims." },
+      { type: "h2", text: "How We Support Breached Users & Clients" },
+      { type: "list", items: [
+        "360-Degree Dark Web Scanning: Ingesting 1.6+ billion identity records to surface full exposure maps.",
+        "Guided Remediation Playbooks: Providing automated, step-by-step recovery steps tailored to the specific type of breach (healthcare, financial, credential, or identity).",
+        "Executive & VIP Shielding: Specialized identity monitoring for corporate leaders frequently targeted in impersonation campaigns.",
+        "Direct API Integration: Plugging directly into enterprise IT security stacks to automate containment without human delay."
+      ]}
+    ]
+  },
+  "post-breach-identity-restoration-playbook": {
+    author: "Track The Breach Editorial",
+    blocks: [
+      { type: "lead", text: "Restoring digital identity hygiene after an exposure event requires a disciplined approach. Here is how Track The Breach guides users through complete identity restoration." },
+      { type: "h2", text: "Audit Interconnected SaaS Grants" },
+      { type: "p", text: "Attackers who gain temporary access often install silent OAuth applications to maintain persistence. Review all third-party app authorizations connected to your primary Google, Microsoft, or social accounts and revoke unused permissions immediately." },
+      { type: "h2", text: "Continuous Identity Guarding" },
+      { type: "p", text: "Breach data is frequently resold months after the initial leak. Continuous monitoring ensures that as secondary threat actors aggregate and package your exposed information into fresh combo-lists, your team is alerted first." }
+    ]
+  }
+      {
+  "fintech-api-abuse-2026": {
+    author: "Track The Breach Financial Security Team",
+    blocks: [
+      { type: "lead", text: "The rapid rise of Open Banking and BaaS (Banking-as-a-Service) has transformed the financial sector, but it has also created a massive, often unmonitored attack surface: the API layer." },
+      { type: "h2", text: "The API Blindspot" },
+      { type: "p", text: "Unlike traditional web applications, APIs are designed for machine-to-machine communication, making malicious traffic harder to distinguish from legitimate user behavior. In 2026, threat actors are aggressively targeting Open Banking APIs to scrape account balances, initiate unauthorized micro-transactions, and harvest PII." },
+      { type: "h2", text: "Bypassing Rate Limits" },
+      { type: "p", text: "Attackers no longer blast a single API endpoint from one IP address. They utilize massive residential proxy networks—routing their attacks through millions of compromised home Wi-Fi routers and smart TVs. This 'low and slow' approach easily bypasses traditional rate-limiting and IP blacklists." },
+      { type: "h2", text: "The Defense Playbook" },
+      { type: "p", text: "Fintechs must adopt behavioral API security. Defenses must analyze the context of the request—looking at the sequence of API calls, the velocity of token generation, and the geographic impossibility of session requests—rather than just the volume of traffic." }
+    ]
+  },
+  "healthcare-black-market-value": {
+    author: "Track The Breach Threat Intelligence",
+    blocks: [
+      { type: "lead", text: "If a stolen credit card sells for $5 on a dark web marketplace, a complete medical record can easily fetch $50 to $250. Here is why the healthcare sector is under relentless siege." },
+      { type: "h2", text: "The Value of Immutable Data" },
+      { type: "p", text: "You can cancel a credit card in five minutes. You cannot cancel your medical history, your blood type, or your Social Security Number. Protected Health Information (PHI) is immutable, giving it a much longer shelf-life for cybercriminals." },
+      { type: "h2", text: "Medical Identity Theft" },
+      { type: "p", text: "Buyers on the dark web use stolen medical records to commit medical identity theft. They forge identities to receive expensive surgeries, procure prescription narcotics to resell on the street, or file massive, fraudulent claims with government insurance programs like Medicare and Medicaid." },
+      { type: "h2", text: "Extortion Leverage" },
+      { type: "p", text: "Ransomware groups target hospitals because the urgency is life-or-death, increasing the likelihood of a payout. Furthermore, they use the highly sensitive nature of psychiatric records, terminal diagnoses, and cosmetic surgery details to extort individual patients directly if the hospital refuses to pay." }
+    ]
+  },
+  "ecommerce-botnet-defense": {
+    author: "Track The Breach Fraud Prevention",
+    blocks: [
+      { type: "lead", text: "E-commerce platforms are fighting a daily, silent war against automated botnets. The prize? Customer loyalty points, stored credit cards, and high-demand inventory." },
+      { type: "h2", text: "Account Takeover (ATO) at Scale" },
+      { type: "p", text: "Using billions of leaked credentials from previous breaches (like the massive Synthient leak of 2026), attackers deploy credential stuffing bots against retail login pages. Because consumers heavily reuse passwords, attackers successfully breach accounts, draining loyalty reward points or making purchases using saved payment methods." },
+      { type: "h2", text: "Inventory Denial (Grinch Bots)" },
+      { type: "p", text: "Beyond ATO, specialized 'scalper bots' are used to instantly buy up high-demand inventory (like limited-edition sneakers or electronics) the millisecond it goes live, denying real customers the chance to buy and destroying brand trust." },
+      { type: "h2", text: "Moving Beyond CAPTCHA" },
+      { type: "p", text: "Traditional CAPTCHAs introduce massive friction for real shoppers and are easily bypassed by AI-solving services. Retailers must shift to invisible behavioral biometrics—analyzing mouse movements, keystroke dynamics, and device fingerprinting to silently separate humans from bots." }
+    ]
+  },
+  "manufacturing-it-ot-convergence": {
+    author: "Track The Breach Infrastructure Team",
+    blocks: [
+      { type: "lead", text: "For decades, factory floors were 'air-gapped'—completely disconnected from the corporate internet. With the rise of Industry 4.0, that gap has vanished, and the security implications are severe." },
+      { type: "h2", text: "The IT/OT Collision" },
+      { type: "p", text: "Modern manufacturing requires Operational Technology (OT)—the robotic arms, PLCs, and HVAC systems—to communicate with Information Technology (IT) for predictive maintenance and supply chain analytics. However, legacy OT equipment was never designed with security in mind. It lacks encryption, MFA, and modern authentication." },
+      { type: "h2", text: "Lateral Movement to the Factory Floor" },
+      { type: "p", text: "Threat actors now routinely breach a manufacturer's corporate IT network (often via a simple phishing email to an HR employee) and pivot laterally into the poorly defended OT network. Once there, they deploy ransomware that physically halts the assembly line." },
+      { type: "h2", text: "Securing the Smart Factory" },
+      { type: "p", text: "Manufacturers must implement strict micro-segmentation. An infection in the corporate email server should never have a routable path to the safety controllers on the factory floor. The Purdue Model of network segmentation is no longer a best practice; it is a survival requirement." }
+    ]
+  },
+  "law-firms-third-party-vector": {
+    author: "Track The Breach Privacy Desk",
+    blocks: [
+      { type: "lead", text: "Why spend months trying to hack a Fortune 500 bank when you can simply hack the 50-person law firm handling their mergers and acquisitions?" },
+      { type: "h2", text: "The Ultimate Data Aggregators" },
+      { type: "p", text: "Law firms, accountancies, and consulting groups are prime targets because they act as centralized repositories of highly sensitive data. A successful breach of a mid-sized legal practice yields unannounced M&A details (perfect for insider trading), corporate trade secrets, and massive volumes of executive PII." },
+      { type: "h2", text: "The Supply Chain Audit" },
+      { type: "p", text: "In 2026, major enterprises are ruthlessly auditing their legal partners. Law firms that cannot prove they enforce hardware MFA, maintain continuous dark web monitoring, and utilize zero-trust architecture are actively losing lucrative enterprise retainers." },
+      { type: "h2", text: "Client Data Silos" },
+      { type: "p", text: "Legal practices must abandon flat network architectures. A junior associate working on a real estate contract should not have default network access to the directory containing a multi-billion dollar tech acquisition. Strict, role-based access control (RBAC) is non-negotiable." }
+    ]
+  }
 };
