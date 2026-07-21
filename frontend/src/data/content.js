@@ -1550,6 +1550,53 @@ export const BLOG_POSTS = [
     excerpt: "Threat actors know legal practices hold the keys to M&A data and corporate secrets. How law firms must adapt to client security demands.", 
     tag: "case-studies" 
   }
+{ 
+    slug: "lummac2-stealer-teardown", 
+    title: "LummaC2 Stealer Teardown: Evading EDR to harvest active sessions", 
+    category: "Malware Teardowns", 
+    date: "Jul 21, 2026", 
+    reading: "8 min read", 
+    excerpt: "An engineering-level look at how the LummaC2 infostealer uses trigonometry-based human behavior checks to bypass enterprise EDR platforms.", 
+    tag: "tech" 
+  },
+  { 
+    slug: "mfa-fatigue-prompt-bombing-tactics", 
+    title: "MFA Fatigue: How attackers use 'prompt bombing' to break the human perimeter", 
+    category: "Attack Tactics", 
+    date: "Jul 19, 2026", 
+    reading: "6 min read", 
+    excerpt: "When technical bypasses fail, attackers annoy users into submission. Inside the psychology and execution of MFA fatigue attacks.", 
+    tag: "threat-intel" 
+  },
+  { 
+    slug: "raas-economics-2026-affiliates", 
+    title: "Ransomware-as-a-Service (RaaS): Inside the 2026 affiliate payout models", 
+    category: "Malware Teardowns", 
+    date: "Jul 15, 2026", 
+    reading: "7 min read", 
+    excerpt: "Ransomware groups operate exactly like SaaS companies. Here is a breakdown of their profit-sharing, affiliate panels, and negotiation playbooks.", 
+    tag: "dark-web" 
+  },
+  
+  // --- CISO THOUGHT LEADERSHIP ---
+  { 
+    slug: "roi-of-itdr-2026", 
+    title: "The ROI of ITDR: Why Identity Threat Detection is your best 2026 investment", 
+    category: "Executive Strategy", 
+    date: "Jul 18, 2026", 
+    reading: "6 min read", 
+    excerpt: "Traditional endpoint security is no longer enough. Here is how CISOs can justify the budget for Identity Threat Detection and Response (ITDR).", 
+    tag: "guides" 
+  },
+  { 
+    slug: "ciso-guide-alert-fatigue-soc", 
+    title: "CISO Guide: Eliminating SOC alert fatigue through automated quarantine", 
+    category: "Executive Strategy", 
+    date: "Jul 12, 2026", 
+    reading: "5 min read", 
+    excerpt: "Your security operations center is drowning in false positives. How to shift from alert generation to automated identity quarantine.", 
+    tag: "case-studies" 
+  }
 ];
 
 export const JOBS = [
@@ -2430,6 +2477,67 @@ export const BLOG_BODIES = {
       { type: "p", text: "In 2026, major enterprises are ruthlessly auditing their legal partners. Law firms that cannot prove they enforce hardware MFA, maintain continuous dark web monitoring, and utilize zero-trust architecture are actively losing lucrative enterprise retainers." },
       { type: "h2", text: "Client Data Silos" },
       { type: "p", text: "Legal practices must abandon flat network architectures. A junior associate working on a real estate contract should not have default network access to the directory containing a multi-billion dollar tech acquisition. Strict, role-based access control (RBAC) is non-negotiable." }
+    ]
+  }
+{
+  "lummac2-stealer-teardown": {
+    author: "Track The Breach Malware Lab",
+    blocks: [
+      { type: "lead", text: "LummaC2 (or Lumma Stealer) has rapidly become one of the most prolific threats in the cybercrime ecosystem. Written in C/C++, it is specifically designed to steal cryptocurrency wallets, browser extensions, and active session cookies while remaining virtually invisible to traditional antivirus." },
+      { type: "h2", text: "Trigonometry-Based Anti-Analysis" },
+      { type: "p", text: "What makes LummaC2 terrifying in 2026 is its anti-sandbox capabilities. Before executing its primary payload, the malware tracks the user's cursor movements. It uses trigonometry to calculate the vector and velocity of the mouse, ensuring the movements mimic a real human rather than an automated malware-analysis sandbox. If the math doesn't look human, the malware simply goes to sleep." },
+      { type: "h2", text: "The Cookie Harvesting Engine" },
+      { type: "p", text: "Once human interaction is verified, LummaC2 attacks the local databases of Chromium and Gecko-based browsers. It bypasses App-Bound Encryption by injecting threads directly into trusted browser processes, successfully extracting session cookies and decrypting stored passwords before exfiltrating the data to a command-and-control (C2) server." },
+      { type: "h2", text: "Defensive Countermeasures" },
+      { type: "p", text: "Traditional Endpoint Detection and Response (EDR) often misses LummaC2 due to its process-hollowing techniques. Defense relies on enforcing extremely short session timeouts for critical enterprise apps and monitoring dark web intelligence feeds—like Track The Breach—for the first sign of an employee's leaked session cookie." }
+    ]
+  },
+  "mfa-fatigue-prompt-bombing-tactics": {
+    author: "Track The Breach Threat Intelligence",
+    blocks: [
+      { type: "lead", text: "Attackers don't always need to crack a cryptographic protocol. Sometimes, they just need to wake an employee up at 3:00 AM." },
+      { type: "h2", text: "The Anatomy of Prompt Bombing" },
+      { type: "p", text: "Also known as MFA Fatigue, this tactic occurs when an attacker has already acquired a valid username and password (usually from a data breach). They attempt to log in, which triggers a push notification to the victim's phone. When the victim denies it, the attacker runs a script that sends 50 more requests in rapid succession." },
+      { type: "h2", text: "The Psychology of the Bypass" },
+      { type: "p", text: "The attack relies on human exhaustion. Eventually, the victim approves the prompt—either accidentally while trying to silence their phone, or intentionally, believing that approving the request is the only way to stop the relentless buzzing. In some cases, attackers will even call the victim posing as IT support, claiming the prompts are a 'system glitch' that requires the user to hit 'Approve' to fix." },
+      { type: "h2", text: "Fixing the Vulnerability" },
+      { type: "list", items: [
+        "Enable Number Matching: Force the user to type a two-digit number displayed on their login screen into their authenticator app, making blind approvals impossible.",
+        "Rate Limit Prompts: Configure your Identity Provider (IdP) to lock the account after three consecutive denied MFA prompts.",
+        "Transition to FIDO2: Physical security keys completely eliminate push-notification fatigue."
+      ]}
+    ]
+  },
+  "raas-economics-2026-affiliates": {
+    author: "Track The Breach Dark Web Intelligence",
+    blocks: [
+      { type: "lead", text: "The most dangerous ransomware actors today don't actually write ransomware. They rent it. The Ransomware-as-a-Service (RaaS) model has industrialized cyber-extortion into a highly structured corporate supply chain." },
+      { type: "h2", text: "The Affiliate Model" },
+      { type: "p", text: "Core developers (the 'operators') write the encryption software, manage the leak sites, and handle the cryptocurrency laundering. They rent this infrastructure out to 'affiliates'—freelance hackers whose only job is to breach corporate networks. When a victim pays a $1 million ransom, the affiliate typically keeps 70-80%, while the operator takes a 20-30% cut." },
+      { type: "h2", text: "Initial Access Brokers (IABs)" },
+      { type: "p", text: "To make the process even more efficient, affiliates rarely do their own hacking anymore. They buy pre-breached network access from Initial Access Brokers (IABs) on dark web forums. An IAB might sell a compromised VPN credential for a Fortune 500 company for $5,000, which the affiliate then turns into a multi-million dollar ransom." },
+      { type: "h2", text: "Why This Matters for Defenders" },
+      { type: "p", text: "This supply chain creates a massive window of opportunity. Months often pass between the moment an IAB steals a credential and the moment an affiliate deploys the ransomware. Continuous dark web monitoring allows defenders to detect the IAB's listing and rotate the compromised credential before the ransomware is ever deployed." }
+    ]
+  },
+  "roi-of-itdr-2026": {
+    author: "Track The Breach Advisory Board",
+    blocks: [
+      { type: "lead", text: "For years, CISOs poured budget into securing the endpoint and the perimeter. But in a cloud-first, work-from-anywhere world, the identity is the new perimeter. If you cannot defend the identity, your EDR and firewalls are irrelevant." },
+      { type: "h2", text: "The Blind Spot of Traditional Security" },
+      { type: "p", text: "When an attacker logs in with a stolen session cookie or a successfully bypassed MFA prompt, traditional security tools do not flag the activity as malware—they see a legitimate user logging in. Identity Threat Detection and Response (ITDR) fills this critical gap." },
+      { type: "h2", text: "Calculating the ROI" },
+      { type: "p", text: "The ROI of ITDR is measured in containment speed. By monitoring for credential exposure on the dark web and actively analyzing authentication behavior, ITDR platforms like Track The Breach can automatically revoke a session token the moment an identity exhibits anomalous behavior. The financial return is simple: the cost of the ITDR platform versus the multi-million dollar fallout of an undetected lateral movement event." }
+    ]
+  },
+  "ciso-guide-alert-fatigue-soc": {
+    author: "Track The Breach Executive Desk",
+    blocks: [
+      { type: "lead", text: "The average Security Operations Center (SOC) analyst ignores up to 30% of daily alerts simply due to volume. In 2026, generating more alerts is no longer a selling point for security tools—it is a liability." },
+      { type: "h2", text: "The Cost of False Positives" },
+      { type: "p", text: "When analysts are drowning in 'impossible travel' alerts generated by employees using standard commercial VPNs, they suffer from alert fatigue. This is exactly how critical, true-positive alerts—like a stolen session cookie being used from a residential proxy—slip through the cracks." },
+      { type: "h2", text: "Shifting to Automated Quarantine" },
+      { type: "p", text: "CISOs must shift their SOC from an alerting model to an automated quarantine model. If Track The Breach detects a corporate credential in a newly uploaded stealer log, the platform shouldn't just send an email to the SOC. It should use an API webhook to instantly suspend the user's Okta session and require a password reset. Human analysts should only be involved to review the post-mortem, not to execute the basic containment." }
     ]
   }
 };
